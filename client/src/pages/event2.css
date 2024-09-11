@@ -1,3 +1,16 @@
+.checkout-box select {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ea3f80;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.checkout-box select:focus {
+  border-color: #d6336c;
+  outline: none;
+}
+
 .event2 {
   font-family: 'Roboto', sans-serif;
   color: #1a1a1a;
@@ -6,8 +19,13 @@
   overflow: hidden;
 }
 
-.event2-title {
-  color: #fff;
+.event2 > main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  width: 100%;
 }
 
 .event2 > main > img {
@@ -20,47 +38,34 @@
 
 .event2 > main > h1 {
   margin-bottom: 20px;
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
 }
 
 .event2 > main > p {
+  color: #fff;
+  text-align: center;
   margin-bottom: 30px;
 }
 
-.event2 > main > div.checkout-box > h2.title2 {
-  color: #fff;
-}
-
-.event2 > main > p {
-  color: #fff;
-}
-
-.event2 footer {
+.checkout-box {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  color: #fff !important;
 }
 
-.checkout-box > form > button[type="submit"] {
-  background-color: #4CAF50 !important;
-  color: #fff !important;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-}
-
-.checkout-box > form > button[type="submit"]:hover {
-  background-color: #dfe1f7 !important;
-  color: #4CAF50 !important;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
+.checkout-box h2.title2 {
+  color: #fff;
 }
 
 .checkout-box form {
-  margin-bottom: 20px;
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .checkout-box input[type="text"], 
@@ -68,9 +73,29 @@
 .checkout-box input[type="email"] {
   margin-bottom: 10px;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #ea3f80;
   border-radius: 4px;
   width: 100%;
+}
+
+.checkout-box button[type="submit"] {
+  background-color: #ea3f80;
+  color: #ffffff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin: 1.5rem auto 0;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.checkout-box button[type="submit"]:hover {
+  background-color: #d6336c;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .error-text {
@@ -81,24 +106,24 @@
 
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 .modal-content {
-  background-color: #dff0d8 !important;
-  padding: 20px;
-  border-radius: 10px;
-  width: 60% !important;
-  margin: 0 auto;
+  background-color: #81e698 !important;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #155724;
   text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .modal-content h2 {
@@ -109,41 +134,41 @@
   margin-bottom: 2rem;
 }
 
-.modal-content button.proceed-button {
-  background-color: #4CAF50 !important;
-  color: #fff !important;
-  padding: 12px 20px;
+.modal-content button {
+  background-color: #ea3f80;
+  color: #ffffff;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto 20px;
-  width: 300px;
+  padding: 1rem;
+  border-radius: 4px;
   font-size: 1rem;
-}
-
-.modal-content button.proceed-button:hover {
-  background-color: #dfe1f7;
-  color: #4CAF50;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.modal-content .close-button {
-  background-color: #FF0000;
-  color: #FFFFFF;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
+  font-weight: bold;
   cursor: pointer;
-  display: block;
-  margin: 20px auto 0;
-  width: 300px;
-  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 1rem;
 }
 
-.modal-content .close-button:hover {
-  background-color: #dfe1f7;
-  color: #FF0000;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
+.modal-content button:hover {
+  background-color: #d6336c;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.upi-qr {
+  max-width: 250px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.upi-details {
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
