@@ -18,7 +18,6 @@ function Contact() {
 
   useEffect(() => {
     console.log('Checking Supabase connection...');
-    // Fetch existing data if needed
   }, []);
 
   const handleChange = (e) => {
