@@ -162,7 +162,7 @@ const Event2 = () => {
   };
 
   const redirectToHome = () => {
-    navigate('/'); // Redirect to home page
+    navigate('/'); 
   };
 
   return (
