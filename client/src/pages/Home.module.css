@@ -1,6 +1,13 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .home {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden; 
+  overflow-y: auto;
 }
 
 .backgroundVideo {
@@ -22,6 +29,10 @@
   background-color: rgba(0, 0, 0, 0.6);
   padding: 60px 20px;
   color: #fff;
+  max-width: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .registrationTitle {
@@ -51,17 +62,18 @@
 
 .registrationPhoto {
   max-width: 100%;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Existing hero section styles */
 .hero {
   background: linear-gradient(to right, rgba(23, 37, 90, 0.8), rgba(201, 64, 101, 0.8));
   padding: 80px 10px;
   margin: 50px 0;
   text-align: center;
   color: #ffffff !important;
+  max-width: 100%;
 }
 
 .wordart {
@@ -77,6 +89,12 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.journey {
+  max-width: 100%;
+  padding: 80px 20px;
+  overflow-x: hidden;
+}
+
 .journeyTitle {
   font-size: 2.5rem;
   color: #f8f9fa;
@@ -87,6 +105,8 @@
   color: #fff;
   border-radius: 8px;
   transition: transform 0.3s ease;
+  padding: 20px;
+  text-align: center;
 }
 
 .step:hover {
@@ -105,5 +125,9 @@
 
   .registrationTitle {
     font-size: 2rem;
+  }
+
+  .heroVideo {
+    max-width: 100%;
   }
 }

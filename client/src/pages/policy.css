@@ -1,4 +1,3 @@
-/* Root Variables for Color Consistency */
 :root {
     --primary-color: rgb(237, 47, 98);
     --secondary-color: rgb(2, 2, 39);
@@ -8,11 +7,10 @@
     --heading-color: #ffffff;
 }
 
-/* Flexbox Layout to Ensure Footer at Bottom */
 .policy {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure full viewport height */
+    min-height: 100vh; 
     background: url('img.jpeg') no-repeat center center,
                 url('https://www.transparenttextures.com/patterns/cubes.png');
     background-size: cover, 50px 50px;
@@ -22,13 +20,11 @@
     overflow: hidden;
 }
 
-/* Ensuring Main Content Fills Remaining Space */
 main {
     flex-grow: 1;
     z-index: 2;
 }
 
-/* Gradient Overlay */
 .policy::before {
     content: '';
     position: absolute;
@@ -41,14 +37,12 @@ main {
     transition: opacity 0.2s ease;
 }
 
-/* Bootstrap Container Styling */
 .policy-container {
     position: relative;
     z-index: 2;
     padding: 2rem;
 }
 
-/* Headings */
 .policy-container h1, .policy-container h3 {
     color: var(--heading-color);
     margin: 0;
@@ -67,7 +61,6 @@ main {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Policy Cards */
 .policy-card {
     background-color: var(--light-bg);
     padding: 20px;
@@ -81,7 +74,6 @@ main {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* Cards Container */
 .cards-container {
     color: var(--dark-text);
     gap: 40px;
@@ -89,7 +81,7 @@ main {
     flex-direction: column;
 }
 
-/* Footer Styling */
+
 footer {
     z-index: 3;
     background-color: var(--secondary-color);

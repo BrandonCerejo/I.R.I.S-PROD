@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import styles from './Home.module.css';
 import videoSource from './vid1.mp4';
 import backgroundVideo from './vid2.mp4';
-import smallPhoto from './sephackathon.png'; // Correct path for the small photo
+import smallPhoto from './sephackathon.png';
 
 function Home() {
   return (
@@ -19,14 +19,14 @@ function Home() {
 
       <div className={styles.overlay}>
         <main className="flex-grow-1">
-          {/* New Registration Section */}
+          {/* Registration Section */}
           <div className={`${styles.registration} d-flex align-items-center justify-content-center`}>
             <div className="container text-center">
               <div className="row align-items-center">
                 <div className="col-lg-6 text-center text-lg-start">
                   <h2 className={`${styles.registrationTitle} display-4`}>Innovation Hackathon</h2>
                   <p className="lead">Be part of the innovation and research.</p>
-                  {/* Use Link component for navigation */}
+                  {/* Linking component for navigation */}
                   <Link to="/events/2" className={styles.registerBtn}>
                     Register Now
                   </Link>
@@ -38,7 +38,7 @@ function Home() {
             </div>
           </div>
 
-          {/* Existing Hero Section */}
+          {/*Hero Section */}
           <div className={`${styles.hero} text-white d-flex align-items-center`}>
             <div className="container">
               <div className="row align-items-center">

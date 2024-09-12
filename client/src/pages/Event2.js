@@ -173,7 +173,9 @@ const Event2 = () => {
       <main>
         <h1 className="title">Upcoming Event: September Hackathon</h1>
         <p>This is a short description of the event.</p>
-        <img src="/hackathon.png" alt="Event 2 Image" />
+        <div className="image-container">
+          <img src="/sephackathon.png" alt="Event 2 Image" className="event-image" />
+        </div>
         <div className="checkout-box">
           <h2 className="title2">Registration Fee: INR 250</h2>
           <form onSubmit={handleSubmit}>
