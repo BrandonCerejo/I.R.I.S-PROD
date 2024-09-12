@@ -411,7 +411,7 @@ const Event2 = () => {
             <div className="modal-overlay">
               <div className="modal-content">
                 <h2>Registration Successful!</h2>
-                <p>Your team has been successfully registered for the event. Leader will receive an email.</p>
+                <p>Your team has been successfully registered for the event. Leader will receive an email shortly.</p>
                 <button onClick={redirectToHome} className="close-btn">Go to Home</button>
               </div>
             </div>
