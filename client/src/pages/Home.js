@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import styles from './Home.module.css';
 import videoSource from './vid1.mp4';
 import backgroundVideo from './vid2.mp4';
-import smallPhoto from './sephackathon.png';
+import smallPhoto from './sephackathon.jpg';
 
 function Home() {
   return (

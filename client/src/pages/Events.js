@@ -18,7 +18,7 @@ function Events() {
     id: 2,
     title: "Sept Hackathon",
     description: "Hackathon details to be added soon. Registration starts from 13th Sept, 2024. Stay Tuned!",
-    image: "./sephackathon.png",
+    image: "./sephackathon.jpg",
     date: "To be held on: 26/09/2024 || ",
     time: "04:00 PM",
   };
