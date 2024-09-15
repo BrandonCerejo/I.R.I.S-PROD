@@ -47,6 +47,39 @@ function About() {
           <div className={styles.teamMembers + ' p-4'}>
             <h2>Team Members</h2>
             <div className="row">
+              {/* Team Member 7 */}
+              <div className="col-md-4">
+                <div className={styles.card}>
+                  <img src="logo2.png" alt="Team Member 5" />
+                  <div className={styles.cardContent}>
+                    <h3>Kushagra Singh</h3>
+                    <p>Lead Developer</p>
+                    <a href="https://www.linkedin.com/in/kushagra-anit-singh/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+              {/* Team Member 8 */}
+              <div className="col-md-4">
+                <div className={styles.card}>
+                  <img src="logo2.png" alt="Team Member 5" />
+                  <div className={styles.cardContent}>
+                    <h3>Gaganjot Kaur</h3>
+                    <p>Lead Developer</p>
+                    <a href="https://www.linkedin.com/in/gaganjot-kaur-badwal-4017062a7/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+              {/* Team Member 9 */}
+              <div className="col-md-4">
+                <div className={styles.card}>
+                  <img src="Purva.png" alt="Team Member 5" />
+                  <div className={styles.cardContent}>
+                    <h3>Purva Rana</h3>
+                    <p>Lead Developer</p>
+                    <a href="https://www.linkedin.com/in/sarahwilson" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
               {/* Team Member 1 */}
               <div className="col-md-4">
                 <div className={styles.card}>
@@ -87,65 +120,33 @@ function About() {
                   <div className={styles.cardContent}>
                     <h3>Grishma Shinde</h3>
                     <p>General Secratory</p>
-                    <a href="https://www.linkedin.com/in/michaelbrown" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/grishma-shinde-835343294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
               </div>
               {/* Team Member 5 */}
               <div className="col-md-4">
                 <div className={styles.card}>
-                  <img src="logo2.png" alt="Team Member 5" />
+                  <img src="kavas.png" alt="Team Member 5" />
                   <div className={styles.cardContent}>
                     <h3>Kaustub </h3>
                     <p>Marketing Head</p>
-                    <a href="https://www.linkedin.com/in/sarahwilson" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/kawas-nandan/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
               </div>
               {/* Team Member 6 */}
               <div className="col-md-4">
                 <div className={styles.card}>
-                  <img src="logo2.png" alt="Team Member 5" />
+                  <img src="Riya.jpg" alt="Team Member 5" />
                   <div className={styles.cardContent}>
                     <h3>Riya Kondawar</h3>
-                    <p></p>
+                    <p>Social Media Head</p>
                     <a href="https://www.linkedin.com/in/riyakondawar/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
               </div>
-              {/* Team Member 7 */}
-              <div className="col-md-4">
-                <div className={styles.card}>
-                  <img src="logo2.png" alt="Team Member 5" />
-                  <div className={styles.cardContent}>
-                    <h3>Kushagra Singh</h3>
-                    <p>Lead Developer</p>
-                    <a href="https://www.linkedin.com/in/sarahwilson" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                  </div>
-                </div>
-              </div>
-              {/* Team Member 8 */}
-              <div className="col-md-4">
-                <div className={styles.card}>
-                  <img src="logo2.png" alt="Team Member 5" />
-                  <div className={styles.cardContent}>
-                    <h3>Gaganjot Kaur</h3>
-                    <p>Lead Developer</p>
-                    <a href="https://www.linkedin.com/in/sarahwilson" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                  </div>
-                </div>
-              </div>
-              {/* Team Member 9 */}
-              <div className="col-md-4">
-                <div className={styles.card}>
-                  <img src="logo2.png" alt="Team Member 5" />
-                  <div className={styles.cardContent}>
-                    <h3>Purva Rana</h3>
-                    <p>Lead Developer</p>
-                    <a href="https://www.linkedin.com/in/sarahwilson" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
