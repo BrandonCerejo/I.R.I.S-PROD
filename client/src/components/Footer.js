@@ -25,7 +25,7 @@ function Footer() {
                 <h5 className="py-2">Follow Us</h5>
                 <ul className="list-unstyled">
                   <li><a href="https://www.instagram.com/iris_mitwpu/" className="text-light" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                  <li><a href="https://github.com/IRIS-MITWPU/I.R.I.S.-Website" className="text-light" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                  <li><a href="https://github.com/IRIS-MITWPU" className="text-light" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                   <li><a href="https://www.youtube.com/@IRIS-MITWPU" className="text-light" target="_blank" rel="noopener noreferrer">YouTube</a></li>
                   <li><a href="https://chat.whatsapp.com/Lnu3YpiEM4WDmwCjwDCY6n" className="text-light" target="_blank" rel="noopener noreferrer">WhatsApp Community</a></li>
                 </ul>

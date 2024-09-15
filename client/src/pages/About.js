@@ -47,62 +47,7 @@ function About() {
           <div className={styles.teamMembers + ' p-4'}>
             <h2>Team Members</h2>
             <div className="row">
-              {/* Team Member 7 */}
-              <div className="col-md-4">
-                <div className={styles.card}>
-                  <img src="logo2.png" alt="Team Member 5" />
-                  <div className={styles.cardContent}>
-                    <h3>Kushagra Singh</h3>
-                    <p>Lead Developer</p>
-                    <a href="https://www.linkedin.com/in/kushagra-anit-singh/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                  </div>
-                </div>
-              </div>
-              {/* Team Member 8 */}
-              <div className="col-md-4">
-                <div className={styles.card}>
-                  <img src="logo2.png" alt="Team Member 5" />
-                  <div className={styles.cardContent}>
-                    <h3>Gaganjot Kaur</h3>
-                    <p>Lead Developer</p>
-                    <a href="https://www.linkedin.com/in/gaganjot-kaur-badwal-4017062a7/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                  </div>
-                </div>
-              </div>
-              {/* Team Member 9 */}
-              <div className="col-md-4">
-                <div className={styles.card}>
-                  <img src="Purva.png" alt="Team Member 5" />
-                  <div className={styles.cardContent}>
-                    <h3>Purva Rana</h3>
-                    <p>Lead Developer</p>
-                    <a href="https://www.linkedin.com/in/sarahwilson" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                  </div>
-                </div>
-              </div>
               {/* Team Member 1 */}
-              <div className="col-md-4">
-                <div className={styles.card}>
-                  <img src="taksh.jpg" alt="Team Member 1" />
-                  <div className={styles.cardContent}>
-                    <h3>Taksh Dhabalia</h3>
-                    <p>President</p>
-                    <a href="https://www.linkedin.com/in/taksh-dhabalia-2b6969202/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                  </div>
-                </div>
-              </div>
-              {/* Team Member 2 */}
-              <div className="col-md-4">
-                <div className={styles.card}>
-                  <img src="samanyu.jpg" alt="Team Member 2" />
-                  <div className={styles.cardContent}>
-                    <h3>Samanyu Bhate</h3>
-                    <p>VP</p>
-                    <a href="https://www.linkedin.com/in/samanyu-bhate-17136b1ab/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                  </div>
-                </div>
-              </div>
-              {/* Team Member 3 */}
               <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="durgesh.jpg" alt="Team Member 3" />
@@ -113,7 +58,73 @@ function About() {
                   </div>
                 </div>
               </div>
+              {/* Team Member 1 */}
+              <div className="col-md-4">
+                <div className={styles.card}>
+                  <img src="logo2.png" alt="Team Member 3" />
+                  <div className={styles.cardContent}>
+                    <h3>Kavish</h3>
+                    <p>Founder</p>
+                    <a href="https://www.linkedin.com/in/durgesh-deore-74a75a281/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+              {/* Team Member 1 */}
+              <div className="col-md-4">
+                <div className={styles.card}>
+                  <img src="logo2.png" alt="Team Member 3" />
+                  <div className={styles.cardContent}>
+                    <h3>Chinmay</h3>
+                    <p>Founder</p>
+                    <a href="https://www.linkedin.com/in/durgesh-deore-74a75a281/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+              {/* Team Member 1 */}
+              <div className="col-md-4">
+                <div className={styles.card}>
+                  <img src="logo2.png" alt="Team Member 3" />
+                  <div className={styles.cardContent}>
+                    <h3>Raghunandan</h3>
+                    <p>Founder</p>
+                    <a href="https://www.linkedin.com/in/durgesh-deore-74a75a281/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+              {/* Team Member 2 */}
+              <div className="col-md-4">
+                <div className={styles.card}>
+                  <img src="taksh.jpg" alt="Team Member 1" />
+                  <div className={styles.cardContent}>
+                    <h3>Taksh Dhabalia</h3>
+                    <p>President</p>
+                    <a href="https://www.linkedin.com/in/taksh-dhabalia-2b6969202/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+              {/* Team Member 3 */}
+              <div className="col-md-4">
+                <div className={styles.card}>
+                  <img src="samanyu.jpg" alt="Team Member 2" />
+                  <div className={styles.cardContent}>
+                    <h3>Samanyu Bhate</h3>
+                    <p>VP</p>
+                    <a href="https://www.linkedin.com/in/samanyu-bhate-17136b1ab/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
               {/* Team Member 4 */}
+              <div className="col-md-4">
+                <div className={styles.card}>
+                  <img src="Brandon.jpg" alt="Team Member 3" />
+                  <div className={styles.cardContent}>
+                    <h3>Brandon Cerejo</h3>
+                    <p>Treasurer</p>
+                    <a href="https://www.linkedin.com/in/brandon-cerejo-921275247/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+              {/* Team Member 5 */}
               <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="logo2.png" alt="Team Member 4" />
@@ -124,18 +135,51 @@ function About() {
                   </div>
                 </div>
               </div>
-              {/* Team Member 5 */}
+                {/* Team Member 6 */}
+                <div className="col-md-4">
+                  <div className={styles.card}>
+                    <img src="logo2.png" alt="Team Member 5" />
+                    <div className={styles.cardContent}>
+                      <h3>Kushagra Singh</h3>
+                      <p>Lead Developer</p>
+                      <a href="https://www.linkedin.com/in/kushagra-anit-singh/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                  </div>
+              </div>
+              {/* Team Member 7 */}
+              <div className="col-md-4">
+                <div className={styles.card}>
+                  <img src="logo2.png" alt="Team Member 5" />
+                  <div className={styles.cardContent}>
+                    <h3>Gaganjot Kaur</h3>
+                    <p>Lead Developer</p>
+                    <a href="https://www.linkedin.com/in/gaganjot-kaur-badwal-4017062a7/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+              {/* Team Member 8 */}
+              <div className="col-md-4">
+                <div className={styles.card}>
+                  <img src="Purva.png" alt="Team Member 5" />
+                  <div className={styles.cardContent}>
+                    <h3>Purva Rana</h3>
+                    <p>Lead Developer</p>
+                    <a href="https://www.linkedin.com/in/sarahwilson" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+              {/* Team Member 9 */}
               <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="kavas.png" alt="Team Member 5" />
                   <div className={styles.cardContent}>
-                    <h3>Kaustub </h3>
+                    <h3> Kaustubha M</h3>
                     <p>Marketing Head</p>
                     <a href="https://www.linkedin.com/in/kawas-nandan/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
               </div>
-              {/* Team Member 6 */}
+              {/* Team Member 10 */}
               <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="Riya.jpg" alt="Team Member 5" />
@@ -146,13 +190,22 @@ function About() {
                   </div>
                 </div>
               </div>
-              
+              {/* Team Member 10 */}
+              <div className="col-md-4">
+                <div className={styles.card}>
+                  <img src="logo2.png" alt="Team Member 5" />
+                  <div className={styles.cardContent}>
+                    <h3>Richa</h3>
+                    <p>Event Operation Head</p>
+                    <a href="https://www.linkedin.com/in/riyakondawar/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </div>
+                </div>
+              </div>                
             </div>
           </div>
         </div>
       </main>
 
-      <Footer />
     </div>
   );
 }
