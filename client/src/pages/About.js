@@ -127,7 +127,7 @@ function About() {
               {/* Team Member 5 */}
               <div className="col-md-4">
                 <div className={styles.card}>
-                  <img src="logo2.png" alt="Team Member 4" />
+                  <img src="grishma.jpg" alt="Team Member 4" />
                   <div className={styles.cardContent}>
                     <h3>Grishma Shinde</h3>
                     <p>General Secratory</p>
@@ -138,7 +138,7 @@ function About() {
                 {/* Team Member 6 */}
                 <div className="col-md-4">
                   <div className={styles.card}>
-                    <img src="logo2.png" alt="Team Member 5" />
+                    <img src="kush.jpg" alt="Team Member 5" />
                     <div className={styles.cardContent}>
                       <h3>Kushagra Singh</h3>
                       <p>Lead Developer</p>
@@ -149,7 +149,7 @@ function About() {
               {/* Team Member 7 */}
               <div className="col-md-4">
                 <div className={styles.card}>
-                  <img src="logo2.png" alt="Team Member 5" />
+                  <img src="gagan.jpg" alt="Team Member 5" />
                   <div className={styles.cardContent}>
                     <h3>Gaganjot Kaur</h3>
                     <p>Lead Developer</p>
@@ -164,7 +164,7 @@ function About() {
                   <div className={styles.cardContent}>
                     <h3>Purva Rana</h3>
                     <p>Lead Developer</p>
-                    <a href="https://www.linkedin.com/in/sarahwilson" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://www.linkedin.com/search/results/all/?heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAD5_bEsBByIkyzQKkwxpYl7o17vWZzNAtTc&keywords=Purva%20Rana&origin=ENTITY_SEARCH_HOME_HISTORY&sid=ix%40" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
               </div>
