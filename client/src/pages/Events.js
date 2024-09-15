@@ -37,7 +37,7 @@ function Events() {
       <Header />
       <main className={styles.mainContent}>
         <h1 className={styles.title}>Events</h1>
-        
+
         {/* Upcoming Events Section */}
         <section className={styles.upcomingEvents}>
           <h2 className={styles.upcoming}>Upcoming Events</h2>
@@ -56,7 +56,7 @@ function Events() {
             </div>
           </div>
         </section>
-        
+
         {/* Past Events Section */}
         <section className={styles.pastEvents}>
           <h2 className={styles.past}>Past Events</h2>
@@ -75,7 +75,7 @@ function Events() {
             </div>
           </div>
         </section>
-        
+
         {/* Podcast Section */}
         <section className={styles.podcasts}>
           <h2 className={styles.podcastTitle}>Podcasts</h2>

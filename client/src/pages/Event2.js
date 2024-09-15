@@ -3,6 +3,8 @@ import { supabase } from '../supabase'; // Import the Supabase client
 import './event2.css'; // Make sure this file includes necessary styles
 import QRCodeImage from './QRCode.jpeg';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Event2 = () => {
   const [formData, setFormData] = useState({
@@ -149,9 +151,9 @@ const Event2 = () => {
 
   return (
     <div className="event2">
-      <header>
+      <Header>
         {/* Include Header component here */}
-      </header>
+      </Header>
       <main>
         <h1 className="title">Upcoming Event: September Hackathon</h1>
         <p>This is a short description of the event.</p>
