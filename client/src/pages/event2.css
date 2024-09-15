@@ -6,6 +6,11 @@
   width: 100%;
 }
 
+.centered-header {
+  text-align: center;
+  margin: 1rem 0; /* Adjust margin as needed */
+}
+
 .checkout-box select:focus {
   border-color: #d6336c;
   outline: none;
@@ -78,6 +83,7 @@
 
 .checkout-box h2.title2 {
   color: #fff;
+  margin-top: 20px; /* Add top margin for space before the title */
 }
 
 .checkout-box form {
@@ -184,9 +190,10 @@
 }
 
 .upi-qr {
+  display: block;
   max-width: 250px;
   height: auto;
-  margin-bottom: 10px;
+  margin: 0 auto 10px; /* Center horizontally and add bottom margin */
 }
 
 .upi-details {

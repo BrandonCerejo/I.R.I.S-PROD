@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
 import { supabase } from '../supabase'; // Import the Supabase client
 import './event2.css'; // Make sure this file includes necessary styles
-import axios from 'axios';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import QRCodeImage from './QRCode.jpeg';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
 
 const Event2 = () => {
   const [formData, setFormData] = useState({
-    college_name: '',
     team_name: '',
     leader_name: '',
     leader_phone: '',
@@ -35,9 +31,7 @@ const Event2 = () => {
   });
 
   const [errors, setErrors] = useState({});
-  const [showModal, setShowModal] = useState(false);
-  const [showPrnFields, setShowPrnFields] = useState(false);
-
+  const [showModal, setShowModal] = useState(false); // Add state for modal visibility
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -46,11 +40,6 @@ const Event2 = () => {
       ...prevFormData,
       [name]: value
     }));
-
-    // Check if PRN fields should be shown based on selected college
-    if (name === 'college_name') {
-      setShowPrnFields(value === 'MIT ADT' || value === 'MIT WPU');
-    }
   };
 
   const validate = () => {
@@ -61,39 +50,34 @@ const Event2 = () => {
 
     // Basic required fields
     const requiredFields = [
-      'college_name', 'team_name', 'leader_name', 'leader_phone', 'leader_email',
-      'leader_branch', 'member2_name', 'member2_phone', 'member2_email',
-      'member2_branch', 'member3_name', 'member3_phone', 'member3_email',
-      'member3_branch', 'member4_name', 'member4_phone', 'member4_email',
+      'team_name', 'leader_name', 'leader_phone', 'leader_email', 'leader_prn',
+      'leader_branch', 'member2_name', 'member2_phone', 'member2_email', 'member2_prn',
+      'member2_branch', 'member3_name', 'member3_phone', 'member3_email', 'member3_prn',
+      'member3_branch', 'member4_name', 'member4_phone', 'member4_email', 'member4_prn',
       'member4_branch', 'upi_transaction_id'
     ];
 
     requiredFields.forEach((key) => {
-      if (formData[key].trim() === '' && !key.includes('prn')) {
+      if (formData[key].trim() === '') {
         newErrors[key] = 'This field is required';
       }
     });
 
-    // Additional validation for college name if needed
-    if (!formData.college_name) {
-      newErrors.college_name = 'Please select a college';
-    }
+    // Validate PRN fields
+    ['leader_prn', 'member2_prn', 'member3_prn', 'member4_prn'].forEach((key) => {
+      if (!prnRegex.test(formData[key])) {
+        newErrors[key] = 'Enter valid PRN';
+      }
+    });
 
-    if (showPrnFields) {
-      // Validate PRN fields only if PRN fields are visible
-      ['leader_prn', 'member2_prn', 'member3_prn', 'member4_prn'].forEach((key) => {
-        if (!prnRegex.test(formData[key])) {
-          newErrors[key] = 'Enter valid PRN';
-        }
-      });
-    }
-
+    // Validate phone numbers
     ['leader_phone', 'member2_phone', 'member3_phone', 'member4_phone'].forEach((key) => {
       if (!phoneRegex.test(formData[key])) {
         newErrors[key] = 'Enter valid 10 digits number';
       }
     });
 
+    // Validate UPI transaction ID
     if (!upiRegex.test(formData.upi_transaction_id)) {
       newErrors.upi_transaction_id = 'Enter valid UPI Transaction ID';
     }
@@ -127,9 +111,7 @@ const Event2 = () => {
         console.error('Error inserting data:', error);
       } else {
         console.log('Registration successful:', data);
-        setShowModal(true);
         setFormData({
-          college_name: '',
           team_name: '',
           leader_name: '',
           leader_phone: '',
@@ -154,7 +136,7 @@ const Event2 = () => {
           upi_transaction_id: ''
         });
         setErrors({});
-        setShowPrnFields(false); // Reset PRN fields visibility
+        setShowModal(true); // Show modal on successful registration
       }
     } catch (err) {
       console.error('Error submitting form:', err);
@@ -177,33 +159,9 @@ const Event2 = () => {
           <img src="/sephackathon.png" alt="Event 2 Image" className="event-image" />
         </div>
         <div className="checkout-box">
-          <h2 className="title2">Registration Fee: INR 250</h2>
+          <h2 className="title2">*Registration Fee: INR 250*</h2>
           <form onSubmit={handleSubmit}>
-            <h3>College Name:</h3>
-            {errors.college_name && <div className="error-text">{errors.college_name}</div>}
-            <select
-              name="college_name"
-              value={formData.college_name}
-              onChange={handleChange}
-              placeholder="Select College"
-            >
-              <option value="" disabled>Select College</option>
-              <option value="BVP">BVP</option>
-              <option value="COEP">COEP</option>
-              <option value="Cummins">Cummins</option>
-              <option value="DY Patil">DY Patil</option>
-              <option value="I2IT Pune">I2IT Pune</option>
-              <option value="IIIT Pune">IIIT Pune</option>
-              <option value="MIT ADT">MIT ADT</option>
-              <option value="MIT WPU">MIT WPU</option>
-              <option value="PCCOE">PCCOE</option>
-              <option value="PICT">PICT</option>
-              <option value="Sinhgad College">Sinhgad College</option>
-              <option value="Symbiosis">Symbiosis</option>
-              <option value="VIT Pune">VIT Pune</option>
-            </select>
-
-            <h3>Team Information:</h3>
+            <h3 className="centered-header">Team Information:</h3>
             {errors.team_name && <div className="error-text">{errors.team_name}</div>}
             <input
               type="text"
@@ -213,7 +171,7 @@ const Event2 = () => {
               placeholder="Team Name"
             />
 
-            <h3>Leader:</h3>
+            <h3 className="centered-header">Leader:</h3>
             {errors.leader_name && <div className="error-text">{errors.leader_name}</div>}
             <input
               type="text"
@@ -238,18 +196,14 @@ const Event2 = () => {
               onChange={handleChange}
               placeholder="Leader Email ID"
             />
-            {showPrnFields && (
-              <>
-                {errors.leader_prn && <div className="error-text">{errors.leader_prn}</div>}
-                <input
-                  type="text"
-                  name="leader_prn"
-                  value={formData.leader_prn}
-                  onChange={handleChange}
-                  placeholder="Leader PRN"
-                />
-              </>
-            )}
+            {errors.leader_prn && <div className="error-text">{errors.leader_prn}</div>}
+            <input
+              type="text"
+              name="leader_prn"
+              value={formData.leader_prn}
+              onChange={handleChange}
+              placeholder="Leader PRN"
+            />
             <input
               type="text"
               name="leader_branch"
@@ -258,7 +212,7 @@ const Event2 = () => {
               placeholder="Branch | Ex: SYCSE Core"
             />
 
-            <h3>Member 2:</h3>
+            <h3 className="centered-header">Member 2:</h3>
             {errors.member2_name && <div className="error-text">{errors.member2_name}</div>}
             <input
               type="text"
@@ -283,18 +237,14 @@ const Event2 = () => {
               onChange={handleChange}
               placeholder="Email ID"
             />
-            {showPrnFields && (
-              <>
-                {errors.member2_prn && <div className="error-text">{errors.member2_prn}</div>}
-                <input
-                  type="text"
-                  name="member2_prn"
-                  value={formData.member2_prn}
-                  onChange={handleChange}
-                  placeholder="PRN"
-                />
-              </>
-            )}
+            {errors.member2_prn && <div className="error-text">{errors.member2_prn}</div>}
+            <input
+              type="text"
+              name="member2_prn"
+              value={formData.member2_prn}
+              onChange={handleChange}
+              placeholder="PRN"
+            />
             <input
               type="text"
               name="member2_branch"
@@ -303,7 +253,7 @@ const Event2 = () => {
               placeholder="Branch | Ex: SYCSE Core"
             />
 
-            <h3>Member 3:</h3>
+            <h3 className="centered-header">Member 3:</h3>
             {errors.member3_name && <div className="error-text">{errors.member3_name}</div>}
             <input
               type="text"
@@ -328,18 +278,14 @@ const Event2 = () => {
               onChange={handleChange}
               placeholder="Email ID"
             />
-            {showPrnFields && (
-              <>
-                {errors.member3_prn && <div className="error-text">{errors.member3_prn}</div>}
-                <input
-                  type="text"
-                  name="member3_prn"
-                  value={formData.member3_prn}
-                  onChange={handleChange}
-                  placeholder="PRN"
-                />
-              </>
-            )}
+            {errors.member3_prn && <div className="error-text">{errors.member3_prn}</div>}
+            <input
+              type="text"
+              name="member3_prn"
+              value={formData.member3_prn}
+              onChange={handleChange}
+              placeholder="PRN"
+            />
             <input
               type="text"
               name="member3_branch"
@@ -347,8 +293,7 @@ const Event2 = () => {
               onChange={handleChange}
               placeholder="Branch | Ex: SYCSE Core"
             />
-
-            <h3>Member 4:</h3>
+            <h3 className="centered-header">Member 4:</h3>
             {errors.member4_name && <div className="error-text">{errors.member4_name}</div>}
             <input
               type="text"
@@ -373,18 +318,14 @@ const Event2 = () => {
               onChange={handleChange}
               placeholder="Email ID"
             />
-            {showPrnFields && (
-              <>
-                {errors.member4_prn && <div className="error-text">{errors.member4_prn}</div>}
-                <input
-                  type="text"
-                  name="member4_prn"
-                  value={formData.member4_prn}
-                  onChange={handleChange}
-                  placeholder="PRN"
-                />
-              </>
-            )}
+            {errors.member4_prn && <div className="error-text">{errors.member4_prn}</div>}
+            <input
+              type="text"
+              name="member4_prn"
+              value={formData.member4_prn}
+              onChange={handleChange}
+              placeholder="PRN"
+            />
             <input
               type="text"
               name="member4_branch"
@@ -393,7 +334,7 @@ const Event2 = () => {
               placeholder="Branch | Ex: SYCSE Core"
             />
 
-            <h3>UPI Transaction ID:</h3>
+            <h3 className="centered-header">UPI Transaction Details:</h3>
             <img src={QRCodeImage} alt="QR Code" className="upi-qr" />
             {errors.upi_transaction_id && <div className="error-text">{errors.upi_transaction_id}</div>}
             <input
@@ -401,7 +342,7 @@ const Event2 = () => {
               name="upi_transaction_id"
               value={formData.upi_transaction_id}
               onChange={handleChange}
-              placeholder="UPI Transaction ID"
+              placeholder="Enter UPI Transaction ID"
             />
 
             <button type="submit" className="submit-btn">Register</button>
