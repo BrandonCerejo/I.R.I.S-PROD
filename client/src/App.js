@@ -6,6 +6,7 @@ import backgroundVideo from './pages/vid2.mp4';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import AppRouter from './Router.js';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Header />
         <AppRouter /> {/* This does not need its own Router */}
         <Footer />
+        <Analytics />
       </div>
     </Router>
   );
