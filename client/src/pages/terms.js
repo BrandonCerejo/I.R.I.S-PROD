@@ -56,6 +56,7 @@ function Terms() {
             <div className="policy-card">
               <h2>Contact Us</h2>
               <p>If you have any questions or concerns about these Terms and Conditions, please contact us at iris@mitwpu.edu.in.</p>
+              <p>Address: MIT World Peace University Survey No, 124, Paud Rd, Kothrud, Pune, Maharashtra 411038</p>
             </div>
           </div>
         </div>
