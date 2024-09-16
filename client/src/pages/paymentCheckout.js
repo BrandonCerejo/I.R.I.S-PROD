@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { supabase } from '../supabase';
 import Header from '../components/Header';
@@ -9,6 +9,11 @@ const CheckoutPayment = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const { formData } = location.state || {};
+
+    // Scroll to the top of the page when this component mounts
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const loadScript = (src) => {
         return new Promise((resolve) => {
@@ -88,8 +93,7 @@ const CheckoutPayment = () => {
 
     return (
         <div className="checkoutPayment">
-            <Header>
-            </Header>
+            <Header />
             <div className="invoiceCard">
                 <h1>Invoice</h1>
                 <div className="invoiceDetails">

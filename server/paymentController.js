@@ -1,7 +1,6 @@
-// paymentController.js
 import crypto from 'crypto';
-import supabase from './supabase.js'; // Correct import for default export
-import { instance } from './server.js'; // Import Razorpay instance
+import supabase from './supabase.js'; 
+import { instance } from './server.js';
 
 export const checkout = async (req, res) => {
   try {
