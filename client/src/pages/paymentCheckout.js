@@ -1,9 +1,10 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './paymentCheckout.css';
 
 const CheckoutPayment = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { formData } = location.state || {};
 
   const loadScript = (src) => {
@@ -35,10 +36,12 @@ const CheckoutPayment = () => {
         image: "https://avatars.githubusercontent.com/u/160888318?v=4", // Logo
         handler: function (response) {
           if (response.razorpay_payment_id) {
-            alert('Payment successful!');
+            // Navigate to PaymentSuccess page
+            navigate('/PaymentSuccess');
           } else {
             alert('Payment failed.');
           }
+          resolve(); // Resolve the promise regardless of success or failure
         },
         prefill: {
           name: formData?.leader_name || "",
@@ -55,6 +58,7 @@ const CheckoutPayment = () => {
       const paymentObject = new window.Razorpay(options);
       paymentObject.on('payment.failed', (response) => {
         alert('Payment failed.');
+        reject(); // Reject the promise on failure
       });
       paymentObject.open();
     });
