@@ -1,14 +1,16 @@
 import React from 'react';
 import { useSearchParams } from 'react-router-dom';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import './PaymentSuccess.css';
 
 const PaymentSuccess = () => {
     const [searchParams] = useSearchParams();
     const reference = searchParams.get("reference");
-    const leaderEmail = searchParams.get("leader_email");
 
     return (
         <div className="payment-success-container">
+            <Header />
             <div className="payment-success-content">
                 <img src="/logo.png" alt="Success Icon" className="success-icon" />
                 <h1>Payment Successful!</h1>

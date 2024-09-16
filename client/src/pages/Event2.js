@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { supabase } from '../supabase'; // Import the Supabase client
-import './event2.css'; // Make sure this file includes necessary styles
+import { supabase } from '../supabase';
+import './event2.css';
 
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { AuthWeakPasswordError } from '@supabase/supabase-js';
-
 
 const Event2 = () => {
   const [formData, setFormData] = useState({
@@ -31,70 +29,9 @@ const Event2 = () => {
     member4_email: '',
     member4_prn: '',
     member4_branch: '',
-    //upi_transaction_id: ''
   });
-  // const loadScript = (src) => {
-  //   return new Promise((resolve) => {
-  //     const script = document.createElement("script");
-  //     script.src = src;
-  //     script.onload = () => {
-  //       resolve(true);
-  //     };
-  //     script.onerror = () => {
-  //       resolve(false);
-  //     };
-  //     document.body.appendChild(script);
-  //   });
-  // };
-
-  // const pay = async () => {
-  //   let amount = 255;
-  //   const res = await loadScript("https://checkout.razorpay.com/v1/checkout.js");
-
-  //   if (!res) {
-  //     alert("Razorpay SDK failed to load. Are you online?");
-  //     return false; // Payment failed due to SDK not loading
-  //   }
-
-  //   return new Promise((resolve, reject) => {
-  //     const options = {
-  //       key: "rzp_test_DEvIsmgNnBeEH2", // API key from Razorpay dashboard
-  //       amount: parseInt(amount * 100), // Amount in paise
-  //       currency: "INR", // Currency code
-  //       name: "I.R.I.S. MIT WPU", // Project or transaction name
-  //       description: "Hackathon Registration Fee",
-  //       image: "https://avatars.githubusercontent.com/u/160888318?v=4", // Logo
-  //       handler: function (response) {
-  //         // This function will be called after successful payment
-  //         if (response.razorpay_payment_id) {
-  //           resolve(true); // Payment successful
-  //         } else {
-  //           resolve(false); // Payment failed
-  //         }
-  //       },
-  //       prefill: {
-  //         name: "IRIS MIT WPU ",
-  //         email: "iris@mitwpu.edu.in",
-  //         //contact: "7715959053",
-  //       },
-  //       notes: {
-  //         address: "India",
-  //       },
-  //       theme: {
-  //         color: "#000000",
-  //       },
-  //     };
-
-  //     const paymentObject = new window.Razorpay(options);
-  //     paymentObject.on('payment.failed', (response) => {
-  //       resolve(false); // Payment failed
-  //     });
-  //     paymentObject.open();
-  //   });
-  // };
 
   const [errors, setErrors] = useState({});
-  // const [showModal, setShowModal] = useState(false); // Add state for modal visibility
 
   const navigate = useNavigate();
 
@@ -110,15 +47,13 @@ const Event2 = () => {
     const newErrors = {};
     const phoneRegex = /^\d{10}$/;
     const prnRegex = /^\d{10}$/;
-    //const upiRegex = /^\d{12}$/;
 
-    // Basic required fields
     const requiredFields = [
       'team_name', 'leader_name', 'leader_phone', 'leader_email', 'leader_prn',
       'leader_branch', 'member2_name', 'member2_phone', 'member2_email', 'member2_prn',
       'member2_branch', 'member3_name', 'member3_phone', 'member3_email', 'member3_prn',
       'member3_branch', 'member4_name', 'member4_phone', 'member4_email', 'member4_prn',
-      'member4_branch', //'upi_transaction_id'
+      'member4_branch'
     ];
 
     requiredFields.forEach((key) => {
@@ -141,11 +76,6 @@ const Event2 = () => {
       }
     });
 
-    // Validate UPI transaction ID
-    // if (!upiRegex.test(formData.upi_transaction_id)) {
-    //   newErrors.upi_transaction_id = 'Enter valid UPI Transaction ID';
-    // }
-
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length > 0) {
@@ -158,76 +88,18 @@ const Event2 = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   const paymentStatus = await pay();
-  //   if (paymentStatus == true) {
-  //     console.log("Payment successful!");
-  //   } else {
-  //     console.log("Payment failed.");
-  //   }
-
-  //   if (!validate()) {
-  //     return;
-  //   }
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) {
       return;
     }
 
-    try {
-      // Insert form data into Supabase
-      const { data, error } = await supabase
-        .from('event2_registrations') // Ensure this matches your Supabase table name
-        .insert([{ ...formData, created_at: new Date().toISOString() }]);
-
-      if (error) {
-        console.error('Error inserting data:', error);
-      } else {
-        console.log('Registration successful:', data);
-        setFormData({
-          team_name: '',
-          leader_name: '',
-          leader_phone: '',
-          leader_email: '',
-          leader_prn: '',
-          leader_branch: '',
-          member2_name: '',
-          member2_phone: '',
-          member2_email: '',
-          member2_prn: '',
-          member2_branch: '',
-          member3_name: '',
-          member3_phone: '',
-          member3_email: '',
-          member3_prn: '',
-          member3_branch: '',
-          member4_name: '',
-          member4_phone: '',
-          member4_email: '',
-          member4_prn: '',
-          member4_branch: '',
-          //upi_transaction_id: ''
-        });
-        setErrors({});
-        // setShowModal(true); // Show modal on successful registration
-        navigate('/checkoutPayment', { state: { formData } });
-      }
-    } catch (err) {
-      console.error('Error submitting form:', err);
-    }
-  };
-
-  const redirectToHome = () => {
-    navigate('/');
+    navigate('/checkoutPayment', { state: { formData } });
   };
 
   return (
     <div className="event2">
       <Header>
-        {/* Include Header component here */}
       </Header>
       <main>
         <h1 className="title">Upcoming Event: September Hackathon</h1>
@@ -411,41 +283,8 @@ const Event2 = () => {
               placeholder="Branch | Ex: SYCSE Core"
             />
 
-            {/* <h3 className="centered-header">UPI Transaction Details:</h3>
-
-            {errors.upi_transaction_id && <div className="error-text">{errors.upi_transaction_id}</div>}
-            <input
-              type="text"
-              name="upi_transaction_id"
-              value={formData.upi_transaction_id}
-              onChange={handleChange}
-              placeholder="Enter UPI Transaction ID"
-            /> */}
-
-            {/* <button type="submit" className="submit-btn" onClick={() => {
-              let valid = validate();
-              if (valid == true) {
-                pay();
-              }
-              else {
-
-              }
-            }}> Save & Proceed to Checkout</button> */}
-
             <button type="submit" className="submit-btn">Save & Proceed to Checkout</button>
-
-
           </form>
-
-          {/* {showModal && (
-            <div className="modal-overlay">
-              <div className="modal-content">
-                <h2>Registration Successful!</h2>
-                <p>Your team has been successfully registered for the event. Leader will receive an email shortly.</p>
-                <button onSubmit={redirectToHome} className="close-btn">Go to Home</button>
-              </div>
-            </div>
-          )} */}
         </div>
       </main>
     </div>
