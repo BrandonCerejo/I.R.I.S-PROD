@@ -1,5 +1,3 @@
-/* paymentCheckout.css */
-
 .checkoutPayment {
   display: flex;
   justify-content: center;
@@ -80,7 +78,6 @@
   height: auto;
 }
 
-/* Additional styles for form and inputs */
 
 .checkout-box {
   display: flex;
@@ -194,7 +191,7 @@
   display: block;
   max-width: 250px;
   height: auto;
-  margin: 0 auto 10px; /* Center horizontally and add bottom margin */
+  margin: 0 auto 10px; 
 }
 
 .upi-details {
