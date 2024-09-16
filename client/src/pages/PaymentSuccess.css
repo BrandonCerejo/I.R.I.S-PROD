@@ -1,11 +1,9 @@
-/* PaymentSuccess.css */
-
 .payment-success-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url('./event.jpg') no-repeat center center/cover; /* Use the same background image */
+  background: url('./event.jpg') no-repeat center center/cover; 
   position: relative;
   overflow: hidden;
 }
@@ -60,7 +58,7 @@ strong {
   padding: 10px 20px;
   font-size: 1rem;
   color: #ffffff;
-  background-color: #ea3f80; /* Updated to match the style of checkout box */
+  background-color: #ea3f80; 
   border-radius: 4px;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
