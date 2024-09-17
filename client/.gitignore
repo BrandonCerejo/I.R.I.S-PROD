@@ -17,6 +17,12 @@ build
 .env.test.local
 .env.production.local
 
+client/src/pages/.env
+client/src/pages/.env.local
+client/src/pages/.env.development.local
+client/src/pages/.env.test.local
+client/src/pages/.env.production.local
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
