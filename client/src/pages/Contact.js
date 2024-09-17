@@ -35,7 +35,7 @@ function Contact() {
       console.log('Inserting data into Supabase...');
       // Insert form data into Supabase
       const { data, error } = await supabase
-        .from('contacts') // Make sure this matches your Supabase table name
+        .from('contacts')
         .insert(formDataWithTimestamp);
 
       if (error) {

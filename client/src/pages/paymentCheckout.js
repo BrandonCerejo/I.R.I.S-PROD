@@ -10,7 +10,6 @@ const CheckoutPayment = () => {
     const navigate = useNavigate();
     const { formData } = location.state || {};
 
-    // Scroll to the top of the page when this component mounts
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -36,18 +35,17 @@ const CheckoutPayment = () => {
 
         return new Promise((resolve, reject) => {
             const options = {
-                key: "rzp_test_DEvIsmgNnBeEH2", // API key from Razorpay dashboard
+                key: process.env.REACT_APP_RAZORPAY_API_KEY,
                 amount: parseInt(amount * 100), // Amount in paise
-                currency: "INR", // Currency code
-                name: "I.R.I.S. MIT WPU", // Project or transaction name
+                currency: "INR",
+                name: "I.R.I.S. MIT WPU", 
                 description: "Hackathon Registration Fee",
-                image: "https://avatars.githubusercontent.com/u/160888318?v=4", // Logo
+                image: "https://avatars.githubusercontent.com/u/160888318?v=4",
                 handler: async function (response) {
                     const { razorpay_payment_id } = response;
 
                     if (razorpay_payment_id) {
                         try {
-                            // Insert payment details into Supabase along with form data
                             const { data, error } = await supabase
                                 .from('event2_registrations')
                                 .insert([{
