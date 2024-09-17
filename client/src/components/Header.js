@@ -6,7 +6,16 @@ function Header() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  // Define topscrollFunction to scroll to the top of the page
+  const topscrollFunction = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Smooth scroll to the top
+    });
+  };
+
   useEffect(() => {
+    // Handle scroll event
     const handleScroll = () => {
       setScrolled(window.scrollY > 50); // Adjust the value as needed
     };
@@ -17,11 +26,16 @@ function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    // Call the topscroll function on location change
+    topscrollFunction();
+  }, [location]);
+
   // Function to handle navbar link click, ensuring collapse closes on mobile view
   const handleNavLinkClick = () => {
     const navbarCollapse = document.getElementById('navbarSupportedContent');
     const bsCollapse = new window.bootstrap.Collapse(navbarCollapse, {
-      toggle: false
+      toggle: false,
     });
     bsCollapse.hide(); // Close the dropdown
   };
