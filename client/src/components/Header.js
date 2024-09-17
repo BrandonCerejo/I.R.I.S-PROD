@@ -8,6 +8,9 @@ function Header() {
 
   // Define topscrollFunction to scroll to the top of the page
   const topscrollFunction = () => {
+    console.log("Scrolling to top...");  // Debugging log
+    document.documentElement.scrollTop = 0; // For most browsers
+    document.body.scrollTop = 0; // For Safari
     window.scrollTo({
       top: 0,
       behavior: 'smooth', // Smooth scroll to the top
