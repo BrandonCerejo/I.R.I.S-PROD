@@ -47,7 +47,7 @@ function About() {
           <div className={styles.teamMembers + ' p-4'}>
             <h2>Team Members</h2>
             <div className="row">
-              {/* Team Member 1 */}
+              {/* FOUNDING MEMBER */}
               <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="durgesh.jpg" alt="Team Member 3" />
@@ -58,7 +58,7 @@ function About() {
                   </div>
                 </div>
               </div>
-              {/* Team Member 1 */}
+              {/* FOUNDING MEMBER */}
               <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="logo2.png" alt="Team Member 3" />
@@ -69,7 +69,7 @@ function About() {
                   </div>
                 </div>
               </div>
-              {/* Team Member 1 */}
+              {/* FOUNDING MEMBER */}
               <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="logo2.png" alt="Team Member 3" />
@@ -80,7 +80,7 @@ function About() {
                   </div>
                 </div>
               </div>
-              {/* Team Member 1 */}
+              {/* FOUNDING MEMBER */}
               <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="logo2.png" alt="Team Member 3" />
@@ -91,7 +91,7 @@ function About() {
                   </div>
                 </div>
               </div>
-              {/* Team Member 2 */}
+              {/* PRESIDENT */}
               <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="taksh.jpg" alt="Team Member 1" />
@@ -102,18 +102,18 @@ function About() {
                   </div>
                 </div>
               </div>
-              {/* Team Member 3 */}
+              {/* VP */}
               <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="samanyu.jpg" alt="Team Member 2" />
                   <div className={styles.cardContent}>
                     <h3>Samanyu Bhate</h3>
-                    <p>VP</p>
+                    <p>Vice President </p>
                     <a href="https://www.linkedin.com/in/samanyu-bhate-17136b1ab/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
               </div>
-              {/* Team Member 4 */}
+              {/* TREASURER */}
               <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="Brandon.jpg" alt="Team Member 3" />
@@ -124,7 +124,7 @@ function About() {
                   </div>
                 </div>
               </div>
-              {/* Team Member 5 */}
+              {/* GS */}
               <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="grishma.jpg" alt="Team Member 4" />
@@ -135,7 +135,7 @@ function About() {
                   </div>
                 </div>
               </div>
-                {/* Team Member 6 */}
+                {/* TECH TEAM */}
                 <div className="col-md-4">
                   <div className={styles.card}>
                     <img src="kush.jpg" alt="Team Member 5" />
@@ -146,7 +146,7 @@ function About() {
                     </div>
                   </div>
               </div>
-              {/* Team Member 7 */}
+              {/* TECH TEAM */}
               <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="gagan.jpg" alt="Team Member 5" />
@@ -157,7 +157,7 @@ function About() {
                   </div>
                 </div>
               </div>
-              {/* Team Member 8 */}
+              {/*  TECH TEAM  */}
               <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="Purva.png" alt="Team Member 5" />
@@ -168,7 +168,18 @@ function About() {
                   </div>
                 </div>
               </div>
-              {/* Team Member 9 */}
+              {/*  RESEARCH HEAD  */}
+              <div className="col-md-4">
+                <div className={styles.card}>
+                  <img src="logo2.png" alt="Team Member 5" />
+                  <div className={styles.cardContent}>
+                    <h3>Nishad Dhodapkar</h3>
+                    <p>Research Head</p>
+                    <a href="https://www.linkedin.com/search/results/all/?heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAD5_bEsBByIkyzQKkwxpYl7o17vWZzNAtTc&keywords=Purva%20Rana&origin=ENTITY_SEARCH_HOME_HISTORY&sid=ix%40" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+              {/* NON-TECH HEAD  */}
               <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="kavas.png" alt="Team Member 5" />
@@ -179,7 +190,7 @@ function About() {
                   </div>
                 </div>
               </div>
-              {/* Team Member 10 */}
+              {/* NON-TECH HEAD  */}
               <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="Riya.jpg" alt="Team Member 5" />
@@ -190,14 +201,25 @@ function About() {
                   </div>
                 </div>
               </div>
-              {/* Team Member 10 */}
+              {/* NON-TECH HEAD  */}
               <div className="col-md-4">
                 <div className={styles.card}>
-                  <img src="logo2.png" alt="Team Member 5" />
+                  <img src="Richa.jpg" alt="Team Member 5" />
                   <div className={styles.cardContent}>
                     <h3>Richa</h3>
                     <p>Event Operation Head</p>
-                    <a href="https://www.linkedin.com/in/riyakondawar/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/richa-shukla-026516258/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+              {/* FOUNDING MEMBER */}
+              <div className="col-md-4">
+                <div className={styles.card}>
+                  <img src="Parth.jpg" alt="Team Member 3" />
+                  <div className={styles.cardContent}>
+                    <h3>Parth Ware</h3>
+                    <p>Founder</p>
+                    <a href="https://www.linkedin.com/in/parth-ware-48993324a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
               </div>                
