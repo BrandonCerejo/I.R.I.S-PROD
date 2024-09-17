@@ -10,7 +10,6 @@ const PaymentSuccess = () => {
 
     return (
         <div className="payment-success-container">
-            <Header />
             <div className="payment-success-content">
                 <img src="/logo.png" alt="Success Icon" className="success-icon" />
                 <h1>Payment Successful!</h1>

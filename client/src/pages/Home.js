@@ -15,8 +15,6 @@ function Home() {
         Your browser does not support the video tag.
       </video>
 
-      <Header />
-
       <div className={styles.overlay}>
         <main className="flex-grow-1">
           {/* Registration Section */}

@@ -91,7 +91,6 @@ const CheckoutPayment = () => {
 
     return (
         <div className="checkoutPayment">
-            <Header />
             <div className="invoiceCard">
                 <h1>Invoice</h1>
                 <div className="invoiceDetails">

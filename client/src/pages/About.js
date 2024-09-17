@@ -15,8 +15,6 @@ function About() {
       </div>
       <div className={styles.overlay}></div>
 
-      <Header />
-
       <main className={styles.content + ' py-5'}>
         <div className="container">
           <h1 className={styles.title}>About I.R.I.S</h1>

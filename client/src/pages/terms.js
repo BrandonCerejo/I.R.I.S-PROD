@@ -6,7 +6,6 @@ import Footer from '../components/Footer';
 function Terms() {
   return (
     <div className="terms">
-      <Header />
       <main>
         <div className='terms-container'>
           <h1>Terms and Conditions</h1>

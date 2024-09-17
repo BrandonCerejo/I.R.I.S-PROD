@@ -6,9 +6,7 @@ import Footer from '../components/Footer';
 
 function Policy() {
   return (
-    <div className="policy">
-      <Header /> {/* Header component */}
-      
+    <div className="policy"> 
       <main>
         <div className='policy-container'>
           <h1>Our Privacy Policy</h1>

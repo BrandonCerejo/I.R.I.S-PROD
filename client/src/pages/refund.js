@@ -7,7 +7,6 @@ import Footer from '../components/Footer';
 function Refund() {
   return (
     <div className="refund">
-      <Header />
       <main>
         <div className='refund-container'>
           <h1>Refund Policy</h1>

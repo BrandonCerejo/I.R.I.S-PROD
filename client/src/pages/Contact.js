@@ -69,7 +69,6 @@ function Contact() {
         </video>
       </div>
       <div className={styles.overlay}></div>
-      <Header />
       <main className={styles.content}>
         <h1 className={styles.contactUsTitle}>Contact Us</h1>
         <p className={styles.titleDesc}>

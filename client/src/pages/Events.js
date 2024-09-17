@@ -34,7 +34,6 @@ function Events() {
 
   return (
     <div className={styles.events}>
-      <Header />
       <main className={styles.mainContent}>
         <h1 className={styles.title}>Events</h1>
 

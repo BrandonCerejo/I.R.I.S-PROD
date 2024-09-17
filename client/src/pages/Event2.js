@@ -99,8 +99,6 @@ const Event2 = () => {
 
   return (
     <div className="event2">
-      <Header>
-      </Header>
       <main>
         <h1 className="title">Upcoming Event: September Hackathon</h1>
         <p>This is a short description of the event.</p>
