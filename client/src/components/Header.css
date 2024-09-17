@@ -1,17 +1,18 @@
 .header {
   position: relative;
   z-index: 2;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar {
-  background-color: rgba(0, 0, 0, 0.7); /* Default dark color */
-  transition: background-color 0.3s ease; /* Smooth transition */
+  background-color: rgba(0, 0, 0, 0.7); 
   padding: 0.8rem 0;
   align-content: center;
+  transition: background-color 0.3s ease; 
 }
 
 .navbar-dark-scrolled {
-  background-color: rgba(0, 0, 0, 0.9); /* Darker color when scrolled */
+  background-color: rgba(0, 0, 0, 0.9); 
 }
 
 .navbar .container {
@@ -22,7 +23,7 @@
   position: relative;
 }
 
-.navbar-brand{
+.navbar-brand {
   justify-self: center;
 }
 
@@ -39,4 +40,24 @@
 
 .nav-link {
   color: #fffffff2 !important;
+  transition: color 0.3s ease; 
+}
+
+.nav-link.active {
+  color: #007bff; 
+  font-weight: bold; 
+}
+
+.nav-link:hover {
+  color: #ddd; 
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
