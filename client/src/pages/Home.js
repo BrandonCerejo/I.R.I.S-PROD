@@ -26,10 +26,10 @@ function Home() {
                     Register Now
                   </Link>
                   <div className={styles.imageWrapper}>
-                    <img 
-                      src="/bharatgo.png" 
-                      alt="BharatGo" 
-                      className={styles.bharatGoImage} 
+                    <img
+                      src="/bharatgo.png"
+                      alt="BharatGo"
+                      className={styles.bharatGoImage}
                     />
                   </div>
                 </div>

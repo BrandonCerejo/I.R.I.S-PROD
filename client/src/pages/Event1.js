@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './event1.module.css';
 
@@ -10,10 +11,10 @@ const Event1 = () => {
         <main className="container">
           <div className={styles.content}>
             <div className={styles.eventImageContainer}>
-              <img 
-                src="/past-innovation-hackathon.jpg" 
-                alt="Past Innovation Hackathon" 
-                className={styles.eventImage} 
+              <img
+                src="/past-innovation-hackathon.jpg"
+                alt="Past Innovation Hackathon"
+                className={styles.eventImage}
               />
             </div>
             <h1 className={styles.title}>🚀 Inter-Campus Innovation Hackathon Recap 🚀</h1>
@@ -84,7 +85,9 @@ const Event1 = () => {
             <section className={styles.eventRegistration}>
               <h3>Stay Connected 📩</h3>
               <p>If you're interested in participating in future events or have any questions, feel free to reach out to us!</p>
-              <button type="button">Contact Us</button>
+              <Link to="/contact" className={styles.registerBtn}>
+                Contact Us
+              </Link>
             </section>
           </div>
         </main>
