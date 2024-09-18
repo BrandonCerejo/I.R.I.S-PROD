@@ -85,7 +85,7 @@ function About() {
                   <div className={styles.cardContent}>
                     <h3>Raghunandan</h3>
                     <p>Founder</p>
-                    <a href="https://www.linkedin.com/in/durgesh-deore-74a75a281/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
               </div>
