@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Events.module.css'; 
+import styles from './Events.module.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -8,7 +8,7 @@ function Events() {
   const pastEvent = {
     id: 1,
     title: "Innovation Hackathon",
-    description: "The Inter-Campus Open Innovation Hackathon, organized by ASPIRE in collaboration with Engineer's Cradle and MIT-TBI, invites students from Pune campuses to participate in a two-phase competition. Teams of up to two students can register online, submit their innovative ideas, and compete in the internal college round. The top 3 teams from each college will advance to the final hackathon round at MIT-WPU, Pune, where they will develop working prototypes, receive mentorship, and present their solutions to a panel of industry experts. Cash prizes, research support, and potential funding opportunities await the top teams.",
+    description: "The Inter-Campus Open Innovation Hackathon, organized by ASPIRE with Engineer's Cradle, I.R.I.S. and MIT-TBI, gathered Pune students. Teams of up to two registered online and competed at their colleges. The top three teams advanced to the finals at MIT-WPU, where they built prototypes, received mentorship, and pitched to experts. Exciting prizes included cash rewards and funding opportunities.",
     image: "./past-innovation-hackathon.jpg",
     date: "Held on: 15/02/2024",
     time: "",

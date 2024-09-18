@@ -40,7 +40,7 @@ function Home() {
             <div className="container">
               <div className="row align-items-center">
                 <div className="col-lg-6 text-center text-lg-start">
-                  <h1 className={`${styles.wordart} display-3`}>I.R.I.S</h1>
+                  <h1 className={`${styles.wordart} display-3`}>I.R.I.S.</h1>
                   <h2 className="lead">Innovation Research & Intelligence Support</h2>
                   <p className="mb-4">Empowering innovation and fostering technological advancements.</p>
                 </div>
