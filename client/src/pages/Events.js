@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Events.module.css'; 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 function Events() {
   const pastEvent = {
@@ -16,11 +14,17 @@ function Events() {
 
   const upcomingEvent = {
     id: 2,
-    title: "Sept Hackathon",
-    description: "Hackathon details to be added soon. Registration starts from 13th Sept, 2024. Stay Tuned!",
+    title: "IRIS Innovation Hackathon 2024",
+    description: "Organized by: I.R.I.S Club",
     image: "./sephackathon.jpg",
-    date: "To be held on: 26/09/2024 || ",
-    time: "04:00 PM",
+    date: "Dates: September 26-28, 2024",
+    highlights: [
+      "Exciting Prizes: ₹36,000 in BharatGo vouchers for top 3 teams",
+      "Workshops & Mentorship: Expert guidance in Web3, Blockchain, AI, and Data Science",
+      "Networking: Connect with industry leaders and peers",
+      "Collaborative Environment: Innovate and solve real-world problems"
+    ],
+    conclusion: "Join us for a dynamic event that fuels creativity and innovation!"
   };
 
   const podcast = {
@@ -49,6 +53,12 @@ function Events() {
                 <span>{upcomingEvent.date}</span>
                 <span>{upcomingEvent.time}</span>
               </p>
+              <ul>
+                {upcomingEvent.highlights.map((highlight, index) => (
+                  <li key={index}>{highlight}</li>
+                ))}
+              </ul>
+              <p>{upcomingEvent.conclusion}</p>
               <Link to={`/events/${upcomingEvent.id}`} className={styles.btn}>
                 REGISTRATION OPEN!
               </Link>
@@ -99,7 +109,6 @@ function Events() {
           </div>
         </section>
       </main>
-
     </div>
   );
 }

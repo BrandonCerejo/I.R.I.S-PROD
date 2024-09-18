@@ -3,9 +3,6 @@ import { supabase } from '../supabase';
 import './event2.css';
 
 import { useNavigate } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-
 const Event2 = () => {
   const [formData, setFormData] = useState({
     team_name: '',
@@ -101,7 +98,7 @@ const Event2 = () => {
     <div className="event2">
       <main>
         <h1 className="title">Upcoming Event: September Hackathon</h1>
-        <p>This is a short description of the event.</p>
+        <p>Dates: September 26-28, 2024</p>
         <div className="image-container">
           <img src="/sephackathon.jpg" alt="Event 2 Image" className="event-image" />
         </div>
