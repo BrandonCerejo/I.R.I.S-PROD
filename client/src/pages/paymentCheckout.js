@@ -38,7 +38,7 @@ const CheckoutPayment = () => {
                 key: process.env.REACT_APP_RAZORPAY_API_KEY,
                 amount: parseInt(amount * 100), // Amount in paise
                 currency: "INR",
-                name: "I.R.I.S. MIT WPU", 
+                name: "I.R.I.S. MIT WPU",
                 description: "Hackathon Registration Fee",
                 image: "https://avatars.githubusercontent.com/u/160888318?v=4",
                 handler: async function (response) {
