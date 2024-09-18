@@ -31,7 +31,7 @@ const Event1 = () => {
           </div>
         </div>
       </main>
-      
+
       <footer>
         <div className="footer-content">
           <div className="footer-section">
