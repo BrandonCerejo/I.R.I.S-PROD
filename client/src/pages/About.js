@@ -59,11 +59,11 @@ function About() {
               {/* FOUNDING MEMBER */}
               <div className="col-6 col-md-4">
                 <div className={styles.card}>
-                  <img src="logo2.png" alt="Team Member 3" />
+                  <img src="kavish.jpeg" alt="Team Member 3" />
                   <div className={styles.cardContent}>
-                    <h3>Kavish</h3>
+                    <h3>Kavish Jain</h3>
                     <p>Founder</p>
-                    <a href="https://www.linkedin.com/in/durgesh-deore-74a75a281/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/kavish-jain-38b812247/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
               </div>
@@ -162,7 +162,7 @@ function About() {
                   <div className={styles.cardContent}>
                     <h3>Purva Rana</h3>
                     <p>Lead Developer</p>
-                    <a href="https://www.linkedin.com/search/results/all/?heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAD5_bEsBByIkyzQKkwxpYl7o17vWZzNAtTc&keywords=Purva%20Rana&origin=ENTITY_SEARCH_HOME_HISTORY&sid=ix%40" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/purva-rana-b231a0253/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
               </div>
@@ -173,7 +173,7 @@ function About() {
                   <div className={styles.cardContent}>
                     <h3>Nishad Dhodapkar</h3>
                     <p>Research Head</p>
-                    <a href="https://www.linkedin.com/search/results/all/?heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAD5_bEsBByIkyzQKkwxpYl7o17vWZzNAtTc&keywords=Purva%20Rana&origin=ENTITY_SEARCH_HOME_HISTORY&sid=ix%40" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/nishad-dhodapkar/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
               </div>
@@ -224,7 +224,7 @@ function About() {
               {/* FOUNDING MEMBER */}
               <div className="col-6 col-md-4">
                 <div className={styles.card}>
-                  <img src="dhyey.jpeg" alt="Team Member 3" />
+                  <img src="dhyey.jpg" alt="Team Member 3" />
                   <div className={styles.cardContent}>
                     <h3>Dhyey Ladani</h3>
                     <p>Treasurer</p>
