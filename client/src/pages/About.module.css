@@ -135,3 +135,9 @@
 .footerContent a:hover {
   color: #ddd;
 }
+
+@media (max-width: 767.98px) {
+  .card {
+    margin: 0.2rem;
+  }
+}
