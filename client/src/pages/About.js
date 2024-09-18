@@ -70,11 +70,11 @@ function About() {
               {/* FOUNDING MEMBER */}
               <div className="col-6 col-md-4">
                 <div className={styles.card}>
-                  <img src="logo2.png" alt="Team Member 3" />
+                  <img src="chinmay.jpg" alt="Team Member 3" />
                   <div className={styles.cardContent}>
-                    <h3>Chinmay</h3>
+                    <h3>Chinmay Huddar</h3>
                     <p>Founder</p>
-                    <a href="https://www.linkedin.com/in/durgesh-deore-74a75a281/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/chinmay-huddar-3536761ab/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
               </div>
@@ -180,7 +180,7 @@ function About() {
               {/* NON-TECH HEAD  */}
               <div className="col-6 col-md-4">
                 <div className={styles.card}>
-                  <img src="kawas.jpg" alt="Team Member 5" />
+                  <img src="kawas.jpeg" alt="Team Member 5" />
                   <div className={styles.cardContent}>
                     <h3> Kaustubha M</h3>
                     <p>Marketing Head</p>
