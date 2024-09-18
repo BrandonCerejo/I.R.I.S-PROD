@@ -92,7 +92,7 @@ function About() {
               {/* PRESIDENT */}
               <div className="col-6 col-md-4">
                 <div className={styles.card}>
-                  <img src="taksh.jpg" alt="Team Member 1" />
+                  <img src="taksh.jpeg" alt="Team Member 1" />
                   <div className={styles.cardContent}>
                     <h3>Taksh Dhabalia</h3>
                     <p>President</p>
@@ -218,6 +218,17 @@ function About() {
                     <h3>Parth Ware</h3>
                     <p>Founder</p>
                     <a href="https://www.linkedin.com/in/parth-ware-48993324a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+              {/* FOUNDING MEMBER */}
+              <div className="col-6 col-md-4">
+                <div className={styles.card}>
+                  <img src="dhyey.jpeg" alt="Team Member 3" />
+                  <div className={styles.cardContent}>
+                    <h3>Dhyey Ladani</h3>
+                    <p>Treasurer</p>
+                    <a href="https://www.linkedin.com/in/dhyey-ladani/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
               </div>
