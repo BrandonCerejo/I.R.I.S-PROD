@@ -107,6 +107,7 @@ const CheckoutPayment = () => {
                 <div className="rpImage">
                     <img src="/rp.png" alt="Razorpay" />
                 </div>
+                <p className="terms-conditions">*Terms & Conditions apply*</p>
             </div>
         </div>
     );
