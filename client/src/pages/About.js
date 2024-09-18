@@ -204,7 +204,7 @@ function About() {
                 <div className={styles.card}>
                   <img src="Richa.jpg" alt="Team Member 5" />
                   <div className={styles.cardContent}>
-                    <h3>Richa</h3>
+                    <h3>Richa Shukla</h3>
                     <p>Event Operation Head</p>
                     <a href="https://www.linkedin.com/in/richa-shukla-026516258/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
