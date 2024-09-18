@@ -1,19 +1,17 @@
-/* Reset some default styles */
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Event Page Styles */
 .eventPage {
-    font-family: 'Roboto', sans-serif;
     background: url('./event.jpg') no-repeat center center/cover;
     position: relative;
     overflow: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 6rem; /* Space for the header */
+    padding-top: 6rem; 
     color: #fff;
     animation: fadeIn 1.2s ease-in-out;
 }
@@ -34,23 +32,12 @@ body {
     z-index: 1;
 }
 
-.overlay {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(23, 37, 90, 0.8), rgba(201, 64, 101, 0.8));
-    z-index: 1;
-}
-
 .content {
     position: relative;
     z-index: 2;
     margin: 0 auto;
     padding: 40px;
-    background-color: rgba(0, 0, 0, 0.6); /* Darker background for better readability */
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -58,13 +45,16 @@ body {
 
 .content:hover {
     transform: scale(1.02);
-    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker on hover */
+    background-color: rgba(0, 0, 0, 0.7); 
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+.eventImage {
+    width: auto;
+    height:auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    align-items:center ;
+    align-content:center;
 }
 
 .title {
@@ -77,11 +67,6 @@ body {
     animation: titleAnimation 1s ease-in-out;
 }
 
-@keyframes titleAnimation {
-    from { transform: translateY(-30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
 .subtitle {
     font-size: 2rem;
     font-weight: bold;
@@ -90,10 +75,15 @@ body {
     color: #fff;
 }
 
+@keyframes titleAnimation {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
 .eventDetails, .eventIntro, .eventJourney, .eventHighlights, .eventRewards, .eventRules, .eventSignificance {
     margin-bottom: 40px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.4); /* Darker background with more opacity for consistency */
+    background-color: rgba(0, 0, 0, 0.4); 
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -121,7 +111,7 @@ body {
     margin-top: 20px;
 }
 
-button[type="submit"] {
+button[type="button"] {
     background-color: #ea3f80;
     color: #ffffff;
     padding: 0.75rem 2rem;
@@ -135,7 +125,7 @@ button[type="submit"] {
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-button[type="submit"]:hover {
+button[type="button"]:hover {
     background-color: #d6336c;
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
