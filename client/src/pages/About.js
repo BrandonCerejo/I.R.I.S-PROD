@@ -136,7 +136,7 @@ function About() {
               {/* TECH TEAM */}
               <div className="col-6 col-md-4">
                 <div className={styles.card}>
-                  <img src="kush.jpg" alt="Team Member 5" />
+                  <img src="Kush.jpg" alt="Team Member 5" />
                   <div className={styles.cardContent}>
                     <h3>Kushagra Singh</h3>
                     <p>Lead Developer</p>
@@ -180,7 +180,7 @@ function About() {
               {/* NON-TECH HEAD  */}
               <div className="col-6 col-md-4">
                 <div className={styles.card}>
-                  <img src="kavas.png" alt="Team Member 5" />
+                  <img src="kawas.jpg" alt="Team Member 5" />
                   <div className={styles.cardContent}>
                     <h3> Kaustubha M</h3>
                     <p>Marketing Head</p>
