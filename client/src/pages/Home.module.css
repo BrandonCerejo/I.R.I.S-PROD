@@ -132,3 +132,9 @@ html, body {
     max-width: 100%;
   }
 }
+
+.bharatGoImage {
+  width: 160px; 
+  height: auto; 
+  margin-top: 10px; 
+}

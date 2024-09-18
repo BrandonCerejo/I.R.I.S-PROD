@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import styles from './Home.module.css';
 import videoSource from './vid1.mp4';
 import backgroundVideo from './vid2.mp4';
@@ -27,6 +25,13 @@ function Home() {
                   <Link to="/events/2" className={styles.registerBtn}>
                     Register Now
                   </Link>
+                  <div className={styles.imageWrapper}>
+                    <img 
+                      src="/bharatgo.png" 
+                      alt="BharatGo" 
+                      className={styles.bharatGoImage} 
+                    />
+                  </div>
                 </div>
                 <div className="col-lg-6 text-center">
                   <img src={smallPhoto} alt="Join Now" className={styles.registrationPhoto} />
@@ -80,8 +85,6 @@ function Home() {
             </div>
           </div>
         </main>
-
-        
       </div>
     </div>
   );
