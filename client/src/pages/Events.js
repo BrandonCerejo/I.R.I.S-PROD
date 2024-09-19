@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Events.module.css'; 
+import styles from './Events.module.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -17,9 +17,9 @@ function Events() {
   const upcomingEvent = {
     id: 2,
     title: "IRIS Innovation Hackathon 2024",
-    description: "Organized by: I.R.I.S Club",
+    description: "-> Organized by: I.R.I.S. Club",
     image: "./sephackathon.jpg",
-    date: "Dates: September 26-28, 2024",
+    date: "-> Dates: September 26-28, 2024",
     highlights: [
       "Exciting Prizes: ₹36,000 in BharatGo vouchers for top 3 teams",
       "Workshops & Mentorship: Expert guidance in Web3, Blockchain, AI, and Data Science",
@@ -50,8 +50,8 @@ function Events() {
             <div key={upcomingEvent.id} className={styles.eventCard}>
               <img src={upcomingEvent.image} alt={upcomingEvent.title} />
               <h2>{upcomingEvent.title}</h2>
-              <p>{upcomingEvent.description}</p>
-              <p>
+              <p className={styles.centeredText}>{upcomingEvent.description}</p>
+              <p className={styles.centeredText}>
                 <span>{upcomingEvent.date}</span>
                 <span>{upcomingEvent.time}</span>
               </p>

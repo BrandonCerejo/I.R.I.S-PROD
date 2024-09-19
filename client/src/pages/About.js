@@ -45,6 +45,28 @@ function About() {
           <div className={styles.teamMembers + ' p-4'}>
             <h2>Team Members</h2>
             <div className="row">
+              {/* FACULTY MENTOR 1 */}
+              <div className="col-md-4">
+                <div className={styles.card}>
+                  <img src="shamlaMaam.jpeg" alt="Team Member 3" />
+                  <div className={styles.cardContent}>
+                    <h3>Shamla Mantri</h3>
+                    <p>Associate Professor</p>
+                    <a href="https://scholar.google.com/citations?user=IUUENAMAAAAJ&hl=en" className={styles.button} target="_blank" rel="noopener noreferrer">Scholar Profile</a>
+                  </div>
+                </div>
+              </div>
+              {/* FACULTY MENTOR 2 */}
+              <div className="col-md-4">
+                <div className={styles.card}>
+                  <img src="yogeshSir.jpg" alt="Team Member 3" />
+                  <div className={styles.cardContent}>
+                    <h3>Dr. Yogesh Kulkarni</h3>
+                    <p>Assistant Professor</p>
+                    <a href="https://scholar.google.com/citations?user=9GsTeoQAAAAJ&hl=en" className={styles.button} target="_blank" rel="noopener noreferrer">Scholar Profile</a>
+                  </div>
+                </div>
+              </div>
               {/* FOUNDING MEMBER */}
               <div className="col-md-4">
                 <div className={styles.card}>
@@ -229,28 +251,6 @@ function About() {
                     <h3>Dhyey Ladani</h3>
                     <p>Treasurer</p>
                     <a href="https://www.linkedin.com/in/dhyey-ladani/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                  </div>
-                </div>
-              </div>
-              {/* FACULTY MENTOR 1 */}
-              <div className="col-md-4">
-                <div className={styles.card}>
-                  <img src="shamlaMaam.jpeg" alt="Team Member 3" />
-                  <div className={styles.cardContent}>
-                    <h3>Shamla Mantri</h3>
-                    <p>Associate Professor</p>
-                    <a href="https://scholar.google.com/citations?user=IUUENAMAAAAJ&hl=en" className={styles.button} target="_blank" rel="noopener noreferrer">Scholar Profile</a>
-                  </div>
-                </div>
-              </div>
-              {/* FACULTY MENTOR 2 */}
-              <div className="col-md-4">
-                <div className={styles.card}>
-                  <img src="yogeshSir.jpg" alt="Team Member 3" />
-                  <div className={styles.cardContent}>
-                    <h3>Dr. Yogesh Kulkarni</h3>
-                    <p>Assistant Professor</p>
-                    <a href="https://scholar.google.com/citations?user=9GsTeoQAAAAJ&hl=en" className={styles.button} target="_blank" rel="noopener noreferrer">Scholar Profile</a>
                   </div>
                 </div>
               </div>
