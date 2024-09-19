@@ -97,7 +97,7 @@ const Event2 = () => {
   return (
     <div className="event2">
       <main>
-        <h1 className="title">Upcoming Event: September Hackathon</h1>
+        <h1 className="title">Upcoming Event: INNOVATION HACKATHON</h1>
         <p>Dates: September 26-28, 2024</p>
         <div className="image-container">
           <img src="/sephackathon.jpg" alt="Event 2 Image" className="event-image" />
