@@ -42,31 +42,38 @@ function About() {
             <h2>Our Vision</h2>
             <p>To be the leading tech community that drives technological advancements and shapes the future of innovation.</p>
           </div>
+          <div className="row">
+            <div className="col-md-6">
+              {/* Faculty Mentor 1 */}
+              <div className={styles.mentor}>
+                <img src="shamlaMaam.jpeg" alt="Shamla Mantri" className={styles.mentorImage} />
+                <div className={styles.mentorInfo}>
+                  <h3>Shamla Mantri</h3>
+                  <p>Associate Professor</p>
+                  <a href="https://scholar.google.com/citations?user=IUUENAMAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+                    Scholar Profile
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6">
+              {/* Faculty Mentor 2 */}
+              <div className={styles.mentor}>
+                <img src="yogeshSir.jpg" alt="Dr.Yogesh Kulkarni" className={styles.mentorImage} />
+                <div className={styles.mentorInfo}>
+                  <h3>Dr. Yogesh Kulkarni</h3>
+                  <p>Associate Professor</p>
+                  <a href="https://scholar.google.com/citations?user=9GsTeoQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+                    Scholar Profile
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className={styles.teamMembers + ' p-4'}>
             <h2>Team Members</h2>
             <div className="row">
-              {/* FACULTY MENTOR 1 */}
-              <div className="col-md-4">
-                <div className={styles.card}>
-                  <img src="shamlaMaam.jpeg" alt="Team Member 3" />
-                  <div className={styles.cardContent}>
-                    <h3>Shamla Mantri</h3>
-                    <p>Associate Professor</p>
-                    <a href="https://scholar.google.com/citations?user=IUUENAMAAAAJ&hl=en" className={styles.button} target="_blank" rel="noopener noreferrer">Scholar Profile</a>
-                  </div>
-                </div>
-              </div>
-              {/* FACULTY MENTOR 2 */}
-              <div className="col-md-4">
-                <div className={styles.card}>
-                  <img src="yogeshSir.jpg" alt="Team Member 3" />
-                  <div className={styles.cardContent}>
-                    <h3>Dr. Yogesh Kulkarni</h3>
-                    <p>Assistant Professor</p>
-                    <a href="https://scholar.google.com/citations?user=9GsTeoQAAAAJ&hl=en" className={styles.button} target="_blank" rel="noopener noreferrer">Scholar Profile</a>
-                  </div>
-                </div>
-              </div>
+              
               {/* FOUNDING MEMBER */}
               <div className="col-md-4">
                 <div className={styles.card}>
@@ -191,7 +198,7 @@ function About() {
               {/*  RESEARCH HEAD  */}
               <div className="col-md-4">
                 <div className={styles.card}>
-                  <img src="logo2.png" alt="Team Member 5" />
+                  <img src="nishad.jpg" alt="Team Member 5" />
                   <div className={styles.cardContent}>
                     <h3>Nishad Dhodapkar</h3>
                     <p>Research Head</p>
