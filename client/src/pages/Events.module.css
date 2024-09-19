@@ -24,17 +24,17 @@
   position: relative;
   z-index: 2;
   padding: 2rem;
-  color: #000; /* Set main text color to black */
+  color: #000; 
 }
 
 .title {
-  color: #000; /* Title color set to black */
+  color: #f8f2f2; 
   text-align: center;
   margin-bottom: 2rem;
 }
 
 .upcoming, .past, .podcastTitle {
-  color: #000; /* Set section headers to black */
+  color: #f1eded; 
   margin-top: 2rem;
 }
 
@@ -50,10 +50,11 @@
   width: 100%;
   max-width: 600px;
   margin-bottom: 2rem;
-  background-color: rgba(255, 255, 255, 0.9); /* Make background lighter for better contrast */
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .eventCard img {
@@ -65,27 +66,27 @@
 .eventCard h2 {
   padding: 1rem;
   margin: 0;
-  color: #000; /* Title in the card set to black */
+  color: #000; 
 }
 
 .eventCard p {
   padding: 0 1rem 1rem;
-  color: #333; /* Description color set to dark gray */
+  color: #333; 
+  text-align: center;
 }
 
-.btn {
+.eventCard .btn {
   display: inline-block;
   background-color: #007bff !important;
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  align-items: center;
   margin: 0 1rem 1rem;
   transition: background-color 0.2s ease-in-out;
 }
 
-.btn:hover {
+.eventCard .btn:hover {
   background-color: #0056b3 !important;
   color: #f7f7f7 !important;
 }

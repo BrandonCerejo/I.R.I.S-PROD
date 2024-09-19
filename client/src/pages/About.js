@@ -46,7 +46,7 @@ function About() {
             <h2>Team Members</h2>
             <div className="row">
               {/* FOUNDING MEMBER */}
-              <div className="col-6 col-md-4">
+              <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="durgesh.jpg" alt="Team Member 3" />
                   <div className={styles.cardContent}>
@@ -57,7 +57,7 @@ function About() {
                 </div>
               </div>
               {/* FOUNDING MEMBER */}
-              <div className="col-6 col-md-4">
+              <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="kavish.jpeg" alt="Team Member 3" />
                   <div className={styles.cardContent}>
@@ -68,7 +68,7 @@ function About() {
                 </div>
               </div>
               {/* FOUNDING MEMBER */}
-              <div className="col-6 col-md-4">
+              <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="chinmay.jpg" alt="Team Member 3" />
                   <div className={styles.cardContent}>
@@ -79,7 +79,7 @@ function About() {
                 </div>
               </div>
               {/* FOUNDING MEMBER */}
-              <div className="col-6 col-md-4">
+              <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="logo2.png" alt="Team Member 3" />
                   <div className={styles.cardContent}>
@@ -89,8 +89,8 @@ function About() {
                   </div>
                 </div>
               </div>
-              {/* PRESIDENT */}
-              <div className="col-6 col-md-4">
+              {/* President */}
+              <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="taksh.jpeg" alt="Team Member 1" />
                   <div className={styles.cardContent}>
@@ -100,8 +100,8 @@ function About() {
                   </div>
                 </div>
               </div>
-              {/* VP */}
-              <div className="col-6 col-md-4">
+              {/* Vice President */}
+              <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="samanyu.jpg" alt="Team Member 2" />
                   <div className={styles.cardContent}>
@@ -112,7 +112,7 @@ function About() {
                 </div>
               </div>
               {/* TREASURER */}
-              <div className="col-6 col-md-4">
+              <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="Brandon.jpg" alt="Team Member 3" />
                   <div className={styles.cardContent}>
@@ -123,18 +123,18 @@ function About() {
                 </div>
               </div>
               {/* GS */}
-              <div className="col-6 col-md-4">
+              <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="grishma.jpg" alt="Team Member 4" />
                   <div className={styles.cardContent}>
                     <h3>Grishma Shinde</h3>
-                    <p>General Secratory</p>
+                    <p>General Secretary</p>
                     <a href="https://www.linkedin.com/in/grishma-shinde-835343294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
               </div>
               {/* TECH TEAM */}
-              <div className="col-6 col-md-4">
+              <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="Kush.jpg" alt="Team Member 5" />
                   <div className={styles.cardContent}>
@@ -145,7 +145,7 @@ function About() {
                 </div>
               </div>
               {/* TECH TEAM */}
-              <div className="col-6 col-md-4">
+              <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="gagan.jpg" alt="Team Member 5" />
                   <div className={styles.cardContent}>
@@ -156,7 +156,7 @@ function About() {
                 </div>
               </div>
               {/*  TECH TEAM  */}
-              <div className="col-6 col-md-4">
+              <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="Purva.png" alt="Team Member 5" />
                   <div className={styles.cardContent}>
@@ -167,7 +167,7 @@ function About() {
                 </div>
               </div>
               {/*  RESEARCH HEAD  */}
-              <div className="col-6 col-md-4">
+              <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="logo2.png" alt="Team Member 5" />
                   <div className={styles.cardContent}>
@@ -178,7 +178,7 @@ function About() {
                 </div>
               </div>
               {/* NON-TECH HEAD  */}
-              <div className="col-6 col-md-4">
+              <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="kawas.jpeg" alt="Team Member 5" />
                   <div className={styles.cardContent}>
@@ -189,7 +189,7 @@ function About() {
                 </div>
               </div>
               {/* NON-TECH HEAD  */}
-              <div className="col-6 col-md-4">
+              <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="Riya.jpg" alt="Team Member 5" />
                   <div className={styles.cardContent}>
@@ -200,7 +200,7 @@ function About() {
                 </div>
               </div>
               {/* NON-TECH HEAD  */}
-              <div className="col-6 col-md-4">
+              <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="Richa.jpg" alt="Team Member 5" />
                   <div className={styles.cardContent}>
@@ -211,7 +211,7 @@ function About() {
                 </div>
               </div>
               {/* FOUNDING MEMBER */}
-              <div className="col-6 col-md-4">
+              <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="Parth.jpg" alt="Team Member 3" />
                   <div className={styles.cardContent}>
@@ -222,7 +222,7 @@ function About() {
                 </div>
               </div>
               {/* FOUNDING MEMBER */}
-              <div className="col-6 col-md-4">
+              <div className="col-md-4">
                 <div className={styles.card}>
                   <img src="dhyey.jpg" alt="Team Member 3" />
                   <div className={styles.cardContent}>
