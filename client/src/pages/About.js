@@ -58,10 +58,10 @@ function About() {
               <div className={styles.mentor}>
                 <img src="shamlaMaam.jpeg" alt="Shamla Mantri" className={styles.mentorImage} />
                 <div className={styles.mentorInfo}>
-                  <h3>Shamla Mantri</h3>
+                  <h3>Dr. Shamla Mantri</h3>
                   <p>Associate Professor</p>
                   <a href="https://scholar.google.com/citations?user=IUUENAMAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-                    Scholar Profile
+                    View Profile
                   </a>
                 </div>
               </div>
@@ -74,7 +74,7 @@ function About() {
                   <h3>Dr. Yogesh Kulkarni</h3>
                   <p>Associate Professor</p>
                   <a href="https://scholar.google.com/citations?user=9GsTeoQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-                    Scholar Profile
+                    View Profile
                   </a>
                 </div>
               </div>
@@ -266,7 +266,7 @@ function About() {
                   <img src="dhyey.jpg" alt="Team Member 3" />
                   <div className={styles.cardContent}>
                     <h3>Dhyey Ladani</h3>
-                    <p>Treasurer</p>
+                    <p>Founder</p>
                     <a href="https://www.linkedin.com/in/dhyey-ladani/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
