@@ -53,6 +53,7 @@ function About() {
             <p>To be the leading tech community that drives technological advancements and shapes the future of innovation.</p>
           </div>
           <div className="row">
+          <h2>Faculty Mentors</h2>
             <div className="col-md-6">
               {/* Faculty Mentor 1 */}
               <div className={styles.mentor}>

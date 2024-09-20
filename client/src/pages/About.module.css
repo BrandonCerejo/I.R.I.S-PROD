@@ -49,7 +49,10 @@
   margin-bottom: 40px;
 }
 
-.contactInfo, .mission, .vision, .teamMembers {
+.contactInfo,
+.mission,
+.vision,
+.teamMembers {
   background: linear-gradient(to right, rgba(23, 37, 90, 0.8), rgba(201, 64, 101, 0.8));
   color: #f5f5f5;
   padding: 2rem;
@@ -58,12 +61,18 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contactInfo:hover, .mission:hover, .vision:hover, .teamMembers:hover {
+.contactInfo:hover,
+.mission:hover,
+.vision:hover,
+.teamMembers:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.contactInfo h2, .mission h2, .vision h2, .teamMembers h2 {
+.contactInfo h2,
+.mission h2,
+.vision h2,
+.teamMembers h2 {
   color: #f5f5f5;
 }
 
@@ -76,7 +85,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  height: 400px; 
+  height: 400px;
 }
 
 .card:hover {
@@ -136,41 +145,13 @@
   color: #ddd;
 }
 
-@media (max-width: 767.98px) {
-  .mentor {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; /* Center horizontally */
-    text-align: center; 
-    padding: 10px; 
-    margin-bottom: 1.5rem; /* Ensure there's space between mentors */
-  }
-
-  .mentorImage {
-    width: 120px; 
-    height: 120px; 
-    margin: 0 auto 1rem; /* Center image and add margin below */
-    border-radius: 50%; /* Keep the circular image */
-    border: 1px solid #fff; /* Optional border */
-  }
-
-  .mentorInfo {
-    text-align: center; 
-  }
-
-  .mentorInfo a {
-    padding: 8px 16px; 
-    font-size: 0.9rem; 
-  }
-}
-
 .mentor {
   display: flex;
-  flex-direction: column; /* Ensure it stacks vertically */
-  align-items: center; /* Center items */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center horizontally */
   margin-bottom: 1.5rem;
-  background: linear-gradient(to right, rgba(23, 37, 90, 0.8), rgba(201, 64, 101, 0.8)); 
-  border-radius: 10px; 
+  background: linear-gradient(to right, rgba(23, 37, 90, 0.8), rgba(201, 64, 101, 0.8));
+  border-radius: 10px;
   padding: 15px 7px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -180,11 +161,11 @@
   height: 150px; 
   object-fit: cover; 
   border-radius: 50%; 
-  margin-bottom: 1rem; /* Margin below image */
+  margin-bottom: 1rem; /* Space between image and text */
 }
 
 .mentorInfo {
-  flex: 1;
+  text-align: center; /* Center text in mentorInfo */
 }
 
 .mentorInfo h3 {
@@ -198,7 +179,6 @@
   color: #ffffff;
 }
 
-
 .mentorInfo a {
   display: inline-block; 
   background-color: #007bff; 
@@ -207,11 +187,35 @@
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  width: 150px;
-  text-align: center; 
+  width: 150px; /* Fixed width for consistent button size */
+  text-align: center; /* Center button text */
+  margin-top: 1rem; /* Space above button */
 }
 
 .mentorInfo a:hover {
   background-color: #0056b3;
   transform: scale(1.05);
+}
+
+@media (max-width: 767.98px) {
+  .mentor {
+    /* Ensure that mentor is centered on mobile */
+    align-items: center; /* Keep items centered */
+    text-align: center; /* Center text */
+    padding: 10px; 
+    margin-bottom: 1.5rem; /* Ensure there's space between mentors */
+  }
+
+  .mentorImage {
+    width: 120px; 
+    height: 120px; 
+    margin: 0 auto 1rem; /* Center image and add margin below */
+    border-radius: 50%; /* Keep the circular image */
+    border: 1px solid #fff; /* Optional border */
+  }
+
+  .mentorInfo a {
+    padding: 8px 16px; 
+    font-size: 0.9rem; 
+  }
 }
