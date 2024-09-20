@@ -93,6 +93,7 @@ const CheckoutPayment = () => {
         <div className="checkoutPayment">
             <div className="invoiceCard">
                 <h1>Invoice</h1>
+                <h3>*Please DO NOT Refresh until Payment Successful*</h3>
                 <div className="invoiceDetails">
                     <p><strong>Event Registration Fee:</strong> INR 250</p>
                     <p><strong>Taxes:</strong> Included</p>

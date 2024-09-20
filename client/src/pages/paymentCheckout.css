@@ -40,6 +40,13 @@
   font-weight: bold;
 }
 
+.invoiceCard h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: red;
+  font-weight: bold;
+}
+
 .invoiceDetails {
   text-align: left;
   margin-bottom: 1.5rem;

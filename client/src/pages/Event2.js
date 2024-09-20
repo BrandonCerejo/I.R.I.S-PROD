@@ -128,6 +128,7 @@ const Event2 = () => {
         <div className="checkout-box">
           <h2 className="title2">*Registration Fee: INR 250*</h2>
           <form onSubmit={handleSubmit}>
+            <h5 className="warning">*Please DO NOT Refresh until Payment Successful*</h5>
             <h3 className="centered-header">Team Information:</h3>
             {errors.team_name && <div className="error-text">{errors.team_name}</div>}
             <input
