@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { supabase } from '../supabase';
 import './event2.css';
-import { useNavigate } from 'react-router-dom';
 
+import { useNavigate } from 'react-router-dom';
 const Event2 = () => {
   const [formData, setFormData] = useState({
     team_name: '',
@@ -29,6 +29,7 @@ const Event2 = () => {
   });
 
   const [errors, setErrors] = useState({});
+
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -44,53 +45,30 @@ const Event2 = () => {
     const phoneRegex = /^\d{10}$/;
     const prnRegex = /^\d{10}$/;
 
-    // Validate team name
-    if (formData.team_name.trim() === '') {
-      newErrors.team_name = 'Team name is required';
-    }
-
-    // Basic validation for leader
-    const leaderRequiredFields = [
-      'leader_name', 'leader_phone', 'leader_email', 'leader_prn', 'leader_branch'
+    const requiredFields = [
+      'team_name', 'leader_name', 'leader_phone', 'leader_email', 'leader_prn',
+      'leader_branch', 'member2_name', 'member2_phone', 'member2_email', 'member2_prn',
+      'member2_branch', 'member3_name', 'member3_phone', 'member3_email', 'member3_prn',
+      'member3_branch', 'member4_name', 'member4_phone', 'member4_email', 'member4_prn',
+      'member4_branch'
     ];
 
-    leaderRequiredFields.forEach((key) => {
+    requiredFields.forEach((key) => {
       if (formData[key].trim() === '') {
         newErrors[key] = 'This field is required';
       }
     });
 
-    // Check if at least one member is filled
-    const memberFilled =
-      formData.member2_name.trim() !== '' ||
-      formData.member3_name.trim() !== '' ||
-      formData.member4_name.trim() !== '';
-
-    if (!memberFilled) {
-      newErrors.member2_name = 'At least one member is required';
-    }
-
-    // Validate branch for the first filled member only
-    if (formData.member2_name.trim() !== '' && formData.member2_branch.trim() === '') {
-      newErrors.member2_branch = 'Member 2 branch is required';
-    }
-    if (formData.member3_name.trim() !== '' && formData.member3_branch.trim() === '') {
-      newErrors.member3_branch = 'Member 3 branch is required';
-    }
-    if (formData.member4_name.trim() !== '' && formData.member4_branch.trim() === '') {
-      newErrors.member4_branch = 'Member 4 branch is required';
-    }
-
-    // Validate PRN fields only if they are filled
+    // Validate PRN fields
     ['leader_prn', 'member2_prn', 'member3_prn', 'member4_prn'].forEach((key) => {
-      if (!prnRegex.test(formData[key]) && formData[key].trim() !== '') {
+      if (!prnRegex.test(formData[key])) {
         newErrors[key] = 'Enter valid PRN';
       }
     });
 
-    // Validate phone numbers only if they are filled
+    // Validate phone numbers
     ['leader_phone', 'member2_phone', 'member3_phone', 'member4_phone'].forEach((key) => {
-      if (!phoneRegex.test(formData[key]) && formData[key].trim() !== '') {
+      if (!phoneRegex.test(formData[key])) {
         newErrors[key] = 'Enter valid 10 digits number';
       }
     });
@@ -119,8 +97,7 @@ const Event2 = () => {
   return (
     <div className="event2">
       <main>
-        <h1 className="title">Upcoming Event</h1>
-        <h1 className="title">INNOVATION HACKATHON 2024</h1>
+        <h1 className="title">Upcoming Event: INNOVATION HACKATHON</h1>
         <p>Dates: September 26-28, 2024</p>
         <div className="image-container">
           <img src="/sephackathon.jpg" alt="Event 2 Image" className="event-image" />
@@ -128,7 +105,6 @@ const Event2 = () => {
         <div className="checkout-box">
           <h2 className="title2">*Registration Fee: INR 250*</h2>
           <form onSubmit={handleSubmit}>
-            <h5 className="warning">*Please DO NOT Refresh until Payment Successful*</h5>
             <h3 className="centered-header">Team Information:</h3>
             {errors.team_name && <div className="error-text">{errors.team_name}</div>}
             <input
@@ -172,7 +148,6 @@ const Event2 = () => {
               onChange={handleChange}
               placeholder="Leader PRN"
             />
-            {errors.leader_branch && <div className="error-text">{errors.leader_branch}</div>}
             <input
               type="text"
               name="leader_branch"
@@ -214,7 +189,6 @@ const Event2 = () => {
               onChange={handleChange}
               placeholder="PRN"
             />
-            {errors.member2_branch && <div className="error-text">{errors.member2_branch}</div>}
             <input
               type="text"
               name="member2_branch"
@@ -256,7 +230,6 @@ const Event2 = () => {
               onChange={handleChange}
               placeholder="PRN"
             />
-            {errors.member3_branch && <div className="error-text">{errors.member3_branch}</div>}
             <input
               type="text"
               name="member3_branch"
@@ -264,7 +237,6 @@ const Event2 = () => {
               onChange={handleChange}
               placeholder="Branch | Ex: SYCSE Core"
             />
-
             <h3 className="centered-header">Member 4:</h3>
             {errors.member4_name && <div className="error-text">{errors.member4_name}</div>}
             <input
@@ -298,7 +270,6 @@ const Event2 = () => {
               onChange={handleChange}
               placeholder="PRN"
             />
-            {errors.member4_branch && <div className="error-text">{errors.member4_branch}</div>}
             <input
               type="text"
               name="member4_branch"
