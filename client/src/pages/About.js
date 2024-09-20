@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import styles from './About.module.css';
 import backgroundVideo from './vid2.mp4';
 
 function About() {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []);
+
   return (
     <div className={styles.aboutUs}>
       <div className={styles.videoBackground}>
@@ -70,10 +80,10 @@ function About() {
               </div>
             </div>
           </div>
-          <div className={styles.teamMembers + ' p-4'}>
+          <div id="team-members" className={styles.teamMembers + ' p-4'}>
             <h2>Team Members</h2>
             <div className="row">
-              
+
               {/* FOUNDING MEMBER */}
               <div className="col-md-4">
                 <div className={styles.card}>

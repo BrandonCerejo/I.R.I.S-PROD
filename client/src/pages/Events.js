@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Events.module.css';
 import Header from '../components/Header';
@@ -37,6 +37,16 @@ function Events() {
     date: "2024-03-14 || ",
     length: "Length: 21 mins 02 secs",
   };
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []);
 
   return (
     <div className={styles.events}>
@@ -88,7 +98,7 @@ function Events() {
         </section>
 
         {/* Podcast Section */}
-        <section className={styles.podcasts}>
+        <section id="podcasts" className={styles.podcasts}>
           <h2 className={styles.podcastTitle}>Podcasts</h2>
           <div className={styles.eventList}>
             <div key={podcast.id} className={styles.eventCard}>

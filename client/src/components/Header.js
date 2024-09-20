@@ -37,7 +37,7 @@ function Header() {
   // Function to handle navbar link click, ensuring collapse closes on mobile view
   const handleNavLinkClick = () => {
     const navbarCollapse = document.getElementById('navbarSupportedContent');
-    
+
     // Check if the collapse is already shown (expanded)
     if (navbarCollapse.classList.contains('show')) {
       const bsCollapse = new window.bootstrap.Collapse(navbarCollapse, {

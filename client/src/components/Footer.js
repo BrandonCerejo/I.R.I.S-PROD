@@ -11,14 +11,14 @@ function Footer() {
                 <h5 className="py-2">About</h5>
                 <ul className="list-unstyled">
                   <li><Link to="/about" className="text-light">Club</Link></li>
-                  <li><Link to="/about" className="text-light">Our Team</Link></li>
+                  <li><Link to="/about#team-members" className="text-light">Our Team</Link></li>
                 </ul>
               </div>
               <div className="col-md-3 px-5">
                 <h5 className="py-2">Events</h5>
                 <ul className="list-unstyled">
                   <li><Link to="/events" className="text-light">Hackathons</Link></li>
-                  <li><Link to="/events" className="text-light">Podcasts</Link></li>
+                  <li><Link to="/events#podcasts" className="text-light">Podcasts</Link></li>
                 </ul>
               </div>
               <div className="col-md-3 px-5">

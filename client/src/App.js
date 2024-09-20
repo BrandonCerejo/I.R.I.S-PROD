@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { supabase } from './supabase'; 
+import { supabase } from './supabase';
 import { BrowserRouter as Router } from 'react-router-dom';
 import styles from './pages/Contact.module.css';
 import backgroundVideo from './pages/vid2.mp4';
@@ -13,7 +13,7 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <AppRouter /> {/* This does not need its own Router */}
+        <AppRouter />
         <Footer />
         <Analytics />
       </div>
@@ -44,7 +44,7 @@ function Contact() {
       const { data, error } = await supabase
         .from('contacts') // Assuming your table is called 'contacts'
         .select('*');
-      
+
       if (error) {
         console.error('Error fetching data:', error);
       } else {
@@ -67,7 +67,7 @@ function Contact() {
         ...formData,
         created_at: new Date().toISOString(),
       };
-      
+
       console.log('Inserting data into Supabase...');
       // Insert form data into Supabase
       const { data, error } = await supabase
