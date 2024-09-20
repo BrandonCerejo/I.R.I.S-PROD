@@ -72,7 +72,7 @@ function About() {
                 <img src="yogeshSir.jpg" alt="Dr.Yogesh Kulkarni" className={styles.mentorImage} />
                 <div className={styles.mentorInfo}>
                   <h3>Dr. Yogesh Kulkarni</h3>
-                  <p>Associate Professor</p>
+                  <p>Assistant Professor</p>
                   <a href="https://scholar.google.com/citations?user=9GsTeoQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
                     View Profile
                   </a>
