@@ -19,8 +19,9 @@ function Home() {
           <div className={`${styles.registration} d-flex align-items-center justify-content-center`}>
             <div className="container text-center">
               <div className="row align-items-center">
+                <h2 className={`${styles.registrationTitle} display-4`}>Innovation Hackathon</h2>
                 <div className="col-lg-6 text-center text-lg-start">
-                  <h2 className={`${styles.registrationTitle} display-4`}>Innovation Hackathon</h2>
+                  <h2 className={`${styles.registrationDate} display-4`}>September 26-28 2024</h2>
                   <div className={styles.transparentBox}>
                     <a
                       href="/IRIS Hackathon GUIDELINES for participants.pdf"
