@@ -25,7 +25,7 @@ const CheckoutPayment = () => {
     };
 
     const handlePayment = async () => {
-        let amount = 250; // Amount in INR
+        let amount = 1; // Amount in INR
         const res = await loadScript("https://checkout.razorpay.com/v1/checkout.js");
 
         if (!res) {
