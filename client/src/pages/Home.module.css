@@ -115,6 +115,26 @@ html, body {
   background: #c94065;
 }
 
+.transparentBox {
+  background-color: rgba(255, 255, 255, 0.15); 
+  padding: 15px; 
+  border-radius: 8px; 
+  margin: 20px 0; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.downloadLink {
+  display: block; 
+  margin: 10px 0; 
+  color: #fff; 
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.downloadLink:hover {
+  color: #d6336c; 
+}
+
 @media only screen and (max-width: 768px) {
   .hero h1 {
     font-size: 3rem;
@@ -130,6 +150,14 @@ html, body {
 
   .heroVideo {
     max-width: 100%;
+  }
+  
+  .downloadLink {
+    display: block;
+  }
+
+  .registrationPhoto {
+    max-width: 80%; 
   }
 }
 

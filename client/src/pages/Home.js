@@ -21,7 +21,25 @@ function Home() {
               <div className="row align-items-center">
                 <div className="col-lg-6 text-center text-lg-start">
                   <h2 className={`${styles.registrationTitle} display-4`}>Innovation Hackathon</h2>
-                  <p className="lead">Be part of the innovation and research.</p>
+                  <div className={styles.transparentBox}>
+                    <a
+                      href="/IRIS Hackathon GUIDELINES for participants.pdf"
+                      download="IRIS Hackathon GUIDELINES.pdf"
+                      className={`${styles.downloadLink} me-2`}
+                    >
+                      Innovation Hackathon GUIDELINES
+                    </a>
+                    <a
+                      href="/Innovation Hackathon Final PPT Template.pptx"
+                      download="InnovationHackathon_PPT_Template.pptx"
+                      className={styles.downloadLink}
+                    >
+                      Innovation Hackathon PPT Template
+                    </a>
+                  </div>
+                </div>
+                <div className="col-lg-6 text-center">
+                  <img src={smallPhoto} alt="Join Now" className={styles.registrationPhoto} />
                   <Link to="/events/2" className={styles.registerBtn}>
                     Register Now
                   </Link>
@@ -32,9 +50,6 @@ function Home() {
                       className={styles.bharatGoImage}
                     />
                   </div>
-                </div>
-                <div className="col-lg-6 text-center">
-                  <img src={smallPhoto} alt="Join Now" className={styles.registrationPhoto} />
                 </div>
               </div>
             </div>
