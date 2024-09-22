@@ -111,7 +111,7 @@ const Event2 = () => {
             Innovation Hackathon GUIDELINES
           </a>
           <a
-            href="/Innovation Hackathon Final PPT Template.pptx"
+            href="/IRIS-ppt-template-for-participants.pptx"
             download="InnovationHackathon_PPT_Template.pptx"
             className="downloadLink"
           >
