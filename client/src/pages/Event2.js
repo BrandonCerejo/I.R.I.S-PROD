@@ -102,6 +102,22 @@ const Event2 = () => {
         <div className="image-container">
           <img src="/sephackathon.jpg" alt="Event 2 Image" className="event-image" />
         </div>
+        <div className="transparentBox">
+          <a
+            href="/IRIS Hackathon GUIDELINES for participants.pdf"
+            download="IRIS Hackathon GUIDELINES.pdf"
+            className="downloadLink me-2"
+          >
+            Innovation Hackathon GUIDELINES
+          </a>
+          <a
+            href="/Innovation Hackathon Final PPT Template.pptx"
+            download="InnovationHackathon_PPT_Template.pptx"
+            className="downloadLink"
+          >
+            Innovation Hackathon PPT Template
+          </a>
+        </div>
         <div className="checkout-box">
           <h2 className="title2">*Registration Fee: INR 250*</h2>
           <form onSubmit={handleSubmit}>
