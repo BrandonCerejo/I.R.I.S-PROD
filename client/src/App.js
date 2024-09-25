@@ -6,7 +6,7 @@ import backgroundVideo from './pages/vid2.mp4';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import AppRouter from './Router.js';
-import { Analytics } from '@vercel/analytics/react';
+//import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Header />
         <AppRouter />
         <Footer />
-        <Analytics />
+        {/* <Analytics /> */}
       </div>
     </Router>
   );
@@ -42,7 +42,7 @@ function Contact() {
     try {
       console.log('Fetching data from Supabase...');
       const { data, error } = await supabase
-        .from('contacts') // Assuming your table is called 'contacts'
+        .from('contacts')
         .select('*');
 
       if (error) {
@@ -71,7 +71,7 @@ function Contact() {
       console.log('Inserting data into Supabase...');
       // Insert form data into Supabase
       const { data, error } = await supabase
-        .from('contacts') // Assuming your table is called 'contacts'
+        .from('contacts')
         .insert(formDataWithTimestamp);
 
       if (error) {
@@ -86,7 +86,7 @@ function Contact() {
           subject: '',
           message: '',
         });
-        fetchData(); // Refresh the contacts data after inserting
+        fetchData();
       }
     } catch (error) {
       console.error('Error submitting form:', error);
