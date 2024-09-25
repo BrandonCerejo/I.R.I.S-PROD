@@ -253,7 +253,7 @@ function About() {
               {/* FOUNDING MEMBER */}
               <div className="col-md-4">
                 <div className={styles.card}>
-                  <img src="Parth.jpg" alt="Team Member 3" />
+                  <img src="Parth.jpg" alt="Team Member 6" />
                   <div className={styles.cardContent}>
                     <h3>Parth Ware</h3>
                     <p>Founder</p>
@@ -264,11 +264,22 @@ function About() {
               {/* FOUNDING MEMBER */}
               <div className="col-md-4">
                 <div className={styles.card}>
-                  <img src="dhyey.jpg" alt="Team Member 3" />
+                  <img src="dhyey.jpg" alt="Team Member 7" />
                   <div className={styles.cardContent}>
                     <h3>Dhyey Ladani</h3>
                     <p>Founder</p>
                     <a href="https://www.linkedin.com/in/dhyey-ladani/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+              {/* FOUNDING MEMBER */}
+              <div className="col-md-4">
+                <div className={styles.card}>
+                  <img src="sarthak.jpeg" alt="Team Member 8" />
+                  <div className={styles.cardContent}>
+                    <h3>Sarthak Patil</h3>
+                    <p>Founder</p>
+                    <a href="https://www.linkedin.com/in/sarthak-patil-aa453a219/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
               </div>
