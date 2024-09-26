@@ -23,38 +23,26 @@
   outline: none;
 }
 
-:root {
-    --primary-color: rgb(237, 47, 98);
-    --secondary-color: rgb(2, 2, 39);
-    --tertiary-color: rgb(19, 95, 225);
-    --light-bg: rgba(255, 255, 255, 0.8);
-    --dark-text: #212529;
-    --heading-color: #ffffff;
-}
-
 .event2 {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; 
-    background: url('img.jpeg') no-repeat center center,
-                url('https://www.transparenttextures.com/patterns/cubes.png');
-    background-size: cover, 50px 50px;
-    background-attachment: fixed;
-    color: rgba(255, 255, 255, 0.886);
-    position: relative;
-    overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  background: url('./event.jpg') no-repeat center center/cover;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
 }
 
 .event2::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(237, 47, 98, 0.7) 0%, rgba(2, 2, 39, 0.7) 75%, rgba(19, 95, 225, 0.7) 100%);
-    z-index: 1;
-    transition: opacity 0.2s ease;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(23, 37, 90, 0.8), rgba(201, 64, 101, 0.8)); 
+  z-index: 1;
 }
 
 .event2 > main {
@@ -81,9 +69,9 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.event2 > main > h1,h3 {
+.event2 > main > h1 {
   margin-bottom: 20px;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #fff;
   text-align: center;
 }
@@ -200,19 +188,12 @@
 }
 
 .transparentBox {
-  background-color: rgba(8, 12, 222, 0.395); 
+  background-color: rgba(255, 255, 255, 0.15); 
   padding: 10px; 
   border-radius: 5px; 
   margin: 10px 0; 
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); 
 }
-
-
-.transparentBox:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-}
-
 
 .downloadLink {
   display: block; 

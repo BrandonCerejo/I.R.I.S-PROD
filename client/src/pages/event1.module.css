@@ -37,16 +37,12 @@ body {
     z-index: 2;
     margin: 0 auto;
     padding: 40px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color:rgba(8, 12, 222, 0.103);
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.content:hover {
-    transform: scale(1.02);
-    background-color: rgba(0, 0, 0, 0.7); 
-}
 
 .eventImageContainer {
     display: flex;

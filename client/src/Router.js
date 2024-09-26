@@ -8,9 +8,9 @@ import Contact from './pages/Contact';
 import Policy from './pages/policy';
 import Refund from './pages/refund';
 import Terms from './pages/terms';
-import PaymentSuccess from './pages/PaymentSuccess';
+//import PaymentSuccess from './pages/PaymentSuccess';
 import ScrollToTop from './ScrollToTop';
-import CheckoutPayment from './pages/paymentCheckout';
+//import CheckoutPayment from './pages/paymentCheckout';
 
 function AppRouter() {
   return (
@@ -26,8 +26,8 @@ function AppRouter() {
         <Route path="/policy" element={<Policy />} />
         <Route path="/refund" element={<Refund />} />
         <Route path="/terms" element={<Terms />} />
-        <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
-        <Route path="/checkoutPayment" element={<CheckoutPayment />} />
+        {/* <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
+        <Route path="/checkoutPayment" element={<CheckoutPayment />} /> */}
       </Routes>
     </>
   );

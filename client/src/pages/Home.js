@@ -21,7 +21,7 @@ function Home() {
               <div className="row align-items-center">
                 <h2 className={`${styles.registrationTitle} display-4`}>Innovation Hackathon</h2>
                 <div className="col-lg-6 text-center text-lg-start">
-                  <h2 className={`${styles.registrationDate} display-4`}>September 26-28 2024</h2>
+                  <h2 className={`${styles.registrationDate} display-4`}>September 27-28 2024</h2>
                   <div className={styles.transparentBox}>
                     <a
                       href="/IRIS Hackathon GUIDELINES for participants.pdf"
@@ -42,7 +42,7 @@ function Home() {
                 <div className="col-lg-6 text-center">
                   <img src={smallPhoto} alt="Join Now" className={styles.registrationPhoto} />
                   <Link to="/events/2" className={styles.registerBtn}>
-                    Register Now
+                    Click to Know More
                   </Link>
                   <div className={styles.imageWrapper}>
                     <img

@@ -72,7 +72,7 @@ function Events() {
               </ul>
               <p>{upcomingEvent.conclusion}</p>
               <Link to={`/events/${upcomingEvent.id}`} className={styles.btn}>
-                REGISTRATION OPEN!
+                Click to Know More!
               </Link>
             </div>
           </div>
