@@ -5,14 +5,14 @@
 }
 
 .navbar {
-  background-color: rgba(0, 0, 0, 0.7); 
+  /* background-color: rgba(0, 0, 0, 0.7);  */
   padding: 0.8rem 0;
   align-content: center;
   transition: background-color 0.3s ease; 
 }
 
 .navbar-dark-scrolled {
-  background-color: rgba(0, 0, 0, 0.9); 
+  background-color: rgba(0, 0, 0, 1); 
 }
 
 .navbar .container {

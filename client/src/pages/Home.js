@@ -16,7 +16,7 @@ function Home() {
       <div className={styles.overlay}>
         <main className="flex-grow-1">
           {/* Registration Section */}
-          <div className={`${styles.registration} d-flex align-items-center justify-content-center`}>
+          {/* <div className={`${styles.registration} d-flex align-items-center justify-content-center`}>
             <div className="container text-center">
               <div className="row align-items-center">
                 <h2 className={`${styles.registrationTitle} display-4`}>Innovation Hackathon</h2>
@@ -54,14 +54,14 @@ function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/*Hero Section */}
           <div className={`${styles.hero} text-white d-flex align-items-center`}>
             <div className="container">
               <div className="row align-items-center">
                 <div className="col-lg-6 text-center text-lg-start">
-                  <h1 className={`${styles.wordart} display-3`}>I.R.I.S.</h1>
+                  <h1 className={`${styles.arial} display-3 fw-bold`} style={{letterSpacing: '0.1em'}}>I.R.I.S.</h1>
                   <h2 className="lead">Innovation Research & Intelligence Support</h2>
                   <p className="mb-4">Empowering innovation and fostering technological advancements.</p>
                 </div>

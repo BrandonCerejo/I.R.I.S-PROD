@@ -10,6 +10,7 @@ import Refund from './pages/refund';
 import Terms from './pages/terms';
 //import PaymentSuccess from './pages/PaymentSuccess';
 import ScrollToTop from './ScrollToTop';
+import { Gallery } from './pages/Gallery';
 //import CheckoutPayment from './pages/paymentCheckout';
 
 function AppRouter() {
@@ -26,6 +27,7 @@ function AppRouter() {
         <Route path="/policy" element={<Policy />} />
         <Route path="/refund" element={<Refund />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path='/gallery' element={<Gallery />} />
         {/* <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
         <Route path="/checkoutPayment" element={<CheckoutPayment />} /> */}
       </Routes>
