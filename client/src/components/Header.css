@@ -50,6 +50,7 @@
 
 .nav-link:hover {
   color: #ddd; 
+  text-decoration: underline;
 }
 
 .navbar-toggler {

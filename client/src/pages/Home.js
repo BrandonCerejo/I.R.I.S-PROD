@@ -57,7 +57,7 @@ function Home() {
           </div> */}
 
           {/*Hero Section */}
-          <div className={`${styles.hero} text-white d-flex align-items-center`}>
+          <div className={`${styles.hero} text-white d-flex align-items-center`} style={{borderRadius: '10px'}}>
             <div className="container">
               <div className="row align-items-center">
                 <div className="col-lg-6 text-center text-lg-start">

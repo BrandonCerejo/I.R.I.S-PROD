@@ -105,6 +105,15 @@ function Header() {
                 >
                   Contact
                 </Link>
+                </li>
+                <li className="nav-item">
+                <Link
+                  className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}
+                  to="/gallery"
+                  onClick={handleNavLinkClick}
+                >
+                  Club Gallery
+                </Link>
               </li>
             </ul>
           </div>
