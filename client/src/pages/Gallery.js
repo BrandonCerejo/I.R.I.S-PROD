@@ -7,6 +7,7 @@ export const Gallery = () => {
         <div className="gallery-container">
              <div className="gallery-heading-container">
                 <span style={{fontSize: '50px', fontWeight: 'bold', letterSpacing: '0.2rem'}}>Gallery</span>
+                <p style={{fontSize: '20px', fontWeight: 'underline', letterSpacing: '0.1rem'}}>(soon will be updated with event images)</p>
                 <p style={{fontSize: '20px', fontWeight: 'underline', letterSpacing: '0.1rem'}}>These are all the amazing photos that were taken on our events</p>
                 <hr></hr>
             </div>
