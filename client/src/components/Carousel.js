@@ -5,7 +5,7 @@ import {BsArrowLeftCircleFill, BsArrowRightCircleFill} from 'react-icons/bs'
 export const Carousel = ({data}) => {
 
     const [slide, setSlide] = useState(0);
-    const autoSlideInterval = 3000;
+    const autoCaruoselSlideInterval = 3000;
 
     const nextSlide = () => {
         setSlide(slide === data.length - 1 ? 0 : slide + 1);
@@ -18,18 +18,18 @@ export const Carousel = ({data}) => {
       useEffect(() => {
         const autoSlide = setInterval(() => {
           nextSlide();
-        }, autoSlideInterval)
+        }, autoCaruoselSlideInterval)
         return () => {
             clearInterval(autoSlide);
           };
-        }, [slide]); 
-
+        }, [slide]);
+        
     return(
         <div className='carousel'>
             <BsArrowLeftCircleFill onClick={prevSlide} className="arrow arrow-left"/>
                 {data && Array.isArray(data) && data.map((item, index) => (
                     <div className="carousel-container">
-                        <img src={item.src} alt={item.alt} key={index} className={slide === index ? "slide slide-active" : "slide slide-hidden"} style={{height: '500px', width: '1200px'}}/>
+                        <img src={item.src} alt={item.alt} key={index} className={slide === index ? "images slide slide-active" : "images slide slide-hidden"} style={{height: '500px', width: '100vw', maxHeight: '100vh'}}/>
                     </div>
                 ))
                 }
