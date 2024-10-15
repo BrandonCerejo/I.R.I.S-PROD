@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import styles from './About.module.css';
 import backgroundVideo from './vid2.mp4';
 

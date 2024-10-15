@@ -2,8 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { supabase } from '../supabase';
 import styles from './Contact.module.css';
 import backgroundVideo from './vid2.mp4';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 function Contact() {
   const [formData, setFormData] = useState({
