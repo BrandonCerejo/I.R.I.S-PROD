@@ -1,7 +1,6 @@
-/* Blog.module.css */
 .blogPage {
   background-color: #f8f9fa;
-  padding-top: 80px; /* Adjust this value to provide more spacing if needed */
+  padding-top: 80px;
 }
 
 .pageTitle {
