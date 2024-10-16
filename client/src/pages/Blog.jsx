@@ -5,27 +5,27 @@ function Blog() {
   const blogPosts = [
     {
       id: 1,
-      title: 'Exploring the Future of AI',
-      description: 'Artificial Intelligence is transforming the world. Let\'s dive into the future possibilities and current trends.',
-      author: 'John Doe',
-      date: 'October 14, 2024',
-      image: 'ai-future.jpg',
+      title: 'Techinical',
+      description: 'I.R.I.S. Website',
+      author: 'Techinical Team',
+      date: 'SEPTEMBER,1 2024',
+      image: 'website.jpg',
     },
     {
       id: 2,
-      title: 'The Rise of Quantum Computing',
-      description: 'Quantum computing promises to revolutionize technology. Here\'s what you need to know about it.',
-      author: 'Jane Smith',
-      date: 'October 12, 2024',
-      image: 'quantum-computing.jpg',
+      title: 'Research Project',
+      description: 'Current research paper work in progress',
+      author: 'Research Team',
+      date: 'September 10, 2024',
+      image: 'Research.jpg',
     },
     {
       id: 3,
-      title: 'Blockchain Beyond Cryptocurrency',
-      description: 'Discover the various applications of blockchain technology beyond just cryptocurrency.',
-      author: 'Alice Johnson',
-      date: 'October 10, 2024',
-      image: 'blockchain.jpg',
+      title: 'Automated Vehicle',
+      description: 'Currenting work going on',
+      author: 'Machanical project',
+      date: 'September 10, 2024',
+      image: 'vehicle.jpg',
     },
   ];
 
@@ -33,6 +33,7 @@ function Blog() {
     <div className={styles.blogPage}>
       <div className="container py-5">
         <h1 className={styles.pageTitle}>Our Blog</h1>
+        <p className={styles.pageTitle}>I.R.I.S. resent development and Ongoing Projects.</p>
         <div className="row">
           {blogPosts.map((post) => (
             <div key={post.id} className="col-md-4">
