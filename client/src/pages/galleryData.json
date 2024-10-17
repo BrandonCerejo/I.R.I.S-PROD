@@ -1,57 +1,55 @@
 {
-    "Hackathon-This is the first Hackathon we had organized":
-    [
+    "Hackathon-This is the first Hackathon we had organized": [
         {
-            "src": "https://vibgvvzzunbfcqwcjfbk.supabase.co/storage/v1/object/sign/IRIS%20Stuff/diane-picchiottino-zsD_76H8IAE-unsplash.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJUklTIFN0dWZmL2RpYW5lLXBpY2NoaW90dGluby16c0RfNzZIOElBRS11bnNwbGFzaC5qcGciLCJpYXQiOjE3Mjc2MzA4MTMsImV4cCI6MTc1OTE2NjgxM30.VByH4upOml5h8xImWQMRRNgh08kxd1ZWrrQ1wsTXj14&t=2024-09-29T17%3A26%3A54.129Z",
+            "src": "/public/diane-picchiottino-zsD_76H8IAE-unsplash.jpg",
             "alt": "Hackathon"
         },
         {
-            "src": "https://vibgvvzzunbfcqwcjfbk.supabase.co/storage/v1/object/sign/IRIS%20Stuff/himalayas-3989400.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJUklTIFN0dWZmL2hpbWFsYXlhcy0zOTg5NDAwLmpwZyIsImlhdCI6MTcyNzYzMDg0MCwiZXhwIjoxNzU5MTY2ODQwfQ.SqPcchVK-HPvjMiZLQBEcjWsJvwgN2HBCr57ZXOrUY8&t=2024-09-29T17%3A27%3A21.053Z",
+            "src": "/public/himalayas-3989400.jpg",
             "alt": "Hackathon"
         },
         {
-            "src": "https://vibgvvzzunbfcqwcjfbk.supabase.co/storage/v1/object/sign/IRIS%20Stuff/ruoyu-li-593TaKHThg4-unsplash.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJUklTIFN0dWZmL3J1b3l1LWxpLTU5M1RhS0hUaGc0LXVuc3BsYXNoLmpwZyIsImlhdCI6MTcyNzYzMDg1OSwiZXhwIjoxNzU5MTY2ODU5fQ.s9CkpMqyagmLVkQP2JYaWHuuJMpJH1qu6wV5oJ07cdM&t=2024-09-29T17%3A27%3A40.097Z",
+            "src": "/public/ruoyu-li-593TaKHThg4-unsplash.jpg",
             "alt": "Hackathon"
         },
         {
-            "src": "https://vibgvvzzunbfcqwcjfbk.supabase.co/storage/v1/object/sign/IRIS%20Stuff/ruoyu-li-Rii2TdRVGAY-unsplash.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJUklTIFN0dWZmL3J1b3l1LWxpLVJpaTJUZFJWR0FZLXVuc3BsYXNoLmpwZyIsImlhdCI6MTcyNzYzMDg2OSwiZXhwIjoxNzU5MTY2ODY5fQ.ys5q662SOTC7hevUMODAaL1seJyWSDW_dD_pILvk4fk&t=2024-09-29T17%3A27%3A49.765Z",
+            "src": "/public/ruoyu-li-Rii2TdRVGAY-unsplash.jpg",
             "alt": "Hackathon"
         }
     ],
-    "Hackathon2-This is the second Hackathon we have organized which happened very recently": [
+    "INNOVATION HACKATHON 2024 - Dates: 26 to 28 September 2024 ": [
         {
-            "src": "https://vibgvvzzunbfcqwcjfbk.supabase.co/storage/v1/object/sign/IRIS%20Stuff/himalayas-3989400.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJUklTIFN0dWZmL2hpbWFsYXlhcy0zOTg5NDAwLmpwZyIsImlhdCI6MTcyNzYzMDg0MCwiZXhwIjoxNzU5MTY2ODQwfQ.SqPcchVK-HPvjMiZLQBEcjWsJvwgN2HBCr57ZXOrUY8&t=2024-09-29T17%3A27%3A21.053Z",
+            "src": "/IH2_1.png",
             "alt": "Hackathon"
         },
         {
-            "src": "https://vibgvvzzunbfcqwcjfbk.supabase.co/storage/v1/object/sign/IRIS%20Stuff/diane-picchiottino-zsD_76H8IAE-unsplash.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJUklTIFN0dWZmL2RpYW5lLXBpY2NoaW90dGluby16c0RfNzZIOElBRS11bnNwbGFzaC5qcGciLCJpYXQiOjE3Mjc2MzA4MTMsImV4cCI6MTc1OTE2NjgxM30.VByH4upOml5h8xImWQMRRNgh08kxd1ZWrrQ1wsTXj14&t=2024-09-29T17%3A26%3A54.129Z",
+            "src": "/IH2_2.jpg",
             "alt": "Hackathon"
         },
         {
-            "src": "https://vibgvvzzunbfcqwcjfbk.supabase.co/storage/v1/object/sign/IRIS%20Stuff/ruoyu-li-593TaKHThg4-unsplash.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJUklTIFN0dWZmL3J1b3l1LWxpLTU5M1RhS0hUaGc0LXVuc3BsYXNoLmpwZyIsImlhdCI6MTcyNzYzMDg1OSwiZXhwIjoxNzU5MTY2ODU5fQ.s9CkpMqyagmLVkQP2JYaWHuuJMpJH1qu6wV5oJ07cdM&t=2024-09-29T17%3A27%3A40.097Z",
+            "src": "/IH2_3.png",
             "alt": "Hackathon"
         },
         {
-            "src": "https://vibgvvzzunbfcqwcjfbk.supabase.co/storage/v1/object/sign/IRIS%20Stuff/ruoyu-li-Rii2TdRVGAY-unsplash.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJUklTIFN0dWZmL3J1b3l1LWxpLVJpaTJUZFJWR0FZLXVuc3BsYXNoLmpwZyIsImlhdCI6MTcyNzYzMDg2OSwiZXhwIjoxNzU5MTY2ODY5fQ.ys5q662SOTC7hevUMODAaL1seJyWSDW_dD_pILvk4fk&t=2024-09-29T17%3A27%3A49.765Z",
-            "alt": "Hackathon"
-        }
-    ],
-    "Hackathon3-This is the next hackton we will organize": [
-        {
-            "src": "https://vibgvvzzunbfcqwcjfbk.supabase.co/storage/v1/object/sign/IRIS%20Stuff/himalayas-3989400.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJUklTIFN0dWZmL2hpbWFsYXlhcy0zOTg5NDAwLmpwZyIsImlhdCI6MTcyNzYzMDg0MCwiZXhwIjoxNzU5MTY2ODQwfQ.SqPcchVK-HPvjMiZLQBEcjWsJvwgN2HBCr57ZXOrUY8&t=2024-09-29T17%3A27%3A21.053Z",
+            "src": "/IH2_4.jpg",
             "alt": "Hackathon"
         },
         {
-            "src": "https://vibgvvzzunbfcqwcjfbk.supabase.co/storage/v1/object/sign/IRIS%20Stuff/diane-picchiottino-zsD_76H8IAE-unsplash.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJUklTIFN0dWZmL2RpYW5lLXBpY2NoaW90dGluby16c0RfNzZIOElBRS11bnNwbGFzaC5qcGciLCJpYXQiOjE3Mjc2MzA4MTMsImV4cCI6MTc1OTE2NjgxM30.VByH4upOml5h8xImWQMRRNgh08kxd1ZWrrQ1wsTXj14&t=2024-09-29T17%3A26%3A54.129Z",
+            "src": "/IH2_5.png",
             "alt": "Hackathon"
         },
         {
-            "src": "https://vibgvvzzunbfcqwcjfbk.supabase.co/storage/v1/object/sign/IRIS%20Stuff/ruoyu-li-593TaKHThg4-unsplash.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJUklTIFN0dWZmL3J1b3l1LWxpLTU5M1RhS0hUaGc0LXVuc3BsYXNoLmpwZyIsImlhdCI6MTcyNzYzMDg1OSwiZXhwIjoxNzU5MTY2ODU5fQ.s9CkpMqyagmLVkQP2JYaWHuuJMpJH1qu6wV5oJ07cdM&t=2024-09-29T17%3A27%3A40.097Z",
+            "src": "/IH2_6.jpg",
             "alt": "Hackathon"
         },
         {
-            "src": "https://vibgvvzzunbfcqwcjfbk.supabase.co/storage/v1/object/sign/IRIS%20Stuff/ruoyu-li-Rii2TdRVGAY-unsplash.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJUklTIFN0dWZmL3J1b3l1LWxpLVJpaTJUZFJWR0FZLXVuc3BsYXNoLmpwZyIsImlhdCI6MTcyNzYzMDg2OSwiZXhwIjoxNzU5MTY2ODY5fQ.ys5q662SOTC7hevUMODAaL1seJyWSDW_dD_pILvk4fk&t=2024-09-29T17%3A27%3A49.765Z",
+            "src": "/IH2_7.jpg",
+            "alt": "Hackathon"
+        },
+        {
+            "src": "/IH2_8.jpg",
             "alt": "Hackathon"
         }
     ]
+    
 }
