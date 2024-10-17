@@ -109,7 +109,7 @@ function Header() {
                   Club Gallery
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link
                   className={`nav-link ${location.pathname === '/blog' ? 'active' : ''}`}
                   to="/blog"
@@ -117,7 +117,7 @@ function Header() {
                 >
                   Blog
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

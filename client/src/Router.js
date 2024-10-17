@@ -29,7 +29,7 @@ function AppRouter() {
         <Route path="/refund" element={<Refund />} />
         <Route path="/terms" element={<Terms />} />
         <Route path='/gallery' element={<Gallery />} />
-        <Route path='/blog' element={<Blog />} />
+        {/* <Route path='/blog' element={<Blog />} /> */}
         {/* <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
         <Route path="/checkoutPayment" element={<CheckoutPayment />} /> */}
       </Routes>
