@@ -13,7 +13,7 @@ import Blog from './pages/Blog';
 import ScrollToTop from './ScrollToTop';
 import { Gallery } from './pages/Gallery';
 //import CheckoutPayment from './pages/paymentCheckout';
-
+import Projects from './pages/Projects';
 function AppRouter() {
   return (
     <>
@@ -29,6 +29,7 @@ function AppRouter() {
         <Route path="/refund" element={<Refund />} />
         <Route path="/terms" element={<Terms />} />
         <Route path='/gallery' element={<Gallery />} />
+        <Route path='/projects' element={<Projects />} />
         {/* <Route path='/blog' element={<Blog />} /> */}
         {/* <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
         <Route path="/checkoutPayment" element={<CheckoutPayment />} /> */}

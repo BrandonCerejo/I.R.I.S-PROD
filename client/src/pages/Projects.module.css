@@ -1,0 +1,46 @@
+/* Projects.module.css */
+.projects {
+    background-color: #f8f8f8;
+    padding: 20px;
+  }
+  
+  .mainContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .ongoing {
+    color: #333;
+  }
+  
+  .projectList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .projectCard {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 300px;
+    background-color: white;
+    text-align: center;
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
