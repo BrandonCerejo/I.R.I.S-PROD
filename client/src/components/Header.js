@@ -109,6 +109,15 @@ function Header() {
                   Club Gallery
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link
+                  className={`nav-link ${location.pathname === '/projects' ? 'active' : ''}`}
+                  to="/projects"
+                  onClick={handleNavLinkClick}
+                >
+                  Projects
+                </Link>
+              </li>
               {/* <li className="nav-item">
                 <Link
                   className={`nav-link ${location.pathname === '/blog' ? 'active' : ''}`}
