@@ -6,19 +6,21 @@ function Header() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  // Define topscrollFunction to scroll to the top of the page
   const topscrollFunction = () => {
-    console.log("Scrolling to top...");
-    document.documentElement.scrollTop = 0; 
-    document.body.scrollTop = 0;
+    console.log("Scrolling to top...");  // Debugging log
+    document.documentElement.scrollTop = 0; // For most browsers
+    document.body.scrollTop = 0; // For Safari
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: 'smooth', // Smooth scroll to the top
     });
   };
 
   useEffect(() => {
+    // Handle scroll event
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 50); // Adjust the value as needed
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -28,17 +30,20 @@ function Header() {
   }, []);
 
   useEffect(() => {
+    // Call the topscroll function on location change
     topscrollFunction();
   }, [location]);
 
+  // Function to handle navbar link click, ensuring collapse closes on mobile view
   const handleNavLinkClick = () => {
     const navbarCollapse = document.getElementById('navbarSupportedContent');
 
+    // Check if the collapse is already shown (expanded)
     if (navbarCollapse.classList.contains('show')) {
       const bsCollapse = new window.bootstrap.Collapse(navbarCollapse, {
         toggle: false,
       });
-      bsCollapse.hide();
+      bsCollapse.hide(); // Only hide if it is already shown
     }
   };
 
@@ -58,6 +63,7 @@ function Header() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
+            {/* Custom SVG Icon */}
             <svg data-wf-icon="Menu24Icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fillRule="evenodd" clipRule="evenodd" d="M19 7H5V6H19V7ZM19 12H5V11H19V12ZM19 17H5V16H19V17Z" fill="currentColor"></path>
             </svg>
@@ -102,15 +108,6 @@ function Header() {
               </li>
               <li className="nav-item">
                 <Link
-                  className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}
-                  to="/gallery"
-                  onClick={handleNavLinkClick}
-                >
-                  Club Gallery
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
                   className={`nav-link ${location.pathname === '/projects' ? 'active' : ''}`}
                   to="/projects"
                   onClick={handleNavLinkClick}
@@ -118,15 +115,6 @@ function Header() {
                   Projects
                 </Link>
               </li>
-              {/* <li className="nav-item">
-                <Link
-                  className={`nav-link ${location.pathname === '/blog' ? 'active' : ''}`}
-                  to="/blog"
-                  onClick={handleNavLinkClick}
-                >
-                  Blog
-                </Link>
-              </li> */}
             </ul>
           </div>
         </div>
@@ -134,4 +122,5 @@ function Header() {
     </header>
   );
 }
+
 export default Header;

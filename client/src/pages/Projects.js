@@ -1,23 +1,21 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Projects.module.css'; // Create a new CSS module for Projects
+import styles from './Projects.module.css'; 
 import Header from '../components/Header';
 
 function Projects() {
   const ongoingTechnicalProject = {
     id: 1,
-    title: "Club Website",
-    description: "A chatbot developed using machine learning techniques to assist users in various queries.",
-    date: "Started: January 2024",
-    conclusion: "This project aims to enhance customer support using AI technology."
+    title: "Ongoing Technical Project: Club Website",
+    description: "some info about website ",
+    date: "Started: July 2024",
   };
 
   const ongoingResearch = {
     id: 2,
-    title: "autonomus ",
-    description: "Research on leveraging blockchain technology to improve transparency and efficiency in supply chains.",
-    date: "Started: March 2024",
-    conclusion: "This research could revolutionize how supply chains operate."
+    title: "Ongoing Research Project: Autonomous Vehicle",
+    description: "info about autonomous vehicle",
+    date: "Started: July 2024",
   };
 
   useEffect(() => {
@@ -35,47 +33,26 @@ function Projects() {
       <main className={styles.mainContent}>
         <h1 className={styles.title}>Projects</h1>
 
-        {/* Ongoing Technical Projects Section */}
-        <section className={styles.ongoingTechnicalProjects}>
-          <h2 className={styles.ongoing}>Ongoing Technical Projects</h2>
-          <div className={styles.projectList}>
-            <div key={ongoingTechnicalProject.id} className={styles.projectCard}>
-              <h2>{ongoingTechnicalProject.title}</h2>
-              <p>{ongoingTechnicalProject.description}</p>
-              <p>{ongoingTechnicalProject.date}</p>
-              <h3>Team Members:</h3>
-              <ul>
-                {ongoingTechnicalProject.teamMembers.map((member, index) => (
-                  <li key={index}>{member}</li>
-                ))}
-              </ul>
-              <p>{ongoingTechnicalProject.conclusion}</p>
-              <Link to={`/projects/${ongoingTechnicalProject.id}`} className={styles.btn}>
-                Click to Know More!
-              </Link>
-            </div>
+        {/* Separate Sections for Technical Projects and Research */}
+        <section className={styles.ongoingTechnical}>
+          <h2 className={styles.ongoing}>{ongoingTechnicalProject.title}</h2>
+          <div className={styles.projectCard}>
+            <p>{ongoingTechnicalProject.description}</p>
+            <p>{ongoingTechnicalProject.date}</p>
+            <Link to={`/projects/${ongoingTechnicalProject.id}`} className={styles.btn}>
+              Click to Know More!
+            </Link>
           </div>
         </section>
 
-        {/* Ongoing Research Section */}
         <section className={styles.ongoingResearch}>
-          <h2 className={styles.ongoing}>Ongoing Research</h2>
-          <div className={styles.projectList}>
-            <div key={ongoingResearch.id} className={styles.projectCard}>
-              <h2>{ongoingResearch.title}</h2>
-              <p>{ongoingResearch.description}</p>
-              <p>{ongoingResearch.date}</p>
-              <h3>Research Members:</h3>
-              <ul>
-                {ongoingResearch.researchMembers.map((member, index) => (
-                  <li key={index}>{member}</li>
-                ))}
-              </ul>
-              <p>{ongoingResearch.conclusion}</p>
-              <Link to={`/projects/${ongoingResearch.id}`} className={styles.btn}>
-                Click to Know More!
-              </Link>
-            </div>
+          <h2 className={styles.ongoing}>{ongoingResearch.title}</h2>
+          <div className={styles.projectCard}>
+            <p>{ongoingResearch.description}</p>
+            <p>{ongoingResearch.date}</p>
+            <Link to={`/projects/${ongoingResearch.id}`} className={styles.btn}>
+              Click to Know More!
+            </Link>
           </div>
         </section>
       </main>

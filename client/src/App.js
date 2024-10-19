@@ -6,6 +6,8 @@ import backgroundVideo from './pages/vid2.mp4';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import AppRouter from './Router.js';
+import Projects from './pages/Projects'; // Adjust the path as necessary
+
 //import { Analytics } from '@vercel/analytics/react';
 
 function App() {
@@ -187,4 +189,4 @@ function Contact() {
   );
 }
 
-export { App, Contact };
+export { App, Contact }
