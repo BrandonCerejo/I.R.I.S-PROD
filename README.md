@@ -22,8 +22,8 @@ This repository contains the official website for **IRIS**, a college club dedic
 ## Installation  
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/username/IRIS-website.git
-   cd IRIS-website
+   git clone https://github.com/kushagra-a-singh/I.R.I.S-PROD.git
+   cd I.R.I.S-PROD
    ```
 2. Install dependencies:  
    ```bash
