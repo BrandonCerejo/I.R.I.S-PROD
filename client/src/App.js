@@ -41,7 +41,6 @@ function Contact() {
 
   const fetchData = async () => {
     try {
-      console.log('Fetching data from Supabase...');
       const { data, error } = await supabase
         .from('contacts')
         .select('*');
@@ -69,7 +68,6 @@ function Contact() {
         created_at: new Date().toISOString(),
       };
 
-      console.log('Inserting data into Supabase...');
       // Insert form data into Supabase
       const { data, error } = await supabase
         .from('contacts')
@@ -78,7 +76,7 @@ function Contact() {
       if (error) {
         console.error('Error inserting data:', error);
       } else {
-        console.log('Data inserted:', data);
+        console.log('Data inserted');
         setShowNotification(true);
         setFormData({
           name: '',

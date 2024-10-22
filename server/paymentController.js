@@ -70,7 +70,7 @@ export const paymentVerification = async (req, res) => {
 
       res.redirect(`http://localhost:3000/paymentsuccess?reference=${razorpay_payment_id}`);
     } catch (error) {
-      console.error('Error with Supabase:', error);
+      console.error('Error inserting:', error);
       res.status(500).json({
         success: false,
         error: 'Failed to insert payment details',

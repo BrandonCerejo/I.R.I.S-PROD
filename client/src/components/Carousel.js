@@ -32,7 +32,7 @@ export const Carousel = ({ data }) => {
           <img src={item.src} alt={item.alt} className={slide === index ? "images slide slide-active" : "images slide slide-hidden"} style={{ height: '500px', width: '100vw', maxHeight: '100vh' }} />
         </div>
       ))}
-      
+
       <BsArrowRightCircleFill onClick={nextSlide} className="arrow arrow-right" />
       <span className='indicators'>
         {data.map((_, idx) => {
