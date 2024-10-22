@@ -33,6 +33,13 @@
   margin-bottom: 2rem;
 }
 
+.text {
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
 .upcoming, .past, .podcastTitle {
   color: #f1eded; 
   margin-top: 2rem;
@@ -104,6 +111,13 @@
 .btn:hover {
   background-color: #0056b3 !important;
   color: #f7f7f7 !important;
+}
+
+.conclusion {
+  color: #333;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  text-align: center;
 }
 
 @media (max-width: 768px) {

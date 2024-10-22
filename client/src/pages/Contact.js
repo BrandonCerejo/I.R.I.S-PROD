@@ -15,7 +15,6 @@ function Contact() {
   const formRef = useRef(null);
 
   useEffect(() => {
-    console.log('Checking Supabase connection...');
   }, []);
 
   const handleChange = (e) => {
