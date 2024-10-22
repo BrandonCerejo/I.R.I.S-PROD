@@ -1,33 +1,30 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Events.module.css';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 function Events() {
-  const pastEvent = {
-    id: 1,
-    title: "Innovation Hackathon",
-    description: "The Inter-Campus Open Innovation Hackathon, organized by ASPIRE with Engineer's Cradle, I.R.I.S. and MIT-TBI, gathered Pune students. Teams of up to two registered online and competed at their colleges. The top three teams advanced to the finals at MIT-WPU, where they built prototypes, received mentorship, and pitched to experts. Exciting prizes included cash rewards and funding opportunities.",
-    image: "./past-innovation-hackathon.jpg",
-    date: "Held on: 15/02/2024",
-    time: "",
-  };
-
-  const upcomingEvent = {
-    id: 2,
-    title: "IRIS Innovation Hackathon 2024",
-    description: "We hope you enjoyed the exhilarating event organized by the I.R.I.S. Club!",
-    image: "./sephackathon.jpg",
-    date: "Dates: September 26-28, 2024",
-    highlights: [
-      "Exciting Prizes: ₹36,000 in BharatGo vouchers awarded to the top 3 teams.",
-      "Workshops & Mentorship: Participants received expert guidance in Web3, Blockchain, AI, and Data Science.",
-      "Networking: Attendees connected with industry leaders and peers.",
-      "Collaborative Environment: Innovators collaborated to solve real-world problems."
-    ],
-    conclusion: "Thank you for joining us and contributing to a dynamic event that fuels creativity and innovation!"
-  };
+  const pastEvents = [
+    {
+      id: 2,
+      title: "IRIS Innovation Hackathon 2024",
+      description: "We hope you enjoyed the exhilarating event organized by the I.R.I.S. Club!",
+      image: "./sephackathon.jpg",
+      date: "2024-09-28",
+      highlights: [
+        "The IRIS Innovation Hackathon gathered enthusiastic participants competing for exciting prizes, including ₹36,000 in BharatGo vouchers for the top three teams. The event offered valuable networking opportunities, allowing attendees to connect with industry leaders and fellow innovators. This collaborative environment fostered teamwork and creativity, leading to innovative solutions to real-world challenges."
+      ],
+      conclusion: "Thank you for joining us and contributing to a dynamic event that fuels creativity and innovation!"
+    },
+    {
+      id: 1,
+      title: "Innovation Hackathon",
+      description: "The Inter-Campus Open Innovation Hackathon, organized by ASPIRE with Engineer's Cradle, I.R.I.S. and MIT-TBI, gathered Pune students. Teams of up to two registered online and competed at their colleges. The top three teams advanced to the finals at MIT-WPU, where they built prototypes, received mentorship, and pitched to experts. Exciting prizes included cash rewards and funding opportunities.",
+      image: "./past-innovation-hackathon.jpg",
+      date: "2024-02-15",
+      time: "",
+    }
+  ];
+  pastEvents.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   const podcast = {
     id: 1,
@@ -55,44 +52,34 @@ function Events() {
 
         {/* Upcoming Events Section */}
         <section className={styles.upcomingEvents}>
-          <h2 className={styles.upcoming}>Stay Tuned For More Exciting Events</h2>
-          <div className={styles.eventList}>
-            <div key={upcomingEvent.id} className={styles.eventCard}>
-              <img src={upcomingEvent.image} alt={upcomingEvent.title} />
-              <h2>{upcomingEvent.title}</h2>
-              <p className={styles.centeredText}>{upcomingEvent.description}</p>
-              <p className={styles.centeredText}>
-                <span>{upcomingEvent.date}</span>
-              </p>
-              <ul>
-                {upcomingEvent.highlights.map((highlight, index) => (
-                  <li key={index}>{highlight}</li>
-                ))}
-              </ul>
-              <p>{upcomingEvent.conclusion}</p>
-              <Link to={`/events/${upcomingEvent.id}`} className={styles.btn}>
-                Click to Know More!
-              </Link>
-            </div>
-          </div>
+          <h2 className={styles.upcoming}>Upcoming Events</h2>
+          <p className={styles.text}>Stay tuned for more upcoming exciting events!</p>
         </section>
 
         {/* Past Events Section */}
         <section className={styles.pastEvents}>
           <h2 className={styles.past}>Past Events</h2>
           <div className={styles.eventList}>
-            <div key={pastEvent.id} className={styles.eventCard}>
-              <img src={pastEvent.image} alt={pastEvent.title} />
-              <h2>{pastEvent.title}</h2>
-              <p>{pastEvent.description}</p>
-              <p>
-                <span>{pastEvent.date}</span>
-                <span>{pastEvent.time}</span>
-              </p>
-              <Link to={`/events/${pastEvent.id}`} className={styles.btn}>
-                Click to know more
-              </Link>
-            </div>
+            {pastEvents.map(event => (
+              <div key={event.id} className={styles.eventCard}>
+                <img src={event.image} alt={event.title} />
+                <h2>{event.title}</h2>
+                <p>Held on: {new Date(event.date).toLocaleDateString()}</p>
+                <p>{event.description}</p>
+                <p>{event.time}</p>
+                {event.highlights && (
+                  <div className={styles.highlightsList}>
+                    {event.highlights.map((highlight, index) => (
+                      <p key={index}>{highlight}</p>
+                    ))}
+                  </div>
+                )}
+                {event.conclusion && <p className={styles.conclusion}>{event.conclusion}</p>}
+                <Link to={`/events/${event.id}`} className={styles.btn}>
+                  Click to know more
+                </Link>
+              </div>
+            ))}
           </div>
         </section>
 
