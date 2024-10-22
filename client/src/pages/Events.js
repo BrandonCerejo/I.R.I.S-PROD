@@ -17,16 +17,16 @@ function Events() {
   const upcomingEvent = {
     id: 2,
     title: "IRIS Innovation Hackathon 2024",
-    description: "-> Organized by: I.R.I.S. Club",
+    description: "We hope you enjoyed the exhilarating event organized by the I.R.I.S. Club!",
     image: "./sephackathon.jpg",
-    date: "-> Dates: September 26-28, 2024",
+    date: "Dates: September 26-28, 2024",
     highlights: [
-      "Exciting Prizes: ₹36,000 in BharatGo vouchers for top 3 teams",
-      "Workshops & Mentorship: Expert guidance in Web3, Blockchain, AI, and Data Science",
-      "Networking: Connect with industry leaders and peers",
-      "Collaborative Environment: Innovate and solve real-world problems"
+      "Exciting Prizes: ₹36,000 in BharatGo vouchers awarded to the top 3 teams.",
+      "Workshops & Mentorship: Participants received expert guidance in Web3, Blockchain, AI, and Data Science.",
+      "Networking: Attendees connected with industry leaders and peers.",
+      "Collaborative Environment: Innovators collaborated to solve real-world problems."
     ],
-    conclusion: "Join us for a dynamic event that fuels creativity and innovation!"
+    conclusion: "Thank you for joining us and contributing to a dynamic event that fuels creativity and innovation!"
   };
 
   const podcast = {
@@ -63,7 +63,6 @@ function Events() {
               <p className={styles.centeredText}>{upcomingEvent.description}</p>
               <p className={styles.centeredText}>
                 <span>{upcomingEvent.date}</span>
-                <span>{upcomingEvent.time}</span>
               </p>
               <ul>
                 {upcomingEvent.highlights.map((highlight, index) => (
