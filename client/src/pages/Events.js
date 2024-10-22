@@ -55,7 +55,7 @@ function Events() {
 
         {/* Upcoming Events Section */}
         <section className={styles.upcomingEvents}>
-          <h2 className={styles.upcoming}>Upcoming Events</h2>
+          <h2 className={styles.upcoming}>Stay Tuned For More Exciting Events</h2>
           <div className={styles.eventList}>
             <div key={upcomingEvent.id} className={styles.eventCard}>
               <img src={upcomingEvent.image} alt={upcomingEvent.title} />
