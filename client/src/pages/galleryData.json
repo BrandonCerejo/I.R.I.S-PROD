@@ -1,25 +1,7 @@
 {
-    "Hackathon-This is the first Hackathon we had organized": [
-        {
-            "src": "/public/diane-picchiottino-zsD_76H8IAE-unsplash.jpg",
-            "alt": "Hackathon"
-        },
-        {
-            "src": "/public/himalayas-3989400.jpg",
-            "alt": "Hackathon"
-        },
-        {
-            "src": "/public/ruoyu-li-593TaKHThg4-unsplash.jpg",
-            "alt": "Hackathon"
-        },
-        {
-            "src": "/public/ruoyu-li-Rii2TdRVGAY-unsplash.jpg",
-            "alt": "Hackathon"
-        }
-    ],
     "INNOVATION HACKATHON 2024 - Dates: 26 to 28 September 2024 ": [
         {
-            "src": "/IH2_1.png",
+            "src": "/IH2_3.png",
             "alt": "Hackathon"
         },
         {
@@ -27,7 +9,7 @@
             "alt": "Hackathon"
         },
         {
-            "src": "/IH2_3.png",
+            "src": "/IH2_1.png",
             "alt": "Hackathon"
         },
         {
@@ -48,6 +30,37 @@
         },
         {
             "src": "/IH2_8.jpg",
+            "alt": "Hackathon"
+        }
+    ],
+
+    "INTERCAMPUS INNOVATION HACKATHON - Engineer's Cradle": [
+        {
+            "src": "/IH1_1.jpg",
+            "alt": "Hackathon"
+        },
+        {
+            "src": "/IH1_2.jpg",
+            "alt": "Hackathon"
+        },
+        {
+            "src": "/IH1_3.jpg",
+            "alt": "Hackathon"
+        },
+        {
+            "src": "/IH1_4.JPG",
+            "alt": "Hackathon"
+        },
+        {
+            "src": "/IH1_5.jpg",
+            "alt": "Hackathon"
+        },
+        {
+            "src": "/IH1_6.jpg",
+            "alt": "Hackathon"
+        },
+        {
+            "src": "/IH1_7.jpg",
             "alt": "Hackathon"
         }
     ]
