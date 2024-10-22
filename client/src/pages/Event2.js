@@ -8,7 +8,7 @@ const Event2 = () => {
   return (
     <div className="event2">
       <main>
-        <h1 className="title">Ongoing Event: INNOVATION HACKATHON</h1>
+        <h1 className="title">INNOVATION HACKATHON 2024</h1>
         <p>Dates: September 26-28, 2024</p>
         <div className="image-container">
           <img src="/sephackathon.jpg" alt="Event 2 Image" className="event-image" />
