@@ -8,7 +8,6 @@ function Header() {
 
   // Define topscrollFunction to scroll to the top of the page
   const topscrollFunction = () => {
-    console.log("Scrolling to top...");  // Debugging log
     document.documentElement.scrollTop = 0; // For most browsers
     document.body.scrollTop = 0; // For Safari
     window.scrollTo({
@@ -99,20 +98,20 @@ function Header() {
               </li>
               <li className="nav-item">
                 <Link
-                  className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}
-                  to="/contact"
-                  onClick={handleNavLinkClick}
-                >
-                  Contact
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
                   className={`nav-link ${location.pathname === '/Gallery' ? 'active' : ''}`}
                   to="/Gallery"
                   onClick={handleNavLinkClick}
                 >
                   Club Gallery
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}
+                  to="/contact"
+                  onClick={handleNavLinkClick}
+                >
+                  Contact
                 </Link>
               </li>
               
