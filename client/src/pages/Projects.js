@@ -39,7 +39,7 @@ function Projects() {
           <div className={styles.projectCard}>
             <p>{ongoingTechnicalProject.description}</p>
             <p>{ongoingTechnicalProject.date}</p>
-            <Link to={`/projects/${ongoingTechnicalProject.id}`} className={styles.btn}>
+            <Link to={`/projects/${ongoingTechnicalProject.id}`}className={styles.btn}>
               Click to Know More!
             </Link>
           </div>
