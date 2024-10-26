@@ -188,7 +188,7 @@ function About() {
                   <img src="gagan.jpg" alt="Team Member 5" />
                   <div className={styles.cardContent}>
                     <h3>Gaganjot Kaur</h3>
-                    <p>Lead Developer</p>
+                    <p>Tech Project Head</p>
                     <a href="https://www.linkedin.com/in/gaganjot-kaur-badwal-4017062a7/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
