@@ -41,7 +41,6 @@ function Projects() {
     }
   }, []);
 
-  
     return (
       <div className={styles.projects}>
         <main className={styles.mainContent}>
@@ -54,7 +53,7 @@ function Projects() {
               <h3 className={styles.ongoing}>{ongoingTechnicalProject.title}</h3>
               <div className={styles.projectCard}>
                 <div>
-                  <img src="logo2.png"/>
+                  <img src ="logo2.png"></img>
                   <p>{ongoingTechnicalProject.description}</p>
                   <p>{ongoingTechnicalProject.date}</p>
                 </div>
@@ -68,7 +67,7 @@ function Projects() {
               <h3 className={styles.ongoing}>{ongoingTechnicalProject2.title}</h3>
               <div className={styles.projectCard}>
                 <div>
-                  <img src="logo2.png"/>
+                  <img src ="logo2.png"></img>
                   <p>{ongoingTechnicalProject2.description}</p>
                   <p>{ongoingTechnicalProject2.date}</p>
                 </div>
@@ -85,7 +84,7 @@ function Projects() {
             <div className={styles.ongoingResearch}>
               <div className={styles.projectCard}>
                 <div>
-                  <img src="logo2.png"/>
+                  <img src ="logo2.png"></img>
                   <p>{ongoingResearch.description}</p>
                   <p>{ongoingResearch.date}</p>
                 </div>
@@ -98,7 +97,7 @@ function Projects() {
             <div className={styles.ongoingResearch}>
               <div className={styles.projectCard}>
                 <div>
-                  <img src="logo2.png"/>
+                  <img src ="logo2.png"></img>
                   <p>{ongoingResearch2.description}</p>
                   <p>{ongoingResearch2.date}</p>
                 </div>
@@ -112,5 +111,4 @@ function Projects() {
       </div>
     );
   }
-
-  export default Projects;
+export default Projects;
