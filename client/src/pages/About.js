@@ -199,7 +199,7 @@ function About() {
                   <img src="Purva.png" alt="Team Member 5" />
                   <div className={styles.cardContent}>
                     <h3>Purva Rana</h3>
-                    <p>Lead Developer</p>
+                    <p>Developer</p>
                     <a href="https://www.linkedin.com/in/purva-rana-b231a0253/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
