@@ -10,9 +10,10 @@ function Projects() {
     description: "some info about website ",
     date: "Started: July 2024",
   };
+  
   const ongoingTechnicalProject2 = {
     id: 2,
-    title: "Autonomus Vehicle",
+    title: "Autonomous Vehicle",
     description: "info about autonomous vehicle",
     date: "Started: July 2024",
   };
