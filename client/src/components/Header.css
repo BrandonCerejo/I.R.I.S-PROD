@@ -6,7 +6,7 @@
 }
 
 .navbar {
-  background: linear-gradient(90deg, rgb(255, 0, 149) 0%, rgb(2, 149, 179) 100%);
+  background: linear-gradient(90deg, rgb(255, 0, 149) 0%, rgb(155, 3, 220) 100%);
   transition: all 0.3s ease;
   border-radius: 0 0 15px 15px;
 }
