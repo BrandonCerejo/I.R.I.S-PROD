@@ -7,29 +7,25 @@ function Projects() {
   const ongoingTechnicalProject = {
     id: 1,
     title: "Club Website",
-    description: "some info about website ",
-    date: "Started: July 2024",
+    description: "some info about website",
   };
   
   const ongoingTechnicalProject2 = {
     id: 2,
     title: "Autonomous Vehicle",
     description: "info about autonomous vehicle",
-    date: "Started: July 2024",
   };
 
   const ongoingResearch = {
     id: 3,
     title: "Research",
     description: "info about research project",
-    date: "Started: July 2024",
   };
 
   const ongoingResearch2 = {
     id: 4,
     title: "Research",
     description: "info about research project",
-    date: "Started: July 2024",
   };
 
   useEffect(() => {
@@ -42,74 +38,51 @@ function Projects() {
     }
   }, []);
 
-    return (
-      <div className={styles.projects}>
-        <main className={styles.mainContent}>
-          <h1 className={styles.title}>Projects</h1>
-          
-          {/* Technical Projects Section */}
-          <h2 className={styles.title}>Ongoing Technical Projects</h2>
-          <div className={styles.projectsWrapper}>
-            <div className={styles.ongoingTechnical}>
-              <h3 className={styles.ongoing}>{ongoingTechnicalProject.title}</h3>
-              <div className={styles.projectCard}>
-                <div>
-                  <img src ="logo2.png"></img>
-                  <p>{ongoingTechnicalProject.description}</p>
-                  <p>{ongoingTechnicalProject.date}</p>
+  return (
+    <div className={styles.projects}>
+      <main className={`${styles.mainContent} container`}>
+        <h1 className={styles.title}>Projects</h1>
+
+        {/* Technical Projects Section */}
+        <h2 className={styles.title}>Ongoing Technical Projects</h2>
+        <div className="row">
+          {[ongoingTechnicalProject, ongoingTechnicalProject2].map((project) => (
+            <div className="col-md-6 d-flex justify-content-center" key={project.id}>
+              <div className={`${styles.projectCard} card`}>
+                <div className="card-body">
+                  <h3 className="card-title">{project.title}</h3> {/* Title above the card body */}
+                  <img src="logo2.png" className="card-img-top" alt="Project logo" />
+                  <p className="card-text">{project.description}</p>
+                  <Link to={`/projects/${project.id}`} className="btn btn-primary">
+                    Click to Know More!
+                  </Link>
                 </div>
-                <Link to={`/projects/${ongoingTechnicalProject.id}`} className={styles.btn}>
-                  Click to Know More!
-                </Link>
               </div>
             </div>
-  
-            <div className={styles.ongoingTechnical}>
-              <h3 className={styles.ongoing}>{ongoingTechnicalProject2.title}</h3>
-              <div className={styles.projectCard}>
-                <div>
-                  <img src ="logo2.png"></img>
-                  <p>{ongoingTechnicalProject2.description}</p>
-                  <p>{ongoingTechnicalProject2.date}</p>
+          ))}
+        </div>
+
+        {/* Research Section */}
+        <h2 className={styles.title}>Ongoing Research</h2>
+        <div className="row">
+          {[ongoingResearch, ongoingResearch2].map((research) => (
+            <div className="col-md-6 d-flex justify-content-center" key={research.id}>
+              <div className={`${styles.projectCard} card`}>
+                <div className="card-body">
+                  <h3 className="card-title">{research.title}</h3> {/* Title above the card body */}
+                  <img src="logo2.png" className="card-img-top" alt="Research logo" />
+                  <p className="card-text">{research.description}</p>
+                  <Link to={`/projects/${research.id}`} className="btn btn-primary">
+                    Click to Know More!
+                  </Link>
                 </div>
-                <Link to={`/projects/${ongoingTechnicalProject2.id}`} className={styles.btn}>
-                  Click to Know More!
-                </Link>
               </div>
             </div>
-          </div>
-  
-          {/* Research Section */}
-          <h2 className={styles.title}>Ongoing Research</h2>
-          <div className={styles.projectsWrapper}>
-            <div className={styles.ongoingResearch}>
-              <div className={styles.projectCard}>
-                <div>
-                  <img src ="logo2.png"></img>
-                  <p>{ongoingResearch.description}</p>
-                  <p>{ongoingResearch.date}</p>
-                </div>
-                <Link to={`/projects/${ongoingResearch.id}`} className={styles.btn}>
-                  Click to Know More!
-                </Link>
-              </div>
-            </div>
-  
-            <div className={styles.ongoingResearch}>
-              <div className={styles.projectCard}>
-                <div>
-                  <img src ="logo2.png"></img>
-                  <p>{ongoingResearch2.description}</p>
-                  <p>{ongoingResearch2.date}</p>
-                </div>
-                <Link to={`/projects/${ongoingResearch2.id}`} className={styles.btn}>
-                  Click to Know More!
-                </Link>
-              </div>
-            </div>
-          </div>
-        </main>
-      </div>
-    );
-  }
+          ))}
+        </div>
+      </main>
+    </div>
+  );
+}
+
 export default Projects;
