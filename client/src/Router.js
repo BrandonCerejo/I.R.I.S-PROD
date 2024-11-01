@@ -31,7 +31,7 @@ function AppRouter() {
         <Route path="/terms" element={<Terms />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/projects' element={<Projects />} />
-        <Route path='/projects/1' element={<Projects1 />} />
+        <Route path="/projects/1" element={<Projects1 />} />
         <Route path='/blog' element={<Blog />} />
         {/* <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
         <Route path="/checkoutPayment" element={<CheckoutPayment />} /> */}
