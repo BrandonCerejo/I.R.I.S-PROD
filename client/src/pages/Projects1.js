@@ -11,9 +11,12 @@ const Projects1 = () => {
             <h1 className={styles.title}>I.R.I.S Club WEBSITE</h1>
 
             <div className={styles.aboutwebsite}>
-              <h3> ABOUT OUR WEBSITE </h3>
+              <h3>ABOUT OUR WEBSITE</h3>
               <p>
-                The I.R.I.S. club website is a dynamic platform designed to unite our community of innovators, learners, and leaders...
+                The I.R.I.S. club website is a dynamic platform designed to unite our community of innovators, learners, and leaders. Acting as a central hub, it provides essential information about events, announcements, and achievements while facilitating communication with members, alumni, and external partners. The site not only showcases our events and podcast episodes but also serves as a vital resource for attracting new members and enhancing our visibility on campus.
+              </p>
+              <p>
+                This website consolidates all details about I.R.I.S. for sponsors, partners, teachers, and participants in our workshops and hackathons. It highlights our collective work, including research, projects, and past events, fostering collaboration and engagement. By promoting events and offering seamless registration, the I.R.I.S. website boosts participation and streamlines operations, while connecting members with external groups. Ultimately, it supports our community by providing information and opportunities for involvement in various activities, such as hackathons, seminars, and podcasts.
               </p>
             </div>
 
