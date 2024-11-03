@@ -1,18 +1,16 @@
-/* Reset any extra padding or margins */
 .App {
   padding: 0 !important;
   margin: 0;
   background: transparent;
-  overflow-x: hidden; /* Prevents horizontal overflow */
+  overflow-x: hidden; 
 }
 
 body, html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevents body-level overflow */
+  overflow-x: hidden; 
 }
 
-/* Example styling for App logo if used */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
