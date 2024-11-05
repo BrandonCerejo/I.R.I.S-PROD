@@ -20,14 +20,14 @@ const Projects1 = () => {
               </p>
             </div>
 
-            <section className={styles.timeline}>
+            {/*<section className={styles.timeline}>
               <h3>Project Timeline</h3>
               <p>Day 1: Planning & Setup</p>
               <p>Days 2-7: Frontend Development</p>
               <p>Days 8-13: Backend Development</p>
               <p>Days 14-18: Final Integration</p>
               <p>Days 19-26: Deployment & Final Project</p>
-            </section>
+            </section>*/}
 
             <section className={styles.websitefeatures}>
               <h3>Website Features</h3>
