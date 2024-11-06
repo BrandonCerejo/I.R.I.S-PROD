@@ -1,6 +1,8 @@
 .blogPage {
-  background-color: #f8f9fa;
+ background-color: #1e1e1e;
+  color: #f8f9fa;
   padding-top: 80px;
+  font-family: Arial, sans-serif;
 }
 
 .pageTitle {
@@ -8,13 +10,21 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 40px;
-  color: #333;
+  color: #ff00ff;
+  /* color: linear-gradient(90deg, #ff00ff, #d5006d); */
+}
+
+.pageSubtitle {
+  text-align: center;
+  color: #b3b3b3;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .blogCard {
-  background: #fff;
+  background: #333;  
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   margin-bottom: 30px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -24,13 +34,18 @@
 
 .blogCard:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.75);
 }
 
 .blogImage {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blogImage:hover {
+  transform: scale(1.05);
 }
 
 .blogContent {
@@ -45,25 +60,28 @@
 .blogTitle {
   font-size: 24px;
   font-weight: bold;
-  color: #007bff;
+  color: #ff00ff; /* Magenta color for titles */
   margin-bottom: 10px;
 }
 
 .blogDescription {
   font-size: 16px;
-  color: #666;
+  color: #b3b3b3; /* Lighter gray for description */
   margin-bottom: 20px;
 }
 
 .blogMeta {
   font-size: 14px;
-  color: #999;
+  color: #8c8c8c; /* Medium gray for metadata */
   margin-bottom: 20px;
+  padding: 10px 0;
+  border-top: 1px solid #444;
 }
 
 .readMoreButton {
   display: inline-block;
-  background-color: #007bff;
+  background: linear-gradient(90deg, #ff00ff, #d5006d);
+  /* background-color: #ff00ffa4; Magenta background */ 
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -73,7 +91,7 @@
 }
 
 .readMoreButton:hover {
-  background-color: #0056b3;
+  background: linear-gradient(90deg, #d5006d, #ff00ff);
   transform: scale(1.05);
 }
 
@@ -84,7 +102,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8); /* Darker overlay */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,17 +112,20 @@
 .modal {
   width: 80vw;
   max-width: 900px;
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #2c2c2c; /* Dark modal background */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
   overflow-y: auto;
   max-height: 80vh;
+  position: relative;
+  top: 5vh;
 }
 
 .modalContent {
   position: relative;
   text-align: left;
+  color: #f8f9fa; /* Light text color in modal */
 }
 
 .closeButton {
@@ -114,25 +135,31 @@
   background: none;
   border: none;
   font-size: 24px;
+  color: #ff00ff; /* Magenta close button */
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.closeButton:hover {
+  color: #d5006d;
 }
 
 .modalTitle {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #007bff;
+  color: #ff00ff; /* Magenta color for modal title */
 }
 
 .modalSubtitle {
   font-size: 20px;
   margin-bottom: 15px;
-  color: #555;
+  color: #ccc; /* Lighter gray for modal subtitle */
 }
 
 .modalMeta {
   font-size: 14px;
-  color: #777;
+  color: #999; /* Medium gray for modal metadata */
   margin-bottom: 20px;
 }
 
@@ -147,4 +174,9 @@
   height: auto;
   margin-bottom: 15px;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.modalImage:hover {
+  transform: scale(1.03);
 }

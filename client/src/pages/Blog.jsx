@@ -49,7 +49,7 @@ function Blog() {
         <p className={styles.pageSubtitle}>
           I.R.I.S. recent developments and ongoing projects.
         </p>
-        <div className="row">
+        <div className="row py-5">
           {blogPosts.map((post) => (
             <div key={post.id} className="col-md-4">
               <div className={styles.blogCard}>
