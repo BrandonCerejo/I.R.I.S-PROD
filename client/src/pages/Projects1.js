@@ -9,10 +9,10 @@ const Projects1 = () => {
         <main className="container">
           <div className={styles.content}>
             
-            <h1 className={styles.title}>I.R.I.S Club WEBSITE </h1>
+            <h1 className={styles.title}>I.R.I.S CLUB WEBSITE </h1>
            
 
-        <div className={styles.Aboutwesbite}>
+        <div className={styles.aboutwebsite}>
             <h3> ABOUT OUR WEBSITE </h3>
               <p> 
               The I.R.I.S. club website is a dynamic platform designed to unite our community of innovators, learners, and leaders. Acting as a central hub, it provides essential information about events, announcements, and achievements while facilitating communication with members, alumni, and external partners. The site not only showcases our events and podcast episodes but also serves as a vital resource for attracting new members and enhancing our visibility on campus.
@@ -22,18 +22,7 @@ const Projects1 = () => {
              </p>
             </div>
 
-            <section className={styles.Timeline}>
-                <h3> Project Timeline</h3>
-              <p>Day 1: Planning & Setup</p>
-              <p>Days 2-7: Frontend Development </p>
-              <p>Days 8-13: Backend Development</p>
-              <p>Days 14-18: Final Integration </p>
-              <p>Days 19-26: Deployement & Final Project </p>
-             </section>
-
-            
-            
-            <section className={"websitefeatures"}>
+            <section className={styles.websitefeatures}>
               <h3>Wesbite Features</h3>
               <ol>
                 <li>Event Management: Displays upcoming and past events with registration options. </li>
@@ -45,16 +34,27 @@ const Projects1 = () => {
               
             </section>
 
-            <section className={"webtechnologies"}>
-              <h3>TECHNOLOGIES</h3>
-              <ol>
-                <li>React JS (Frontend Development) </li>
-                <li>Bootstrap (Frontend Development)</li>
-                <li>Razorpay(Payment Gateway) </li>
-                <li>Github(Version Control & Collaboration)</li>
-                <li>Supabase SQL(Database)</li>
-                <li>Vercel(Frontend and Backend deployment)</li>
-              </ol>
+            <section className={styles.webtechnologies}>
+              <h3>Plan and Research</h3>
+              <p>Our team planned intensively in order to make sure a smooth development process for the website. Our team held multiple meetings spanned across a few weeks to finalize the plan and to research
+              </p>
+              <h3> Development</h3>
+                <ol>
+                <li>React JS: React JS is the library on which I.R.I.S’s website is made. </li>
+                <li>Bootstrap Bootstrap is a very popular CSS framework that we used to make I.R.I.S Website more responsive in multiple types of screens and displays.</li>
+                <li>Razorpay:Razorpay is a payment gateway API which is used to handle online payments for the hackathon and our future ventures and events. </li>
+                <li>Github:</li>
+                <li>Supabase SQL:Github is an industry standard service used for version controlling and collaboration. Our team used github throughout the production phase to collaborate with everyone</li>
+                </ol>
+                <h3>Built & Test</h3>
+                <p>
+                During our building & testing phase, we used Vercel extensively to check for bugs and to increase security in our code.
+                </p>
+                <h3>Deployement</h3>
+                <p> 
+                We have used Vercel to deploy both our front and back end because of their reputation of being secure and their seamless integration with github.
+
+                </p>
             </section>
             </div>
         </main>

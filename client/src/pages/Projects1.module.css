@@ -4,7 +4,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.projects1 {
+.Projects1 {
     background: url('img.jpeg') no-repeat center center,
                 url('https://www.transparenttextures.com/patterns/cubes.png');
     background-size: cover, 50px 50px;            
@@ -59,7 +59,7 @@ body {
     to { transform: translateY(0); opacity: 1; }
 }
 
-.aboutwebsite, .timeline, .journey {
+.aboutwebsite, .timeline, .journey  {
     margin-bottom: 40px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.4); 
