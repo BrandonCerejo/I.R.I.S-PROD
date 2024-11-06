@@ -1,7 +1,4 @@
 :root {
-    --primary-color: rgb(237, 47, 98);
-    --secondary-color: rgb(2, 2, 39);
-    --tertiary-color: rgb(19, 95, 225);
     --light-bg: rgba(255, 255, 255, 0.8);
     --dark-text: #212529;
     --heading-color: #ffffff;
@@ -79,13 +76,4 @@ main {
     gap: 40px;
     display: flex;
     flex-direction: column;
-}
-
-
-footer {
-    z-index: 3;
-    background-color: var(--secondary-color);
-    color: var(--heading-color);
-    padding: 20px;
-    text-align: center;
 }

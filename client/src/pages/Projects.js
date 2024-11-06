@@ -7,16 +7,14 @@ function Projects() {
   const ongoingTechnicalProject = {
     id: 1,
     title: "Club Website",
-    description: "some info about website",
   };
   
   const ongoingTechnicalProject2 = {
     id: 2,
     title: "Autonomous Vehicle",
-    description: "info about autonomous vehicle",
   };
 
-  const ongoingResearch = {
+  {/*const ongoingResearch = {
     id: 3,
     title: "Research",
     description: "info about research project",
@@ -26,7 +24,7 @@ function Projects() {
     id: 4,
     title: "Research",
     description: "info about research project",
-  };
+  };*/}
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -46,7 +44,21 @@ function Projects() {
         {/* Technical Projects Section */}
         <h2 className={styles.title}>Ongoing Technical Projects</h2>
         <div className="row">
-          {[ongoingTechnicalProject, ongoingTechnicalProject2].map((project) => (
+          {[ongoingTechnicalProject].map((project) => (
+            <div className="col-md-6 d-flex justify-content-center" key={project.id}>
+              <div className={`${styles.projectCard} card`}>
+                <div className="card-body">
+                  <h3 className="card-title">{project.title}</h3> {/* Title above the card body */}
+                  <img src="website image.png" className="card-img-top" alt="Project logo" />
+                  <p className="card-text">{project.description}</p>
+                  <Link to={`/projects/${project.id}`} className="btn btn-primary">
+                    Click to Know More!
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+          {[ongoingTechnicalProject2].map((project) => (
             <div className="col-md-6 d-flex justify-content-center" key={project.id}>
               <div className={`${styles.projectCard} card`}>
                 <div className="card-body">
@@ -63,14 +75,14 @@ function Projects() {
         </div>
 
         {/* Research Section */}
-        <h2 className={styles.title}>Ongoing Research</h2>
+        {/*<h2 className={styles.title}>Ongoing Research</h2>
         <div className="row">
           {[ongoingResearch, ongoingResearch2].map((research) => (
             <div className="col-md-6 d-flex justify-content-center" key={research.id}>
               <div className={`${styles.projectCard} card`}>
                 <div className="card-body">
                   <h3 className="card-title">{research.title}</h3> {/* Title above the card body */}
-                  <img src="logo2.png" className="card-img-top" alt="Research logo" />
+        {/*<img src="logo2.png" className="card-img-top" alt="Research logo" />
                   <p className="card-text">{research.description}</p>
                   <Link to={`/projects/${research.id}`} className="btn btn-primary">
                     Click to Know More!
@@ -79,7 +91,7 @@ function Projects() {
               </div>
             </div>
           ))}
-        </div>
+        </div>*/}
       </main>
     </div>
   );

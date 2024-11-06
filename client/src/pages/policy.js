@@ -1,8 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import './policy.css';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 function Policy() {
   return (
@@ -10,43 +7,42 @@ function Policy() {
       <main>
         <div className='policy-container'>
           <h1>Our Privacy Policy</h1>
-          <h3>At I.R.I.S, we are committed to protecting the privacy of our users. This policy explains how we collect, use, and protect your personal data.</h3>
+          <h3>At I.R.I.S, we prioritize your privacy and are committed to safeguarding your personal information. This policy explains how we collect, use, and protect your data through Razorpay for payment processing.</h3>
           
           <div className='policy-content-container'>
             <div className='cards-container'>
               <div className="policy-card">
                 <h2>Information We Collect</h2>
-                <p>When you register for our hackathon, we may collect personal information such as your name, email address, contact number, and payment details.</p>
-                <p>We may collect payment details such as credit card numbers or bank information through secure methods provided by our payment processor.</p>
-                <p>We may collect data on how you interact with our website or services, such as pages visited and interaction with event registration forms.</p>
+                <p>We may collect personal information such as your name, email address, contact number, and payment details to facilitate transactions through Razorpay.</p>
+                <p>Payment details such as credit card numbers or bank information are collected and processed securely through Razorpay's payment gateway.</p>
+                <p>We may also collect data on how you interact with our website for event registrations and other activities.</p>
               </div>
 
               <div className="policy-card">
                 <h2>Use of Information</h2>
-                <p>Your personal information will be used to manage registrations, provide event updates, and handle customer support.</p>
-                <p>Your payment details will be used solely for processing your hackathon participation fee.</p>
-                <p>We may use your email to send important updates, unless you opt out.</p>
+                <p>Your personal information is used to manage registrations, provide updates, and handle customer support. Payment details are used only for processing fees and are securely managed through Razorpay.</p>
+                <p>We may use your email to send updates, notifications, or other necessary information related to our events and services.</p>
               </div>
 
               <div className="policy-card">
                 <h2>Data Sharing</h2>
-                <p>We share payment information with third-party payment processors.</p>
-                <p>We may disclose personal information if required by law.</p>
+                <p>Your payment information is shared with Razorpay for secure transaction processing.</p>
+                <p>We may also disclose personal information if legally required to do so.</p>
               </div>
 
               <div className="policy-card">
                 <h2>Data Security</h2>
-                <p>We take reasonable measures to protect your personal data. However, no online transaction is 100% secure.</p>
+                <p>We take reasonable steps to protect your data. While no online transaction is completely secure, we rely on Razorpay's industry-standard security measures.</p>
               </div>
 
               <div className="policy-card">
                 <h2>Your Rights</h2>
-                <p>You may request access to, correction, or deletion of your personal data by contacting us.</p>
+                <p>You may request access to, correction, or deletion of your personal data by contacting us directly.</p>
               </div>
 
               <div className="policy-card">
                 <h2>Third-Party Services</h2>
-                <p>Our payment processing is handled by third-party services.</p>
+                <p>We use Razorpay as our payment processor. Please review their privacy policy for additional details on their data handling practices.</p>
               </div>
 
               <div className="policy-card">
@@ -58,7 +54,6 @@ function Policy() {
           </div>
         </div>
       </main>
-
     </div>
   );
 }

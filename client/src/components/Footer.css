@@ -1,24 +1,22 @@
 footer {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 2rem;
-    position: relative;
-    width: 100%;
-  }
-  
-  footer a {
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  footer a:hover {
-    color: white;
-    text-decoration: underline;
-  }
+  background-color: #1a1a1a;
+  color: white;
+  padding: 2rem;
+  width: 100%;
+}
 
-  footer hr{
-    position: relative;
-    left: -15vw;
-    width: 120vw;
-  }
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+footer hr {
+  width: 100%;
+  margin: 0;
+}
