@@ -1,0 +1,41 @@
+.tarzen-page-container{
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 70px;
+    .tarzen-page-heading-container{
+        border: 5px solid white;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(192,120,71);
+        background: linear-gradient(337deg, rgba(192,120,71,1) 0%, rgba(24,2,111,1) 0%, rgba(129,0,172,1) 100%);
+        // background-color: rgb(0, 162, 255);
+        color: white;
+        height: 200px;
+        text-align: center;
+        p{
+            font-size: 22px;
+        }
+
+        h1{
+            text-shadow: none;
+        }
+    }
+}
+
+.content-listing{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tarzen-page-section-3-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}

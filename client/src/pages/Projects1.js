@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './ProjectFiles/Project.scss'
 import styles from './Projects1.module.css';
+<<<<<<< HEAD
 
+=======
+import './ProjectFiles/Project.scss'
+>>>>>>> 87d8b585 (Made the tarzan page, designed the scrollbar and uploaded all the files in the main IRIS supabase)
 const Projects1 = () => {
   return (
     <>

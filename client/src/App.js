@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { supabase } from './supabase';
 import { BrowserRouter as Router } from 'react-router-dom';
 import styles from './pages/Contact.module.css';
-import backgroundVideo from './pages/vid2.mp4';
+// import backgroundVideo from './pages/vid2.mp4';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import AppRouter from './Router.js';
@@ -10,7 +10,9 @@ import Projects from './pages/Projects'; // Adjust the path as necessary
 
 //import { Analytics } from '@vercel/analytics/react';
 
+
 function App() {
+
   return (
     <Router>
       <div className="App">
@@ -96,11 +98,13 @@ function Contact() {
     setShowNotification(false);
   };
 
+  const [link, setLink] = useState("https://rkvbuqdjkilvqlywzjsi.supabase.co/storage/v1/object/sign/AboutPhotos/Videos/vid2.mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBYm91dFBob3Rvcy9WaWRlb3MvdmlkMi5tcDQiLCJpYXQiOjE3MzA5MDA1MDcsImV4cCI6MTc2MjQzNjUwN30.qMfRi7Uxvtpz4rRnaN6bTSQzEE_AtxrRQMBp2qR5YEI&t=2024-11-06T13%3A41%3A48.487Z")
+
   return (
     <div className={styles.contact}>
       <div className={styles.videoBackground}>
         <video autoPlay muted loop>
-          <source src={backgroundVideo} type="video/mp4" />
+          <source src={link} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

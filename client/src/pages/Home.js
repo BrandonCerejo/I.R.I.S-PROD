@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 import videoSource from './vid1.mp4';
-import backgroundVideo from './vid2.mp4';
 import smallPhoto from './sephackathon.jpg';
 
 function Home() {
+
+  const [link, setLink] = useState("https://rkvbuqdjkilvqlywzjsi.supabase.co/storage/v1/object/sign/AboutPhotos/Videos/vid2.mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBYm91dFBob3Rvcy9WaWRlb3MvdmlkMi5tcDQiLCJpYXQiOjE3MzA5MDA1MDcsImV4cCI6MTc2MjQzNjUwN30.qMfRi7Uxvtpz4rRnaN6bTSQzEE_AtxrRQMBp2qR5YEI&t=2024-11-06T13%3A41%3A48.487Z")
+  const [robotLink, setRobotLink] = useState("https://rkvbuqdjkilvqlywzjsi.supabase.co/storage/v1/object/sign/AboutPhotos/Videos/vid1.mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBYm91dFBob3Rvcy9WaWRlb3MvdmlkMS5tcDQiLCJpYXQiOjE3MzA4OTk4MjMsImV4cCI6MTc2MjQzNTgyM30.C_yjMhQfYEszRhFBj9DrlK3rUF4-ugkIRdR7t4vkXkU&t=2024-11-06T13%3A30%3A24.685Z")
+
+
   return (
     <div className={styles.home}>
       <video className={styles.backgroundVideo} autoPlay muted loop>
-        <source src={backgroundVideo} type="video/mp4" />
+        <source src={link} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
@@ -67,7 +71,7 @@ function Home() {
                 </div>
                 <div className="col-lg-6 text-center">
                   <video className={styles.heroVideo} autoPlay loop muted>
-                    <source src={videoSource} type="video/mp4" />
+                    <source src={robotLink} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>

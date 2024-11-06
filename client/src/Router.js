@@ -15,6 +15,7 @@ import { Gallery } from './pages/Gallery';
 //import CheckoutPayment from './pages/paymentCheckout';
 import Projects from './pages/Projects';
 import Projects1 from './pages/Projects1';
+import { TarzenProject } from './pages/ProjectFiles/Tarzan/TarzenProject';
 function AppRouter() {
   return (
     <>
@@ -32,6 +33,7 @@ function AppRouter() {
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/projects' element={<Projects />} />
         <Route path="/projects/1" element={<Projects1 />} />
+        <Route path='/projects/2' element={<TarzenProject />} />
         <Route path='/blog' element={<Blog />} />
         {/* <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
         <Route path="/checkoutPayment" element={<CheckoutPayment />} /> */}
