@@ -8,7 +8,7 @@ const Projects1 = () => {
       <div className={styles.projects1}>
         <main className="container">
           <div className={styles.content}>
-            <h1 className={styles.title}>I.R.I.S Club WEBSITE</h1>
+            <h1 className={styles.title}>I.R.I.S. Club Website</h1>
 
             <div className={styles.aboutwebsite}>
               <h3>ABOUT OUR WEBSITE</h3>
@@ -20,10 +20,6 @@ const Projects1 = () => {
               </p>
             </div>
 
-            
-
-            
-            
             <section className={styles.websitefeatures}>
               <h3>WEBSITE FEATURES</h3>
               <ol>
@@ -52,11 +48,9 @@ const Projects1 = () => {
                 <li>Supabase SQL: Supabase SQL is a powerful database which is highly scalable & secure. We use it to store the data of our users securely.
                 </li>
               </ol>
-              <h3>BUILD & TEST</h3>
-              <p>During our building & testing phase, we used Vercel extensively to check for bugs and to increase security in our code</p>
                   
               <h3>DEPLOYMENT</h3>
-              <p>We have used Vercel to deploy frontend because of their reputation of being secure and their seamless integration with github.
+              <p>We have used Vercel to deploy frontend because of their easy deployment and seamless integration with github.
               </p>
             </section>
           </div>

@@ -30,7 +30,7 @@ function About() {
 
       <main className={styles.content + ' py-5'}>
         <div className="container">
-          <h1 className={styles.title}>About I.R.I.S</h1>
+          <h1 className={styles.title}>About I.R.I.S.</h1>
           <p className={styles.titleDesc}>I.R.I.S (Innovation Research & Intelligence Support) is a tech club dedicated to fostering innovation and supporting research in the field of technology.</p>
           <div className="row">
             <div className="col-md-6">
@@ -182,7 +182,7 @@ function About() {
                   <img src="https://rkvbuqdjkilvqlywzjsi.supabase.co/storage/v1/object/sign/AboutPhotos/Photos/Kush.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBYm91dFBob3Rvcy9QaG90b3MvS3VzaC5qcGciLCJpYXQiOjE3MzA4OTk1ODEsImV4cCI6MTc2MjQzNTU4MX0.h-qtkXfADCCZGQxQpjTl4n8lHXmEUpLw6mR9VHH2ewI&t=2024-11-06T13%3A26%3A22.615Z" alt="Team Member 5" />
                   <div className={styles.cardContent}>
                     <h3>Kushagra Singh</h3>
-                    <p>Lead Developer</p>
+                    <p>Technical Head</p>
                     <a href="https://www.linkedin.com/in/kushagra-anit-singh/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
@@ -193,7 +193,7 @@ function About() {
                   <img src="https://rkvbuqdjkilvqlywzjsi.supabase.co/storage/v1/object/sign/AboutPhotos/Photos/gagan.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBYm91dFBob3Rvcy9QaG90b3MvZ2FnYW4uanBnIiwiaWF0IjoxNzMwODk5NTk3LCJleHAiOjE3NjI0MzU1OTd9.6bW_qvw8a_ogyuA4YlgArpo85dLvK01_bJ7Jj9_i6Po&t=2024-11-06T13%3A26%3A38.333Z" alt="Team Member 5" />
                   <div className={styles.cardContent}>
                     <h3>Gaganjot Kaur</h3>
-                    <p>Lead Developer</p>
+                    <p>Project Team Head</p>
                     <a href="https://www.linkedin.com/in/gaganjot-kaur-badwal-4017062a7/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
@@ -204,7 +204,7 @@ function About() {
                   <img src="https://rkvbuqdjkilvqlywzjsi.supabase.co/storage/v1/object/sign/AboutPhotos/Photos/Purva.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBYm91dFBob3Rvcy9QaG90b3MvUHVydmEucG5nIiwiaWF0IjoxNzMwODk5NjEyLCJleHAiOjE3NjI0MzU2MTJ9.8wEZG8xzADRIehO4k1PVCbNvk6TWiqxuspC7v88X2Fc&t=2024-11-06T13%3A26%3A52.832Z" alt="Team Member 5" />
                   <div className={styles.cardContent}>
                     <h3>Purva Rana</h3>
-                    <p>Lead Developer</p>
+                    <p>Technical Team Member</p>
                     <a href="https://www.linkedin.com/in/purva-rana-b231a0253/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
