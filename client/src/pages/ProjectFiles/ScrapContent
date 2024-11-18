@@ -1,0 +1,122 @@
+ {/* <h2>Introduction: The Need for a Digital Ecosystem</h2>
+          <p>
+            In today's technology-driven world, an organization's digital presence is more than just a website—it's a comprehensive ecosystem that connects, communicates, and catalyzes innovation. For I.R.I.S., our website represents more than a digital brochure; it's a strategic tool for collaboration, management, and showcasing our technological prowess.
+          </p>
+
+          <h3>The Challenges We Addressed</h3>
+          <p>
+            Before our website, we faced significant challenges:
+          </p>
+          <ul>
+            <li>Fragmented communication channels</li>
+            <li>Difficult hackathon registrations</li>
+            <li>Limited visibility of member achievements</li>
+            <li>Complex payment processes</li>
+          </ul>
+
+          <h2>Architectural Overview: More Than Just Pages</h2>
+
+          <h3>Website Structure</h3>
+          <p>
+            Our website is strategically designed with distinct, purpose-driven sections:
+          </p>
+          <ol>
+            <li><strong>Home Page</strong>: First impressions and latest highlights</li>
+            <li><strong>Projects</strong>: Showcasing our technological innovations</li>
+            <li><strong>Members</strong>: Highlighting individual and team achievements</li>
+            <li><strong>Hackathons</strong>: Streamlined registration and management</li>
+            <li><strong>Resources</strong>: Knowledge sharing and documentation</li>
+          </ol>
+
+          <h2>Technology Stack: Powering Our Digital Platform</h2>
+
+          <h3>Frontend: React.js and Bootstrap</h3>
+          <p><strong>Why React.js?</strong></p>
+          <ul>
+            <li>Component-based architecture</li>
+            <li>High performance</li>
+            <li>Seamless state management</li>
+            <li>Rich ecosystem of libraries</li>
+          </ul>
+          <p><strong>Bootstrap Integration</strong></p>
+          <ul>
+            <li>Responsive design</li>
+            <li>Mobile-first approach</li>
+            <li>Consistent UI/UX across devices</li>
+            <li>Rapid development capabilities</li>
+          </ul>
+
+          <h3>Backend and Database: Supabase SQL</h3>
+          <p><strong>Why Supabase?</strong></p>
+          <ul>
+            <li>Real-time database capabilities</li>
+            <li>Robust security features</li>
+            <li>Scalable infrastructure</li>
+            <li>Easy PostgreSQL integration</li>
+          </ul>
+
+          <h3>Payment Gateway: Razorpay</h3>
+          <p><strong>Seamless Transaction Experience</strong></p>
+          <ul>
+            <li>Secure payment processing</li>
+            <li>Multiple payment method support</li>
+            <li>Easy integration</li>
+            <li>Low transaction overhead</li>
+          </ul>
+
+          <h2>Security: Protecting Our Digital Frontier</h2>
+
+          <h3>Cyber Incident: A Critical Learning Moment</h3>
+          <p>
+            In an unexpected turn of events, our website faced a critical security vulnerability—one that reshaped our approach to cybersecurity. Here's a detailed look at the incident:
+          </p>
+
+          <p><strong>The Incident:</strong></p>
+          <ul>
+            <li><strong>What Happened:</strong> Our team developed and deployed the website to handle hackathon registrations and payments. Due to a tight schedule, security was initially deprioritized. We disabled Row Level Security (RLS) in the Supabase backend to speed up data entry, leaving the database exposed to unauthorized changes.</li>
+            <li><strong>How We Discovered It:</strong> After deployment, a participant noticed the exposed database and alerted us. They demonstrated the vulnerability by adding an empty row, highlighting the potential for unauthorized CRUD operations.</li>
+            <li><strong>How We Fixed It:</strong> We quickly re-enabled RLS with custom rules, tested the changes on a dummy site, and then deployed the fix to the live site. This experience reinforced the importance of prioritizing security from the start, no matter the project scale.</li>
+          </ul>
+
+          <h3>Key Learnings:</h3>
+          <ul>
+            <li>Never compromise on security, even for seemingly low-risk projects</li>
+            <li>Implement strong security measures like RLS and key protection early in development</li>
+            <li>Regularly audit systems for vulnerabilities, even after deployment</li>
+          </ul>
+
+          <h2>Deployment: Bringing Our Vision Online</h2>
+          <h3>Vercel: Powering Our Digital Infrastructure</h3>
+          <p><strong>Frontend Deployment</strong></p>
+          <ul>
+            <li>Seamless GitHub integration</li>
+            <li>Instant deployments</li>
+            <li>Global CDN</li>
+            <li>Performance optimization</li>
+          </ul>
+
+          <h3>Serverless Edge Functions</h3>
+          <ul>
+            <li>Scalable backend logic</li>
+            <li>Reduced infrastructure complexity</li>
+            <li>Cost-effective computing</li>
+          </ul>
+
+          <h2>Maintenance and Continuous Improvement</h2>
+          <p>
+            Our DevOps cycle ensures:
+          </p>
+          <ul>
+            <li>Regular updates</li>
+            <li>Performance monitoring</li>
+            <li>Security patches</li>
+            <li>Feature enhancements</li>
+          </ul>
+
+          <h2>Conclusion: More Than a Website</h2>
+          <p>
+            The I.R.I.S. website is a testament to our commitment to innovation, collaboration, and technological excellence. It's not just a platform—it's our digital home.
+          </p>
+
+          <p><strong>Continuous Innovation, Infinite Possibilities</strong></p>
+          <p><i>Developed by the I.R.I.S. Technical Team</i></p> */}
