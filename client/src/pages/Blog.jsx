@@ -13,7 +13,7 @@ function Blog() {
       description: 'An innovative system using computer vision to enhance autonomous vehicle control.',
       author: 'Research Team',
       date: 'November 18, 2024',
-      image: 'autonomous-vehicle.jpg',
+      image: '/simulation.jpg',
       content: (
         <>
           <h1>TARZAN: Revolutionizing Autonomous Vehicle Navigation through Advanced Computer Vision</h1>
@@ -152,7 +152,7 @@ function Blog() {
       description: 'Our journey in building a platform for collaboration, hackathon management, and seamless user experience.',
       author: 'Technical Team',
       date: 'November 18, 2024',
-      image: 'website-development.jpg',
+      image: '/website_img.png',
       content: (
         <>
           <h1>Building the I.R.I.S. Website: A Comprehensive Digital Platform for Innovation</h1>
