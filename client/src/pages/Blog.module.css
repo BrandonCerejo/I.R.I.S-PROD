@@ -130,14 +130,15 @@
 
 .closeButton {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: -30px; 
+  right: -20px; 
   background: none;
   border: none;
-  font-size: 24px;
-  color: #ff00ff; /* Magenta close button */
+  font-size: 30px; 
+  color: #ff00ff;
   cursor: pointer;
   transition: color 0.3s ease;
+  z-index: 1001; 
 }
 
 .closeButton:hover {
@@ -179,4 +180,21 @@
 
 .modalImage:hover {
   transform: scale(1.03);
+}
+
+.imageGallery {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.imageGallery img {
+  max-width: 100%;
+  width:auto;
+  height: auto;
+  margin: 10px 0;
+}
+
+.imageGallery h4 {
+  font-size: 1.2rem;
+  margin-top: 20px;
 }

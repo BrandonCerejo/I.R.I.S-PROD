@@ -89,6 +89,11 @@ function Header() {
                 </Link>
               </li>
               <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === '/blog' ? 'active' : ''}`} to="/blog" onClick={handleNavLinkClick}>
+                  Blog
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`} to="/contact" onClick={handleNavLinkClick}>
                   Contact
                 </Link>

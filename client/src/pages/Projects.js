@@ -49,7 +49,7 @@ function Projects() {
               <div className={`${styles.projectCard} card`}>
                 <div className="card-body">
                   <h3 className="card-title">{project.title}</h3> {/* Title above the card body */}
-                  <img src="website image.png" className="card-img-top" alt="Project logo" />
+                  <img src="logo2.png" className="card-img-top" alt="Project logo" />
                   <p className="card-text">{project.description}</p>
                   <Link to={`/projects/${project.id}`} className="btn btn-primary">
                     Click to Know More!
