@@ -298,3 +298,9 @@
 .voteButton:focus {
   outline: none; 
 }
+
+.voteCount {
+  margin: 0 10px;
+  font-size: 18px;
+  color: #b3b3b3; 
+}

@@ -11,6 +11,7 @@ function Blog() {
   const [commenterName, setCommenterName] = useState('');
   const [deviceId, setDeviceId] = useState(null);
   const [vote, setVote] = useState(null);
+  const [voteCounts, setVoteCounts] = useState({ upvotes: 0, downvotes: 0 });
 
   const blogPosts = [
     {
@@ -134,7 +135,6 @@ function Blog() {
                 As we continue refining TARZAN, we're not just developing a system—we're shaping the future of intelligent transportation. Our project demonstrates that with creativity, advanced algorithms, and a commitment to innovation, we can transform how we navigate our world.
               </p>
               <p><strong>Stay tuned for more updates from the I.R.I.S. Research Team!</strong></p>
-              <p><i>Research Team: MIT World Peace University, Pune</i></p>
               <h3>Visual Insights of TARZAN's System</h3>
               <div className={styles.imageGallery}>
                 <h4>MATLAB System Diagram</h4>
@@ -278,36 +278,83 @@ function Blog() {
       .select('vote_type')
       .eq('post_id', postId)
       .eq('device_id', deviceId)
-      .single();
-
+      .limit(1);
+  
     if (error) {
       console.error('Error fetching vote status:', error);
     } else {
-      setVote(data ? data.vote_type : null); 
+      setVote(data.length > 0 ? data[0].vote_type : null);
+    }
+  
+    const { data: upvoteData, error: upvoteError } = await supabase
+      .from('votes')
+      .select('*')
+      .eq('post_id', postId)
+      .eq('vote_type', 'upvote');
+  
+    const { data: downvoteData, error: downvoteError } = await supabase
+      .from('votes')
+      .select('*')
+      .eq('post_id', postId)
+      .eq('vote_type', 'downvote');
+  
+    if (upvoteError || downvoteError) {
+      console.error('Error fetching vote counts:', upvoteError || downvoteError);
+    } else {
+      const upvotes = upvoteData.length;
+      const downvotes = downvoteData.length;
+      setVoteCounts({ upvotes, downvotes });
     }
   };
 
   const handleVote = async (postId, voteType) => {
-    if (vote === voteType) {
-      alert(`You already ${voteType === 'upvote' ? 'upvoted' : 'downvoted'} this post.`);
-      return; 
-    }
-
-    const { data, error } = await supabase
-      .from('votes')
-      .upsert([
-        {
-          post_id: postId,
-          vote_type: voteType,
-          device_id: deviceId,
-        },
-      ]);
-
-    if (error) {
-      console.error('Error submitting vote:', error);
-    } else {
-      setVote(voteType); 
-      alert(`You ${voteType === 'upvote' ? 'upvoted' : 'downvoted'} this post!`);
+    try {
+      const { data: existingVote, error: fetchError } = await supabase
+        .from('votes')
+        .select('*')
+        .eq('post_id', postId)
+        .eq('device_id', deviceId)
+        .single();
+  
+      if (fetchError && fetchError.code !== 'PGRST116') {
+        console.error('Error fetching existing vote:', fetchError);
+        return;
+      }
+  
+      if (existingVote) {
+        if (existingVote.vote_type === voteType) {
+          return;
+        }
+  
+        const { error: updateError } = await supabase
+          .from('votes')
+          .update({ vote_type: voteType })
+          .eq('post_id', postId)
+          .eq('device_id', deviceId);
+  
+        if (updateError) {
+          console.error('Error updating vote:', updateError);
+          return;
+        }
+      } else {
+        const { error: insertError } = await supabase
+          .from('votes')
+          .insert({
+            post_id: postId,
+            vote_type: voteType,
+            device_id: deviceId,
+          });
+  
+        if (insertError) {
+          console.error('Error inserting vote:', insertError);
+          return;
+        }
+      }
+  
+      setVote(voteType);
+      fetchVoteStatus(postId);
+    } catch (error) {
+      console.error('Unexpected error in handleVote:', error);
     }
   };
 
@@ -398,7 +445,7 @@ function Blog() {
                 <span>{selectedPost.date}</span>
               </div>
               <div className={styles.modalBreaker} />
-              <div className={styles.modalText}>{selectedPost.content}</div>
+              <div className={styles.modalText }>{selectedPost.content}</div>
 
               <div className={styles.voteSection}>
                 <button
@@ -407,44 +454,46 @@ function Blog() {
                 >
                   ▲ Upvote
                 </button>
+                <span className={styles.voteCount}>{voteCounts.upvotes}</span>
                 <button
                   onClick={() => handleVote(selectedPost.id, 'downvote')}
                   className={`${styles.voteButton} ${vote === 'downvote' ? styles.active : ''}`}
                 >
                   ▼ Downvote
                 </button>
+                <span className={styles.voteCount}>{voteCounts.downvotes}</span>
               </div>
 
-            <div className={styles.commentSection}>
-              <div className={styles.commentList}>
-                {comments.map((comment) => (
-                  <div key={comment.id} className={styles.comment}>
-                    <p><strong>{comment.username}</strong></p>
-                    <p>{comment.comment}</p>
-                  </div>
-                ))}
-              </div>
+              <div className={styles.commentSection}>
+                <div className={styles.commentList}>
+                  {comments.map((comment) => (
+                    <div key={comment.id} className={styles.comment}>
+                      <p><strong>{comment.username}</strong></p>
+                      <p>{comment.comment}</p>
+                    </div>
+                  ))}
+                </div>
 
-              <input
-                type="text"
-                value={commenterName}
-                onChange={(e) => setCommenterName(e.target.value)}
-                placeholder="Your Name"
-                className={styles.commentInput}
-              />
+                <input
+                  type="text"
+                  value={commenterName}
+                  onChange={(e) => setCommenterName(e.target.value)}
+                  placeholder="Your Name"
+                  className={styles.commentInput}
+                />
 
-              <textarea
-                value={newComment}
-                onChange={(e) => setNewComment(e.target.value)}
-                placeholder="Write a comment..."
-                className={styles.commentInput}
-              />
-              <button
-                onClick={handleCommentSubmit}
-                className={styles.commentSubmitButton}
-              >
-                Submit Comment
-              </button>
+                <textarea
+                  value={newComment}
+                  onChange={(e) => setNewComment(e.target.value)}
+                  placeholder="Write a comment..."
+                  className={styles.commentInput}
+                />
+                <button
+                  onClick={handleCommentSubmit}
+                  className={styles.commentSubmitButton}
+                >
+                  Submit Comment
+                </button>
               </div>
             </div>
           </Modal>
