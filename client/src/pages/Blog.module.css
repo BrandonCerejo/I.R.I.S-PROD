@@ -1,9 +1,6 @@
 .blogPage {
- /* background-color: #1e1e1e; */
- background: rgb(24,2,111);
-    /* color: white; */
-    background: linear-gradient(90deg, rgba(24,2,111,1) 0%, rgba(201,64,101,1) 100%);
-    
+  background: rgb(24, 2, 111);
+  background: linear-gradient(90deg, rgba(24, 2, 111, 1) 0%, rgba(201, 64, 101, 1) 100%);
   color: #f8f9fa;
   padding-top: 80px;
   font-family: Arial, sans-serif;
@@ -15,7 +12,6 @@
   text-align: center;
   margin-bottom: 40px;
   color: #ff00ff;
-  /* color: linear-gradient(90deg, #ff00ff, #d5006d); */
 }
 
 .pageSubtitle {
@@ -26,7 +22,7 @@
 }
 
 .blogCard {
-  background: #333;  
+  background: #333;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   overflow: hidden;
@@ -65,19 +61,19 @@
 .blogTitle {
   font-size: 24px;
   font-weight: bold;
-  color: #ff00ff; /* Magenta color for titles */
+  color: #ff00ff; 
   margin-bottom: 10px;
 }
 
 .blogDescription {
   font-size: 16px;
-  color: #b3b3b3; /* Lighter gray for description */
+  color: #b3b3b3; 
   margin-bottom: 20px;
 }
 
 .blogMeta {
   font-size: 14px;
-  color: #8c8c8c; /* Medium gray for metadata */
+  color: #8c8c8c; 
   margin-bottom: 20px;
   padding: 10px 0;
   border-top: 1px solid #444;
@@ -86,7 +82,6 @@
 .readMoreButton {
   display: inline-block;
   background: linear-gradient(90deg, #ff00ff, #d5006d);
-  /* background-color: #ff00ffa4; Magenta background */ 
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -100,14 +95,13 @@
   transform: scale(1.05);
 }
 
-/* Modal Styling */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8); /* Darker overlay */
+  background-color: rgba(0, 0, 0, 0.8); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,10 +109,9 @@
 }
 
 .modal {
-  /* border: 5px solid white; */
   width: 80vw;
   max-width: 900px;
-  background-color: #2c2c2c; /* Dark modal background */
+  background-color: #2c2c2c;
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
@@ -131,20 +124,20 @@
 .modalContent {
   position: relative;
   text-align: left;
-  color: #f8f9fa; /* Light text color in modal */
+  color: #f8f9fa; 
 }
 
 .closeButton {
   position: absolute;
-  top: -30px; 
-  right: -20px; 
+  top: -30px;
+  right: -20px;
   background: none;
   border: none;
-  font-size: 30px; 
+  font-size: 30px;
   color: #ff00ff;
   cursor: pointer;
   transition: color 0.3s ease;
-  z-index: 1001; 
+  z-index: 1001;
 }
 
 .closeButton:hover {
@@ -156,24 +149,24 @@
   font-weight: bold;
   line-height: 32px;
   margin-bottom: 10px;
-  color: #ff00ff; /* Magenta color for modal title */
+  color: #ff00ff; 
 }
 
 .modalSubtitle {
   font-size: 20px;
   line-height: 20px;
   margin-bottom: 15px;
-  color: #ccc; /* Lighter gray for modal subtitle */
+  color: #ccc; 
 }
 
 .modalMeta {
   font-size: 14px;
   line-height: 14px;
-  color: #999; /* Medium gray for modal metadata */
+  color: #999;
   margin-bottom: 10px;
 }
 
-.modalBreaker{
+.modalBreaker {
   width: 100%;
   height: 2px;
   border-radius: 10px;
@@ -185,7 +178,6 @@
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 20px;
-  /* background-color: #ffffff63; */
 }
 
 .modalImage {
@@ -207,7 +199,7 @@
 
 .imageGallery img {
   max-width: 100%;
-  width:auto;
+  width: auto;
   height: auto;
   margin: 10px 0;
 }
@@ -215,4 +207,94 @@
 .imageGallery h4 {
   font-size: 1.2rem;
   margin-top: 20px;
+}
+
+.commentSection {
+  margin-top: 30px;
+  border-top: 2px solid #444;
+  padding-top: 20px;
+}
+
+.commentList {
+  margin-bottom: 20px;
+}
+
+.comment {
+  background: #333;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment p {
+  margin: 0;
+  color: #f8f9fa;
+}
+
+.commentInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #333;
+  color: #f8f9fa;
+  resize: vertical;
+}
+
+.commentInput::placeholder {
+  color: #b3b3b3;
+}
+
+.commentSubmitButton {
+  background: linear-gradient(90deg, #ff00ff, #d5006d);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.commentSubmitButton:hover {
+  background: linear-gradient(90deg, #d5006d, #ff00ff);
+  transform: scale(1.05);
+}
+
+.commentSubmitButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.voteSection {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.voteButton {
+  background: transparent;
+  border: none;
+  color: #b3b3b3; 
+  font-size: 24px; 
+  cursor: pointer;
+  padding: 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin: 0 10px; 
+}
+
+.voteButton:hover {
+  color: #ff00ff; 
+  transform: scale(1.1); 
+}
+
+.voteButton.active {
+  color: #ff00ff; 
+}
+
+.voteButton:focus {
+  outline: none; 
 }
