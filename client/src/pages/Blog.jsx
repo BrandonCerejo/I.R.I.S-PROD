@@ -3,6 +3,8 @@ import Modal from 'react-modal';
 import styles from './Blog.module.css';
 import './Blog.scss';
 import { supabase } from '../supabase';
+import { ToastContainer, toast } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css'; 
 
 function Blog() {
   const [selectedPost, setSelectedPost] = useState(null);
@@ -247,7 +249,7 @@ function Blog() {
     },
   ];
 
-  useEffect(() => {
+  useEffect(() => { 
     const storedDeviceId = localStorage.getItem('deviceId');
     if (!storedDeviceId) {
       const newDeviceId = 'device-' + Math.random().toString(36).substring(2);
@@ -279,25 +281,25 @@ function Blog() {
       .eq('post_id', postId)
       .eq('device_id', deviceId)
       .limit(1);
-  
+
     if (error) {
       console.error('Error fetching vote status:', error);
     } else {
       setVote(data.length > 0 ? data[0].vote_type : null);
     }
-  
+
     const { data: upvoteData, error: upvoteError } = await supabase
       .from('votes')
       .select('*')
       .eq('post_id', postId)
       .eq('vote_type', 'upvote');
-  
+
     const { data: downvoteData, error: downvoteError } = await supabase
       .from('votes')
       .select('*')
       .eq('post_id', postId)
       .eq('vote_type', 'downvote');
-  
+
     if (upvoteError || downvoteError) {
       console.error('Error fetching vote counts:', upvoteError || downvoteError);
     } else {
@@ -315,27 +317,30 @@ function Blog() {
         .eq('post_id', postId)
         .eq('device_id', deviceId)
         .single();
-  
+
       if (fetchError && fetchError.code !== 'PGRST116') {
         console.error('Error fetching existing vote:', fetchError);
         return;
       }
-  
+
       if (existingVote) {
         if (existingVote.vote_type === voteType) {
+          toast.error(`You have already ${voteType === 'upvote' ? 'upvoted' : 'downvoted'} this blog.`);
           return;
         }
-  
+
         const { error: updateError } = await supabase
           .from('votes')
           .update({ vote_type: voteType })
           .eq('post_id', postId)
           .eq('device_id', deviceId);
-  
+
         if (updateError) {
           console.error('Error updating vote:', updateError);
           return;
         }
+
+        toast.success(`Your vote has been changed to ${voteType === 'upvote' ? 'Upvote' : 'Downvote'}`);
       } else {
         const { error: insertError } = await supabase
           .from('votes')
@@ -344,13 +349,15 @@ function Blog() {
             vote_type: voteType,
             device_id: deviceId,
           });
-  
+
         if (insertError) {
           console.error('Error inserting vote:', insertError);
           return;
         }
+
+        toast.success(`You have successfully ${voteType === 'upvote' ? 'upvoted' : 'downvoted'} this blog!`);
       }
-  
+
       setVote(voteType);
       fetchVoteStatus(postId);
     } catch (error) {
@@ -359,25 +366,28 @@ function Blog() {
   };
 
   const handleCommentSubmit = async () => {
-    if (newComment.trim() === '' || commenterName.trim() === '') return;
+    if (newComment.trim() === '' || commenterName.trim() === '') {
+      toast.error('Please fill in both name and comment fields!');
+      return;
+    }
 
     const { data, error } = await supabase
       .from('comments')
-      .insert([
-        {
-          post_id: selectedPost.id,
-          username: commenterName, 
-          comment: newComment,
-          device_id: deviceId,
-        },
-      ]);
+      .insert([{
+        post_id: selectedPost.id,
+        username: commenterName, 
+        comment: newComment,
+        device_id: deviceId,
+      }]);
 
     if (error) {
       console.error('Error submitting comment:', error);
+      toast.error('Failed to submit comment!');
     } else {
       setNewComment('');
-      setCommenterName(''); 
+      setCommenterName('');
       fetchComments(selectedPost.id);
+      toast.success('Comment added successfully!');
     }
   };
 
@@ -445,7 +455,7 @@ function Blog() {
                 <span>{selectedPost.date}</span>
               </div>
               <div className={styles.modalBreaker} />
-              <div className={styles.modalText }>{selectedPost.content}</div>
+              <div className={styles.modalText}>{selectedPost.content}</div>
 
               <div className={styles.voteSection}>
                 <button
@@ -465,15 +475,21 @@ function Blog() {
               </div>
 
               <div className={styles.commentSection}>
+                <h3 className={styles.commentTitle}>Comments</h3>
                 <div className={styles.commentList}>
-                  {comments.map((comment) => (
-                    <div key={comment.id} className={styles.comment}>
-                      <p><strong>{comment.username}</strong></p>
-                      <p>{comment.comment}</p>
-                    </div>
-                  ))}
+                  {comments.length > 0 ? (
+                    comments.map((comment) => (
+                      <div key={comment.id} className={styles.comment}>
+                        <p><strong>{comment.username}</strong></p>
+                        <p>{comment.comment}</p>
+                      </div>
+                    ))
+                  ) : (
+                    <p>No comments added yet.</p>
+                  )}
                 </div>
-
+                
+                <h5 className={styles.commentHeader}>Add your comment:</h5>
                 <input
                   type="text"
                   value={commenterName}
@@ -499,6 +515,17 @@ function Blog() {
           </Modal>
         )}
       </div>
+
+      <ToastContainer 
+        position="bottom-right"
+        autoClose={3000} 
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeButton={true}     
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 }

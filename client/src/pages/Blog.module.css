@@ -304,3 +304,18 @@
   font-size: 18px;
   color: #b3b3b3; 
 }
+
+.commentTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.commentHeader {
+  font-size: 1.3rem;  
+  font-weight: bold;
+  margin-top: 1rem;  
+  margin-bottom: 0.5rem;  
+  text-align: center;
+}
