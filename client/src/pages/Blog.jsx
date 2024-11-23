@@ -203,7 +203,7 @@ function Blog() {
                 <br />
                 This is because our website did face a similar problem a couple of months back during the initial days of our hackathon registrations. 
                 <br />
-                Let’s take a deep dive into the same!!
+                Let's take a deep dive into the same!!
               </p>
             </div>
             <div className='content-section'>
@@ -213,11 +213,11 @@ function Blog() {
                 So as discussed above, our website used Supabase SQL in the backend for storage of user data and payment details. 
                 To prevent unauthorised access, Supabase SQL uses Row Level Security (RLS) features, which were initially enabled by our team. 
                 RLS features in SQL allows users to control which user or roles can access specific data in a table. RLS works by filtering rows based on the execution context of the query, rather than the current user access rights. 
-                However, with RLS enabled, data wasn’t being saved, so the team decided to disable it temporarily, assuming that they could bypass security for a college-level event and address the same after the registration phase. 
+                However, with RLS enabled, data wasn't being saved, so the team decided to disable it temporarily, assuming that they could bypass security for a college-level event and address the same after the registration phase. 
                 And yes, you must have guessed it by now!
                 This decision left our database unintentionally vulnerable, potentially allowing anyone to add, edit or delete data entries from our database!
               </p>
-              <h3>How we identified the issue and our story’s white hat:</h3>
+              <h3>How we identified the issue and our story's white hat:</h3>
               <p>
                 The technical team deployed the website and initially, everything appeared to be running smoothly. The teams were able to submit their details and complete the transactions successfully. 
                 But later, while the team was reviewing the database, they noticed an empty row that didn’t align with any of our expected data entries. Uncertain about the cause, they decided to leave it as is. But now, our white hat, a college peer who identified himself as a participant in our event, reached out to our team! He specifically pointed out a critical issue which was related to our backend. He highlighted that the database was publicly accessible and vulnerable to CRUD operations, allowing anyone to make the changes due to the disabled RLS and an exposed key in the network tab. Moreover, the empty row which our team noticed while reviewing the database, was our peer’s way for testing the vulnerability. 
@@ -236,7 +236,7 @@ function Blog() {
               <p>
                 To sum it up, even a small mistake can also offer you a lot of lessons. As we read in the quote a few sections above, mistakes and problems are an opportunity for improvement and growth, which goes along pretty well with our example! The incident helped the team to emphasise more on security and building a more robust and reliable website for our users. 
                 <br />
-                Thanks to our peer’s timely alert, we were able to identify the vulnerability, and make the changes accordingly. 
+                Thanks to our peer's timely alert, we were able to identify the vulnerability, and make the changes accordingly. 
                 This also teaches us about the necessity of networking and reaching out to people who may be facing issues they are unaware of. 
                 <br />
                 <br />
