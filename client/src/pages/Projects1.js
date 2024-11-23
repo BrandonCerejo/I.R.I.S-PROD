@@ -37,8 +37,8 @@ const Projects1 = () => {
                 <p>Our team planned intensively in order to make sure a smooth development process for the website. Our team held multiple meetings spanned across a few weeks to finalize the plan and to research.</p>
               
               <h3>DEVELOPMENT</h3>
-              <ol> 
               <p>The development was done by using multiple technologies which were:</p>
+              <ol> 
                 <li>React JS: React JS is the library on which I.R.I.S’s website is made. </li> 
                 <li>Bootstrap: Bootstrap is a very popular CSS framework that we used to make I.R.I.S Website more responsive in multiple types of screens and displays.
                 </li>

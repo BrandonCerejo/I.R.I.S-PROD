@@ -21,7 +21,7 @@ function Blog() {
       title: 'TARZAN: Revolutionizing Autonomous Vehicle Navigation',
       subtitle: 'Advanced Pothole Detection System',
       description: 'An innovative system using computer vision to enhance autonomous vehicle control.',
-      author: 'Research Team',
+      author: 'Aaryan Kumbhare',
       date: 'November 18, 2024',
       image: '/simulation.jpg',
       content: (
@@ -162,7 +162,7 @@ function Blog() {
       title: 'HOW WE ALMOST LOST ALL OUR DATA OVERNIGHT',
       subtitle: 'An Analysis of the Loss of Data in the I.R.I.S. Hackathon',
       description: 'Our journey in building a platform for collaboration, hackathon management, and seamless user experience.',
-      author: 'Technical Team',
+      author: 'Aaryan Kumbhare',
       date: 'November 11, 2024',
       image: '/website_img.png',
       content: (
@@ -427,7 +427,9 @@ function Blog() {
                   <h3 className={styles.blogTitle}>{post.title}</h3>
                   <p className={styles.blogDescription}>{post.description}</p>
                   <div className={styles.blogMeta}>
-                    <span>By {post.author}</span> | <span>{post.date}</span>
+                    <span>
+                      By <a href="https://www.linkedin.com/in/aaryan-kumbhare-07428032a/" target="_blank" rel="noopener noreferrer" className={styles.authorLink}>{post.author}</a>
+                    </span> | <span>{post.date}</span>
                   </div>
                   <button
                     onClick={() => openModal(post)}

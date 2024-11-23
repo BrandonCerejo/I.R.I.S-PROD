@@ -17,17 +17,17 @@ const Event1 = () => {
                 className={styles.eventImage}
               />
             </div>
-            <h1 className={styles.title}>🚀 IRIS Innovation Hackathon Recap 🚀</h1>
+            <h1 className={styles.title}>🚀 I.R.I.S. Innovation Hackathon Recap 🚀</h1>
             <h2 className={styles.subtitle}>Empowering Ideas & Sparking Innovation</h2>
 
             <div className={styles.eventDetails}>
               <p>Date: 27th-28th September 2024</p>
               <p>Venue: MIT-WPU Campus</p>
-              <p>Host: IRIS in collaboration with BharatGo</p>
+              <p>Host: I.R.I.S. in collaboration with BharatGo</p>
             </div>
 
             <section className={styles.eventIntro}>
-              <p>The IRIS Innovation Hackathon brought together the brightest minds from across MIT, inspiring participants to tackle real-world challenges with creativity and technical expertise in a high-energy environment.</p>
+              <p>The I.R.I.S. Innovation Hackathon brought together the brightest minds from across MIT, inspiring participants to tackle real-world challenges with creativity and technical expertise in a high-energy environment.</p>
               <div className={styles.sectionDivider}></div>
             </section>
 
