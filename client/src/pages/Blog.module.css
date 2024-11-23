@@ -320,31 +320,30 @@
   text-align: center;
 }
 
-/* Adjust modal for smaller screens */
 @media (max-width: 768px) {
   .modal {
-    width: 95vw; /* Increase width on phone screens */
-    padding: 20px; /* Reduce padding for better spacing */
-    top: 2vh; /* Lower the top margin to fit better */
+    width: 95vw; 
+    padding: 20px; 
+    top: 2vh; 
   }
 
   .modalTitle {
-    font-size: 24px; /* Reduce font size */
-    margin-bottom: 8px; /* Tighten spacing */
+    font-size: 24px; 
+    margin-bottom: 8px; 
   }
 
   .modalSubtitle {
-    font-size: 16px; /* Slightly smaller subtitle */
-    margin-bottom: 12px; /* Adjust spacing */
+    font-size: 16px; 
+    margin-bottom: 12px; 
   }
 
   .modalMeta {
-    font-size: 12px; /* Reduce font size for metadata */
+    font-size: 12px; 
   }
 
   .modalText {
-    font-size: 14px; /* Slightly smaller text for content */
-    line-height: 1.4; /* Adjust line height for readability */
+    font-size: 14px; 
+    line-height: 1.4; 
   }
 
   .content-section{
@@ -352,31 +351,31 @@
   }
 
   .voteButton {
-    font-size: 20px; /* Reduce button font size */
-    padding: 8px; /* Adjust padding */
+    font-size: 20px; 
+    padding: 8px;
   }
 
   .voteCount {
-    font-size: 14px; /* Smaller vote count text */
+    font-size: 14px; 
   }
 
   .commentTitle {
-    font-size: 1.6rem; /* Slightly smaller title */
+    font-size: 1.6rem; 
   }
 
   .commentInput {
-    font-size: 14px; /* Adjust input font size */
-    padding: 8px; /* Reduce padding */
+    font-size: 14px; 
+    padding: 8px;
   }
 
   .commentSubmitButton {
-    font-size: 14px; /* Adjust button font size */
-    padding: 10px 15px; /* Smaller padding */
+    font-size: 14px; 
+    padding: 10px 15px; 
   }
 
   .closeButton {
-    top: -20px; /* Adjust position */
+    top: -20px; 
     right: -15px;
-    font-size: 24px; /* Smaller close button */
+    font-size: 24px; 
   }
 }

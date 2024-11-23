@@ -1,9 +1,9 @@
 
-# IRIS Club Website  
+# I.R.I.S. Club Website  
 **Innovation, Research, and Intelligence Support**
 
 ## Overview  
-This repository contains the official website for **IRIS**, a college club dedicated to fostering innovation, research, and collaboration. The website serves as a hub for event information, achievements, and communication with members, alumni, and external partners.
+This repository contains the official website for **I.R.I.S.**, a college club dedicated to fostering innovation, research, and collaboration. The website serves as a hub for event information, achievements, and communication with members, alumni, and external partners.
 
 ## Features  
 - **Event Management**: Displays upcoming and past events with registration options.  

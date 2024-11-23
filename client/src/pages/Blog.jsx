@@ -163,19 +163,19 @@ function Blog() {
       subtitle: 'An Analysis of the Loss of Data in the I.R.I.S. Hackathon',
       description: 'Our journey in building a platform for collaboration, hackathon management, and seamless user experience.',
       author: 'Technical Team',
-      date: 'November 18, 2024',
+      date: 'November 11, 2024',
       image: '/website_img.png',
       content: (
         <>
           <div className='content-container'>
             <div className='content-section'>
-              <h2>Overview about IRIS-Website.</h2>
+              <h2>Overview about I.R.I.S. Website.</h2>
               <p>
                 In today's dynamic and rapidly-evolving digital ecosystem, it is important for an organisation to set up their online presence, so that they can meet the growing demands of their audience and help in increasing the scale of their services. Deployment of a muscular and scalable website acts as a hub for the operations of an organisation, real-time updates about the work of the organisation, showcasing their services and a portal for communication with their customers. This helps in enhancing the user engagement, quality of services; eventually leading to the overall growth of the organisation.
                 <br />
-                IRIS website acts as a crucial platform for showcasing and promoting the club, engaging potential members and boosting club’s visibility on our campus. 
                 <br />
-                Our website serves as a hub for all our activities, events, announcements, and important details, while also talking about the past events, activities and showcasing club’s achievements. It also serves as a networking portal for connecting with the members, mentors and the alumni, while enhancing the communication through engaging podcasts. 
+                I.R.I.S. website acts as a crucial platform for showcasing and promoting the club, engaging potential members and boosting club’s visibility on our campus. Our website serves as a hub for all our activities, events, announcements and important details, while also talking about the past events, activities and showcasing club’s achievements. It also serves as a networking portal for connecting with the members, mentors and the alumni, while enhancing the communication through engaging podcasts. 
+                <br />     
                 <br />     
                 The website also serves as a platform for all our event registrations and online payments, something which we would be discussing in depth in the upcoming sections!
               </p>
@@ -186,18 +186,23 @@ function Blog() {
                 Now, I’m sure that you are aware about the importance of our website. 
                 We will now start with some technicalities and components of our website.
                 <br />
+                <br />
                 The frontend of our website is written in a popular Javascript library, React.JS. To make the website more responsive and enhance the user experience, we have used Bootstrap, a very popular CSS framework. 
                 Data storage and management is an important aspect for an organisation. Similarly, for our backend, we have used Supabase SQL, a powerful database powered by PostgresDB, as our database, for keeping the data of our users secure.
+                <br />
+                <br />
                 For registrations and payments, we need a payment gateway. For this purpose, we have used Razorpay as our payment gateway API for facilitating our online payments for events such as hackathons. 
                 For frontend deployment, we have used Vercel as our web hosting service and for backend deployment, we use Vercel Serverless Edge Functions.
                 Also, GitHub is used for our version control and collaboration. 
                 Additionally, our github repository was integrated with vercel to consistently make seamless updates to our website.
+                <br />
                 <br />
                 But, there is a quote which I read once, “In every problem lies an opportunity for growth and a lesson to be learned.” 
                 <br />
                 In the year of 2019, a popular American bank holding company, Capital One, faced a massive security breach, which exposed the data of over 100 million customers! But, there’s a catch here. The problem was not identified by any employee at the organisation’s security team, but rather, by one individual white hat hacker, who noticed the leaked data on GitHub! The hacker did report the problem immediately to the organisation and helped in preventing further exploitation of the vulnerability. 
                 The issue was related to misconfigured AWS cloud storage permissions, that allowed unauthorised access to sensitive data. This helped Capital One to get to know about the problems related to their cloud security practices. However, the organisation did face some consequences because of the breach, leading to regulatory fines and loss in customer trust. 
                 The hacker received a financial reward as a part of Capital One’s Bug Bounty Program.
+                <br />
                 <br />
                 But wait, hold on for a moment! You must be wondering why we discussed this? What has it to do with our website? 
                 <br />
@@ -209,7 +214,7 @@ function Blog() {
             <div className='content-section'>
               <h2>What caused the issue?</h2>
               <p>
-                Our team created and deployed the IRIS website for registrations and payments of our upcoming event in September, the IRIS Innovation Hackathon. 
+                Our team created and deployed the I.R.I.S. website for registrations and payments of our upcoming event in September, the I.R.I.S. Innovation Hackathon. 
                 So as discussed above, our website used Supabase SQL in the backend for storage of user data and payment details. 
                 To prevent unauthorised access, Supabase SQL uses Row Level Security (RLS) features, which were initially enabled by our team. 
                 RLS features in SQL allows users to control which user or roles can access specific data in a table. RLS works by filtering rows based on the execution context of the query, rather than the current user access rights. 

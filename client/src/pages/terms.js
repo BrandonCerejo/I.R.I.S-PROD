@@ -27,7 +27,7 @@ function Terms() {
 
             <div className="policy-card">
               <h2>Intellectual Property</h2>
-              <p>All content on our website is owned by us or our licensors. You may not copy or distribute our content without permission. Any intellectual property you create remains yours, with I.R.I.S retaining a non-exclusive license to use it for promotional purposes.</p>
+              <p>All content on our website is owned by us or our licensors. You may not copy or distribute our content without permission. Any intellectual property you create remains yours, with I.R.I.S. retaining a non-exclusive license to use it for promotional purposes.</p>
             </div>
 
             <div className="policy-card">

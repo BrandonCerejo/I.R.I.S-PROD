@@ -7,7 +7,7 @@ function Refund() {
       <main>
         <div className='refund-container'>
           <h1>Refund Policy</h1>
-          <h3>At I.R.I.S, we value your satisfaction and provide a refund policy for eligible transactions made through Razorpay.</h3>
+          <h3>At I.R.I.S., we value your satisfaction and provide a refund policy for eligible transactions made through Razorpay.</h3>
           
           <div className='cards-container'>
             <div className="policy-card">
@@ -24,7 +24,7 @@ function Refund() {
 
             <div className="policy-card">
               <h2>Event Cancellation</h2>
-              <p>If an event is canceled or postponed by I.R.I.S, participants are eligible for a refund or can transfer registration to a future event.</p>
+              <p>If an event is canceled or postponed by I.R.I.S., participants are eligible for a refund or can transfer registration to a future event.</p>
             </div>
 
             <div className="policy-card">
