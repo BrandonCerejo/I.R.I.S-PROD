@@ -265,6 +265,20 @@ function Blog() {
     }
   }, []);
 
+  useEffect(() => {
+    const handleBackGesture = (event) => {
+      if (selectedPost) {
+        closeModal();
+        event.preventDefault();
+      }
+    };
+    window.addEventListener('popstate', handleBackGesture);
+
+    return () => {
+      window.removeEventListener('popstate', handleBackGesture);
+    };
+  }, [selectedPost]);
+
   const fetchComments = async (postId) => {
     const { data, error } = await supabase
       .from('comments')
