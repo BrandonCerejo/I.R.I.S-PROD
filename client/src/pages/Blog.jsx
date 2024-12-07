@@ -272,6 +272,7 @@ function Blog() {
         event.preventDefault();
       }
     };
+
     window.addEventListener('popstate', handleBackGesture);
 
     return () => {
