@@ -118,7 +118,7 @@
   overflow-y: auto;
   max-height: 80vh;
   position: relative;
-  top: 5vh;
+  top: 6vh; 
 }
 
 .modalContent {
@@ -324,7 +324,7 @@
   .modal {
     width: 95vw; 
     padding: 20px; 
-    top: 2vh; 
+    top: 6vh; 
   }
 
   .modalTitle {
