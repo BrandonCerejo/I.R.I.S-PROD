@@ -413,12 +413,14 @@ function Blog() {
   const openModal = (post) => {
     setSelectedPost(post);
     fetchComments(post.id);
-    fetchVoteStatus(post.id); 
+    fetchVoteStatus(post.id);
+    window.history.pushState({ modalOpen: true }, '');
   };
 
   const closeModal = () => {
     setSelectedPost(null);
     setVote(null);
+    window.history.back();
   };
 
   return (
