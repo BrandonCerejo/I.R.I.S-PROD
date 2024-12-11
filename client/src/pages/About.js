@@ -146,11 +146,11 @@ function About() {
               {/* Vice President */}
               <div className="col-md-4">
                 <div className={styles.card}>
-                  <img src="https://rkvbuqdjkilvqlywzjsi.supabase.co/storage/v1/object/sign/AboutPhotos/Photos/samanyu.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBYm91dFBob3Rvcy9QaG90b3Mvc2FtYW55dS5qcGciLCJpYXQiOjE3MzA4OTk1MjYsImV4cCI6MTc2MjQzNTUyNn0.5G96ekOkX37Suo4EbJNMJ9WrAVnfrcol0zvsQSfLR_A&t=2024-11-06T13%3A25%3A27.355Z" alt="Team Member 2" />
+                  <img src="logo2.png" alt="Team Member 2" />
                   <div className={styles.cardContent}>
-                    <h3>Samanyu Bhate</h3>
+                    <h3>Namra Doshi</h3>
                     <p>Vice President </p>
-                    <a href="https://www.linkedin.com/in/samanyu-bhate-17136b1ab/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/namra-doshi-445976249/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
               </div>
