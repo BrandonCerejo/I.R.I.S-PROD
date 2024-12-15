@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { supabase } from '../supabase';
 import styles from "./recruitment.module.css";
 import backgroundVideo from "./vid2.mp4";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -38,8 +39,8 @@ function Recruitment() {
 
     if (name === "file") {
       const file = e.target.files[0];
-      if (file && file.size > 50 * 1024) {
-        setError("File size should not exceed 50 kB");
+      if (file && file.size > 100 * 1024) {
+        setError("File size should not exceed 100 kB");
         return;
       } else {
         setError("");
@@ -50,10 +51,9 @@ function Recruitment() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validation
     if (!formData.name || !formData.prn || !formData.email || !formData.phone || !formData.reason || !formData.project || !formData.file) {
       setError("Please fill in all the required fields.");
       return;
@@ -71,9 +71,42 @@ function Recruitment() {
       return;
     }
 
-    console.log("Form Data Submitted:", formData);
-    setShowNotification(true);
+    const filePath = `cvs/${formData.name}-${Date.now()}.pdf`;
+    const { data, error: uploadError } = await supabase
+      .storage
+      .from('cv_bucket')
+      .upload(filePath, formData.file);
 
+    if (uploadError) {
+      setError("Error uploading file: " + uploadError.message);
+      return;
+    }
+
+    const fileUrl = supabase.storage.from('cv_bucket').getPublicUrl(data.path).publicURL;
+
+    const { error: insertError } = await supabase
+      .from('recruitment_forms')
+      .insert([
+        {
+          name: formData.name,
+          prn: formData.prn,
+          email: formData.email,
+          phone: formData.phone,
+          cgpa: formData.cgpa,
+          project: formData.project,
+          reason: formData.reason,
+          experience: formData.experience,
+          contribution: formData.contribution,
+          cv_url: fileUrl,
+        },
+      ]);
+
+    if (insertError) {
+      setError("Error submitting form: " + insertError.message);
+      return;
+    }
+
+    setShowNotification(true);
     setFormData({
       name: "",
       prn: "",
@@ -82,7 +115,9 @@ function Recruitment() {
       project: "",
       email: "",
       phone: "",
-      file: null,
+      file: "",
+      contribution: "",
+      experience: "",
     });
   };
 
@@ -168,7 +203,7 @@ function Recruitment() {
           </div>
 
           <div className={styles.formGroup}>
-            <label htmlFor="project">Select a Project*</label>
+            <label htmlFor="project">Select a Domain*</label>
             <select
               id="project"
               name="project"
@@ -178,7 +213,7 @@ function Recruitment() {
               className="form-control"
             >
               <option value="" disabled>
-                Choose a project.
+                Choose a domain.
               </option>
               <optgroup label="Tech">
                 <option value="Project A">TARZAN: Autonomous Vehicle Navigation</option>
@@ -197,7 +232,7 @@ function Recruitment() {
           </div>
 
           <div className={styles.formGroup}>
-            <label htmlFor="file">Resume or CV (PDF, max 50KB)*</label>
+            <label htmlFor="file">Resume or CV (rename the PDF with your name)*</label>
             <input
               type="file"
               id="file"
@@ -219,6 +254,7 @@ function Recruitment() {
               required
             />
           </div>
+
           <div className={styles.formGroup}>
             <label htmlFor="experience">Any past experiences in your area of interest?*</label>
             <textarea
@@ -229,6 +265,7 @@ function Recruitment() {
               required
             />
           </div>
+
           <div className={styles.formGroup}>
             <label htmlFor="contribution">Why do you want to join IRIS and how will you be able to contribute?*</label>
             <textarea
