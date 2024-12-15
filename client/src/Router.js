@@ -16,6 +16,8 @@ import { Gallery } from './pages/Gallery';
 import Projects from './pages/Projects';
 import Projects1 from './pages/Projects1';
 import { TarzanProject } from './pages/ProjectFiles/Tarzan/TarzanProject';
+import Recruitment from './pages/recruitment';
+
 function AppRouter() {
   return (
     <>
@@ -35,6 +37,7 @@ function AppRouter() {
         <Route path="/projects/1" element={<Projects1 />} />
         <Route path='/projects/2' element={<TarzanProject />} />
         <Route path='/blog' element={<Blog />} />
+        <Route path='/recruitment' element={<Recruitment />} />
         {/* <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
         <Route path="/checkoutPayment" element={<CheckoutPayment />} /> */}
       </Routes>
