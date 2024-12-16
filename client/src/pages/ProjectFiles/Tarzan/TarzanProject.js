@@ -61,7 +61,7 @@ export const TarzanProject = () => {
               <h3>Stay Connected 📩</h3>
               <p>If you're interested in participating in this project or have any questions, feel free to reach out to us!</p>
               <Link to="/recruitment" className={'registerBtn'}>
-                recruitment
+                Recruitment form
               </Link>
             </div>
         </div>
