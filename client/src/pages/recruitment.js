@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { supabase } from '../supabase';
 import styles from "./recruitment.module.css";
 import backgroundVideo from "./vid2.mp4";
@@ -9,30 +9,58 @@ function Recruitment() {
     name: "",
     prn: "",
     cgpa: "",
-    reason: "",
-    project: "",
+    interests: "",
+    domain: "",
     email: "",
     phone: "",
     file: null,
+    school: "",
+    branch: "",
+    currentYear: "",
   });
 
-  const [error, setError] = useState("");
+  const [formErrors, setFormErrors] = useState({
+    name: "",
+    prn: "",
+    email: "",
+    phone: "",
+    cgpa: "",
+    school: "",
+    branch: "",
+    currentYear: "",
+    domain: "",
+    file: "",
+    interests: "",
+    experience: "",
+    contribution: "",
+  });
+
   const [showNotification, setShowNotification] = useState(false);
+  const fileInputRef = useRef(null);
 
-  const validatePhone = (phone) => {
-    const phoneRegex = /^[0-9]{10}$/;
-    return phoneRegex.test(phone);
-  };
+  const schoolsList = [
+    "WPU School of Economics and Commerce",
+    "Ramcharan School of Leadership",
+    "WPU School of Business",
+    "Faculty of Governance",
+    "WPU School of Engineering and Technology",
+    "WPU School of Consciousness",
+    "WPU School of Law",
+    "Department of Liberal Arts",
+    "Department of Biosciences and Technology",
+    "Department of Pharmaceutical Science",
+    "Department of Visual Arts",
+    "Department of Design",
+    "WPU School of Photography",
+    "WPU School of Computer Science and Engineering",
+    "WPU School of Science & Environmental Studies",
+    "Others"
+  ];
+  const uniqueSchools = [...new Set(schoolsList)];
 
-  const validatePrn = (prn) => {
-    const prnRegex = /^[0-9]{10}$/;
-    return prnRegex.test(prn);
-  };
-
-  const validateEmail = (email) => {
-    const emailRegex = /^(.*@gmail\.com|.*@mitwpu\.edu\.in)$/;
-    return emailRegex.test(email);
-  };
+  const validatePhone = (phone) => /^[0-9]{10}$/.test(phone);
+  const validatePrn = (prn) => /^[0-9]{10}$/.test(prn);
+  const validateEmail = (email) => /^(.*@gmail\.com|.*@mitwpu\.edu\.in)$/.test(email);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -40,36 +68,73 @@ function Recruitment() {
     if (name === "file") {
       const file = e.target.files[0];
       if (file && file.size > 100 * 1024) {
-        setError("File size should not exceed 100 kB");
+        setFormErrors({ ...formErrors, file: "File size should not exceed 100 kB" });
         return;
       } else {
-        setError("");
+        setFormErrors({ ...formErrors, file: "" });
       }
       setFormData({ ...formData, file });
     } else {
       setFormData({ ...formData, [name]: value });
+      setFormErrors({ ...formErrors, [name]: "" }); 
     }
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault();  
 
-    if (!formData.name || !formData.prn || !formData.email || !formData.phone || !formData.reason || !formData.project || !formData.file) {
-      setError("Please fill in all the required fields.");
-      return;
-    }
+    const newErrors = {};
+    let formIsValid = true;
+
+    Object.keys(formData).forEach((field) => {
+      if (!formData[field] && field !== "cgpa" && field !== "file") {
+        newErrors[field] = `${field.charAt(0).toUpperCase() + field.slice(1)} is required.`;
+        formIsValid = false;
+      }
+    });
+
     if (!validatePhone(formData.phone)) {
-      setError("Phone number must be exactly 10 digits.");
-      return;
+      newErrors.phone = "Please enter a valid Phone number.";
+      formIsValid = false;
     }
+
     if (!validatePrn(formData.prn)) {
-      setError("PRN must be exactly 10 digits.");
-      return;
+      newErrors.prn = "Please enter a valid PRN.";
+      formIsValid = false;
     }
+
     if (!validateEmail(formData.email)) {
-      setError("Please enter a valid email address with @gmail.com or @mitwpu.edu.in domain.");
+      newErrors.email = "Please enter a valid email address.";
+      formIsValid = false;
+    }
+
+    if (!formData.experience) {
+      newErrors.experience = "Experience in your area of interest is required.";
+      formIsValid = false;
+    }
+
+    if (!formData.contribution) {
+      newErrors.contribution = "This field is required.";
+      formIsValid = false;
+    }
+
+    if (!formData.file) {
+      newErrors.file = "Please upload your resume (PDF).";
+      formIsValid = false;
+    }
+
+    setFormErrors(newErrors);
+
+    if (!formIsValid) {
+      const firstErrorField = Object.keys(newErrors)[0];
+      const firstErrorElement = document.getElementById(firstErrorField);
+      if (firstErrorElement) {
+        firstErrorElement.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
       return;
     }
+
+    const cgpaValue = formData.cgpa ? parseFloat(formData.cgpa) : null;
 
     const filePath = `cvs/${formData.name}-${Date.now()}.pdf`;
     const { data, error: uploadError } = await supabase
@@ -78,7 +143,7 @@ function Recruitment() {
       .upload(filePath, formData.file);
 
     if (uploadError) {
-      setError("Error uploading file: " + uploadError.message);
+      setFormErrors({ ...formErrors, file: "Error uploading file: " + uploadError.message });
       return;
     }
 
@@ -86,39 +151,46 @@ function Recruitment() {
 
     const { error: insertError } = await supabase
       .from('recruitment_forms')
-      .insert([
-        {
-          name: formData.name,
-          prn: formData.prn,
-          email: formData.email,
-          phone: formData.phone,
-          cgpa: formData.cgpa,
-          project: formData.project,
-          reason: formData.reason,
-          experience: formData.experience,
-          contribution: formData.contribution,
-          cv_url: fileUrl,
-        },
-      ]);
+      .insert([{
+        name: formData.name,
+        prn: formData.prn,
+        email: formData.email,
+        phone: formData.phone,
+        cgpa: cgpaValue,
+        domain: formData.domain,
+        interests: formData.interests,
+        experience: formData.experience,
+        contribution: formData.contribution,
+        cv_url: fileUrl,
+        school: formData.school,
+        branch: formData.branch,
+        current_year: formData.currentYear
+      }]);
 
     if (insertError) {
-      setError("Error submitting form: " + insertError.message);
+      setFormErrors({ ...formErrors, form: "Error submitting form: " + insertError.message });
       return;
     }
 
     setShowNotification(true);
+
     setFormData({
       name: "",
       prn: "",
       cgpa: "",
-      reason: "",
-      project: "",
+      interests: "",
+      domain: "",
       email: "",
       phone: "",
-      file: "",
+      file: null,
       contribution: "",
       experience: "",
+      school: "",
+      branch: "",
+      currentYear: ""
     });
+
+    fileInputRef.current.value = null;
   };
 
   const handleOkayButton = () => {
@@ -150,8 +222,8 @@ function Recruitment() {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              required
             />
+            {formErrors.name && <p className="text-danger">{formErrors.name}</p>}
           </div>
 
           <div className={styles.formGroup}>
@@ -162,8 +234,8 @@ function Recruitment() {
               name="prn"
               value={formData.prn}
               onChange={handleChange}
-              required
             />
+            {formErrors.prn && <p className="text-danger">{formErrors.prn}</p>}
           </div>
 
           <div className={styles.formGroup}>
@@ -174,8 +246,8 @@ function Recruitment() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              required
             />
+            {formErrors.email && <p className="text-danger">{formErrors.email}</p>}
           </div>
 
           <div className={styles.formGroup}>
@@ -186,8 +258,8 @@ function Recruitment() {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              required
             />
+            {formErrors.phone && <p className="text-danger">{formErrors.phone}</p>}
           </div>
 
           <div className={styles.formGroup}>
@@ -200,24 +272,70 @@ function Recruitment() {
               value={formData.cgpa}
               onChange={handleChange}
             />
+            {formErrors.cgpa && <p className="text-danger">{formErrors.cgpa}</p>}
           </div>
 
           <div className={styles.formGroup}>
-            <label htmlFor="project">Select a Domain*</label>
+            <label htmlFor="school">School*</label>
             <select
-              id="project"
-              name="project"
-              value={formData.project}
+              id="school"
+              name="school"
+              value={formData.school}
               onChange={handleChange}
-              required
               className="form-control"
             >
-              <option value="" disabled>
-                Choose a domain.
-              </option>
+              <option value="" disabled>Choose a school</option>
+              {uniqueSchools.map((school, index) => (
+                <option key={index} value={school}>{school}</option>
+              ))}
+            </select>
+            {formErrors.school && <p className="text-danger">{formErrors.school}</p>}
+          </div>
+
+          <div className={styles.formGroup}>
+            <label htmlFor="branch">Branch*</label>
+            <input
+              type="text"
+              id="branch"
+              name="branch"
+              value={formData.branch}
+              onChange={handleChange}
+              className="form-control"
+            />
+            {formErrors.branch && <p className="text-danger">{formErrors.branch}</p>}
+          </div>
+
+          <div className={styles.formGroup}>
+            <label htmlFor="currentYear">Current Year*</label>
+            <select
+              id="currentYear"
+              name="currentYear"
+              value={formData.currentYear}
+              onChange={handleChange}
+              className="form-control"
+            >
+              <option value="" disabled>Choose your year</option>
+              <option value="1">1st Year</option>
+              <option value="2">2nd Year</option>
+              <option value="3">3rd Year</option>
+              <option value="4">4th Year</option>
+            </select>
+            {formErrors.currentYear && <p className="text-danger">{formErrors.currentYear}</p>}
+          </div>
+
+          <div className={styles.formGroup}>
+            <label htmlFor="domain">Select a Domain*</label>
+            <select
+              id="domain"
+              name="domain"
+              value={formData.domain}
+              onChange={handleChange}
+              className="form-control"
+            >
+              <option value="" disabled>Choose a domain</option>
               <optgroup label="Tech">
-                <option value="Project A">TARZAN: Autonomous Vehicle Navigation</option>
-                <option value="Project B">I.R.I.S Website</option>
+                <option value="Tarzan">TARZAN - Autonomous Vehicle Project</option>
+                <option value="Website">I.R.I.S. Website - Development & Updates</option>
               </optgroup>
               <optgroup label="Non-tech">
                 <option value="content-writing">Content Writing</option>
@@ -229,6 +347,7 @@ function Recruitment() {
                 <option value="sponsorship-outreach">Sponsorship and Outreach</option>
               </optgroup>
             </select>
+            {formErrors.domain && <p className="text-danger">{formErrors.domain}</p>}
           </div>
 
           <div className={styles.formGroup}>
@@ -239,20 +358,20 @@ function Recruitment() {
               name="file"
               accept=".pdf"
               onChange={handleChange}
-              required
+              ref={fileInputRef}
             />
-            {error && <p className="text-danger">{error}</p>}
+            {formErrors.file && <p className="text-danger">{formErrors.file}</p>}
           </div>
 
           <div className={styles.formGroup}>
-            <label htmlFor="reason">What are your area of interests?*</label>
+            <label htmlFor="interests">What are your area of interests?*</label>
             <textarea
-              id="reason"
-              name="reason"
-              value={formData.reason}
+              id="interests"
+              name="interests"
+              value={formData.interests}
               onChange={handleChange}
-              required
             />
+            {formErrors.interests && <p className="text-danger">{formErrors.interests}</p>}
           </div>
 
           <div className={styles.formGroup}>
@@ -262,8 +381,8 @@ function Recruitment() {
               name="experience"
               value={formData.experience}
               onChange={handleChange}
-              required
             />
+            {formErrors.experience && <p className="text-danger">{formErrors.experience}</p>}
           </div>
 
           <div className={styles.formGroup}>
@@ -273,8 +392,8 @@ function Recruitment() {
               name="contribution"
               value={formData.contribution}
               onChange={handleChange}
-              required
             />
+            {formErrors.contribution && <p className="text-danger">{formErrors.contribution}</p>}
           </div>
 
           <div className={styles.formGroup}>
