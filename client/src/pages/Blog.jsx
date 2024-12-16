@@ -117,7 +117,7 @@ function Blog() {
       description: 'Our journey in building a platform for collaboration, hackathon management and seamless user experience.',
       author: 'Aaryan Kumbhare',
       date: 'November 18, 2024',
-      image: '/website_img.png',
+      image: '/db.jpg',
       content: (
         <>
           <div className='content-container'>
