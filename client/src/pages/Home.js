@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
-import smallPhoto from './sephackathon.jpg';
 
 function Home() {
-  const sections = [
+  const section1 = [
     {
       title: "TARZAN",
       description: "Revolutionizing Autonomous Vehicle Navigation.\nAn innovative system using computer vision to enhance autonomous vehicle control.",
@@ -17,33 +16,99 @@ function Home() {
       link: "/blog",
       image: "/website_img.png",
     },
+  ];
+
+  const section2 = [
     {
-      title: "The Impact of Mobiles",
-      description: "Exploring the dual-edged nature of the digital revolution and its impact on the younger generation.",
-      link: "/blog",
-      image: "/mobile_screen_time.jpg",
+      title: "I.R.I.S. Innovation Hackathon 2024",
+      description: "Held on: 9/28/2024",
+      link: "/events",
+      image: "/sephackathon.jpg",
+    },
+    {
+      title: "Innovation Hackathon",
+      description: "Held on: 2/15/2024",
+      link: "/events",
+      image: "/past-innovation-hackathon.jpg",
     },
   ];
 
-  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
+  const section3 = [
+    {
+      title: "Club Website",
+      description: "A dynamic platform designed to unite our community of innovators, learners, and leaders.",
+      link: "/Projects",
+      image: "/website_img.png",
+    },
+    {
+      title: "Autonomous Vehicle",
+      description: "Tarzan is an innovative, leading-edge autonomous vehicle control system integrating the application of computer vision into vehicular communications.",
+      link: "/Projects",
+      image: "/systemDiagMATLAB.jpg",
+    },
+  ];
+
+  const [SectionIndex1, setSectionIndex1] = useState(0);
+  const [SectionIndex2, setSectionIndex2] = useState(0);
+  const [SectionIndex3, setSectionIndex3] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSectionIndex((prevIndex) => (prevIndex + 1) % sections.length);
-    }, 5000); // Automatically slide every 5 seconds
+      setSectionIndex1((prevIndex) => (prevIndex + 1) % section1.length);
+    }, 5000);
 
-    return () => clearInterval(interval); // Cleanup on component unmount
-  }, [sections.length]);
+    return () => clearInterval(interval);
+  }, [section1.length]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSectionIndex2((prevIndex) =>
+        (prevIndex + 1) % section2.length
+      );
+    }, 7000);
 
-  const handlePrev = () => {
-    setCurrentSectionIndex((prevIndex) =>
-      prevIndex === 0 ? sections.length - 1 : prevIndex - 1
+    return () => clearInterval(interval);
+  }, [section2.length]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSectionIndex3((prevIndex) => (prevIndex + 1) % section3.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [section3.length]);
+
+
+
+  const handlePrev1 = () => {
+    setSectionIndex1((prevIndex) =>
+      prevIndex === 0 ? section1.length - 1 : prevIndex - 1
+    );
+  };
+  const handleNext1 = () => {
+    setSectionIndex1((prevIndex) => (prevIndex + 1) % section1.length);
+  };
+
+  const handlePrev2 = () => {
+    setSectionIndex2((prevIndex) =>
+      prevIndex === 0 ? section2.length - 1 : prevIndex - 1
+    );
+  };
+  const handleNext2 = () => {
+    setSectionIndex2((prevIndex) =>
+      (prevIndex + 1) % section2.length
     );
   };
 
-  const handleNext = () => {
-    setCurrentSectionIndex((prevIndex) => (prevIndex + 1) % sections.length);
+  const handlePrev3 = () => {
+    setSectionIndex3((prevIndex) =>
+      prevIndex === 0 ? section3.length - 1 : prevIndex - 1
+    );
   };
+  const handleNext3 = () => {
+    setSectionIndex3((prevIndex) =>
+      (prevIndex + 1) % section3.length
+    );
+  };
+
 
   return (
     <div className={styles.home}>
@@ -92,7 +157,7 @@ function Home() {
             </div>
           </div>
 
-          {/* Sliding Sections */}
+          {/* Sliding section 1 */}
           <div
             className={`${styles.newSectionContainer} d-flex align-items-center`}
             style={{
@@ -108,13 +173,13 @@ function Home() {
               <div className="row align-items-center">
                 <div className="col-lg-6 text-center text-lg-start">
                   <h2 className="display-4 fw-bold">
-                    {sections[currentSectionIndex].title}
+                    {section1[SectionIndex1].title}
                   </h2>
                   <p className="mb-4">
-                    {sections[currentSectionIndex].description}
+                    {section1[SectionIndex1].description}
                   </p>
                   <Link
-                    to={sections[currentSectionIndex].link}
+                    to={section1[SectionIndex1].link}
                     className={styles.knowMoreBtn}
                   >
                     Know More
@@ -122,28 +187,134 @@ function Home() {
                 </div>
                 <div className="col-lg-6 text-center">
                   <img
-                    src={sections[currentSectionIndex].image}
-                    alt={sections[currentSectionIndex].title}
+                    src={section1[SectionIndex1].image}
+                    alt={section1[SectionIndex1].title}
                     className={styles.newSectionImage}
                   />
                 </div>
               </div>
             </div>
 
-            {/* Arrows */}
+            {/* Arrows 1*/}
             <button
-              onClick={handlePrev}
+              onClick={handlePrev1}
               className={`${styles.arrow} ${styles.leftArrow}`}
             >
               &#8249;
             </button>
             <button
-              onClick={handleNext}
+              onClick={handleNext1}
               className={`${styles.arrow} ${styles.rightArrow}`}
             >
               &#8250;
             </button>
           </div>
+          {/* Sliding section 2 */}
+          <div
+            className={`${styles.newSectionContainer} d-flex align-items-center`}
+            style={{
+              margin: '30px 0',
+              borderRadius: '20px',
+              background: 'linear-gradient(to right, rgba(23, 37, 90, 0.8), rgba(201, 64, 101, 0.8))',
+              position: 'relative',
+              color: '#fff',
+              padding: '20px',
+            }}
+          >
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-lg-6 text-center text-lg-start">
+                  <h2 className="display-4 fw-bold">
+                    {section2[SectionIndex2].title}
+                  </h2>
+                  <p className="mb-4">
+                    {section2[SectionIndex2].description}
+                  </p>
+                  <Link
+                    to={section2[SectionIndex2].link}
+                    className={styles.knowMoreBtn}
+                  >
+                    Know More
+                  </Link>
+                </div>
+                <div className="col-lg-6 text-center">
+                  <img
+                    src={section2[SectionIndex2].image}
+                    alt={section2[SectionIndex2].title}
+                    className={styles.newSectionImage}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Arrows 2*/}
+            <button
+              onClick={handlePrev2}
+              className={`${styles.arrow} ${styles.leftArrow}`}
+            >
+              &#8249;
+            </button>
+            <button
+              onClick={handleNext2}
+              className={`${styles.arrow} ${styles.rightArrow}`}
+            >
+              &#8250;
+            </button>
+          </div>
+          {/* Sliding section 3 */}
+          <div
+            className={`${styles.newSectionContainer} d-flex align-items-center`}
+            style={{
+              margin: '30px 0',
+              borderRadius: '20px',
+              background: 'linear-gradient(to right, rgba(23, 37, 90, 0.8), rgba(201, 64, 101, 0.8))',
+              position: 'relative',
+              color: '#fff',
+              padding: '20px',
+            }}
+          >
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-lg-6 text-center text-lg-start">
+                  <h2 className="display-4 fw-bold">
+                    {section3[SectionIndex3].title}
+                  </h2>
+                  <p className="mb-4">
+                    {section3[SectionIndex3].description}
+                  </p>
+                  <Link
+                    to={section3[SectionIndex3].link}
+                    className={styles.knowMoreBtn}
+                  >
+                    Know More
+                  </Link>
+                </div>
+                <div className="col-lg-6 text-center">
+                  <img
+                    src={section3[SectionIndex3].image}
+                    alt={section3[SectionIndex3].title}
+                    className={styles.newSectionImage}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Arrows 3 */}
+            <button
+              onClick={handlePrev3}
+              className={`${styles.arrow} ${styles.leftArrow}`}
+            >
+              &#8249;
+            </button>
+            <button
+              onClick={handleNext3}
+              className={`${styles.arrow} ${styles.rightArrow}`}
+            >
+              &#8250;
+            </button>
+          </div>
+
+
         {/* Journey Section */}
         <div
             className={`${styles.journey} py-5 text-center text-light`}
