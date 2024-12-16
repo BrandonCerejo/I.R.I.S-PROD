@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './TarzanProject.scss'
 import '../Project.scss'
 
@@ -54,6 +56,13 @@ export const TarzanProject = () => {
             </div>
             <div className='tarzan-page-section-1-container content-section'>
                 Tarzan is an innovative, leading-edge autonomous vehicle control system integrating the application of computer vision into vehicular communications. Under the system, it works based on object detection provided by running YOLOv8 on a streaming set up from mobile-to-laptop, processing video feeds directly from cameras. This processes real-time views for detection of road condition, obstacle, and threat. This visual intelligence is married to a highly developed CAN bus communication system, built around STM32 microcontrollers, allowing interaction directly with vehicle control systems through the OBD-II interface. What sets this device apart is its hybrid approach - combining temporary actuator-based testing capabilities and long-term vision of the implementation of custom PCB boards in production environments. Whether in its current development with mobile camera inputs and actuator-based control or at its intended maturity level of fully integrated CAN bus messaging, Tarzan is an important advance toward making the technology available and deployable for autonomous vehicles in all vehicle platform types.
+            </div>
+            <div className={'projectRegistration'}>
+              <h3>Stay Connected 📩</h3>
+              <p>If you're interested in participating in this project or have any questions, feel free to reach out to us!</p>
+              <Link to="/recruitment" className={'registerBtn'}>
+                recruitment
+              </Link>
             </div>
         </div>
     )

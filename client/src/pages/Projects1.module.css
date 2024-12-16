@@ -64,7 +64,7 @@ body {
     to { transform: translateY(0); opacity: 1; }
 } 
 
-.aboutwebsite, .websitefeatures, .webtechnologies {
+.aboutwebsite, .websitefeatures, .webtechnologies, .projectRegistration {
     margin-top: 35px;
     margin-bottom: 40px;
     padding: 30px;

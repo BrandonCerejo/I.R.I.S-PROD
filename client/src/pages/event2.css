@@ -79,7 +79,7 @@ body {
   to { transform: translateY(0); opacity: 1; }
 }
 
-.eventDetails, .eventIntro, .eventJourney, .eventHighlights, .eventRewards, .eventRules, .eventSignificance {
+.eventDetails, .eventIntro, .eventJourney, .eventHighlights, .eventRewards, .eventRules, .eventSignificance, .eventMentors, .eventWinningTeams {
   margin-bottom: 40px;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.4); 
