@@ -77,8 +77,8 @@ html, body {
 
 .hero {
   background: linear-gradient(to right, rgba(23, 37, 90, 0.8), rgba(201, 64, 101, 0.8));
-  padding: 80px 20px; 
-  margin: 50px 0;
+  padding: 20px; 
+  margin: 30px 0;
   text-align: center;
   color: #ffffff !important;
   max-width: 100%;
@@ -141,6 +141,67 @@ html, body {
 .downloadLink:hover {
   color: #d6336c; 
 }
+
+.newSectionContainer {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px; 
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 20%;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.leftArrow {
+  left: -20px;
+}
+
+.rightArrow {
+  right: -20px; 
+}
+
+.newSectionImage {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  padding: 10px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.knowMoreBtn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #b3016b;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.knowMoreBtn:hover {
+  background-color: #1a015e;
+  transform: scale(1.05);
+}
+
 
 @media only screen and (max-width: 768px) {
   .hero h1 {
