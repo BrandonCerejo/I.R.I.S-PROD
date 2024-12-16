@@ -338,7 +338,7 @@ function Recruitment() {
           </div>
 
           <div className={styles.formGroup}>
-            <label htmlFor="file">Resume or CV (rename the PDF with your name)</label>
+            <label htmlFor="file">Resume or CV (OPTIONAL) (rename the PDF with your name)</label>
             <input
               type="file"
               id="file"
