@@ -2,14 +2,15 @@ import React, { useState, useRef } from "react";
 import { supabase } from '../supabase';
 import styles from "./recruitment.module.css";
 // import backgroundVideo from "./vid2.mp4";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
+import Select from "react-select";
 
 function Recruitment() {
   const [formData, setFormData] = useState({
     name: "",
     prn: "",
     interests: "",
-    domain: "",
+    domain: [],
     email: "",
     phone: "",
     file: null,
@@ -62,6 +63,53 @@ function Recruitment() {
   const validatePrn = (prn) => /^[0-9]{10}$/.test(prn);
   const validateEmail = (email) => /^(.*@gmail\.com|.*@mitwpu\.edu\.in)$/.test(email);
 
+  const domainOptions = [
+    {
+      label: 'Tech',
+      options: [
+        { value: 'Tarzan', label: 'TARZAN - Autonomous Vehicle Project' },
+        { value: 'Website', label: 'I.R.I.S. Website - Development & Updates' }
+      ]
+    },
+    {
+      label: 'Non-tech',
+      options: [
+        { value: 'content-writing', label: 'Content Writing' },
+        { value: 'content-creation', label: 'Content Creation (Video Creation, Video Hosting)' },
+        { value: 'photo-editor', label: 'Photo Editor' },
+        { value: 'video-editor', label: 'Video Editor' },
+        { value: 'graphic-artist', label: 'Graphic Artist' },
+        { value: '3d-modelling-artist', label: '3D Modelling Artist/Animator' },
+        { value: 'poster-design', label: 'Poster Design (Events, Workshops)' },
+        { value: 'story-post-design', label: 'Story and Post Design (Instagram, LinkedIn)' },
+        { value: 'banner-design', label: 'Banner Design (Events, Workshops)' },
+        { value: 'event-ops', label: 'Event and Ops (Event Management)' },
+        { value: 'marketing', label: 'Marketing' },
+        { value: 'sponsorship-outreach', label: 'Sponsorship and Outreach' }
+      ]
+    }
+  ];
+
+  const customSingleValue = ({ data }) => (
+    <div className="custom-single-value">
+      {data.label}
+    </div>
+  );
+
+  const customStyles = {
+    groupHeading: (provided) => ({
+      ...provided,
+      fontWeight: 'bold',
+      fontSize: '16px',
+      color: '#333',
+    }),
+    option: (provided) => ({
+      ...provided,
+      fontWeight: 'normal',
+      fontSize: '14px',
+    })
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -80,6 +128,14 @@ function Recruitment() {
     }
   };
 
+  const handleDomainChange = (selectedOptions) => {
+    const selectedDomainValues = selectedOptions ? selectedOptions.map(option => option.value) : [];
+    setFormData(prevData => ({
+      ...prevData,
+      domain: selectedDomainValues
+    }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -87,11 +143,16 @@ function Recruitment() {
     let formIsValid = true;
 
     Object.keys(formData).forEach((field) => {
-      if (!formData[field] && field !== "file") {
+      if (!formData[field] && field !== "file" && field !== "domain") {
         newErrors[field] = `${field.charAt(0).toUpperCase() + field.slice(1)} is required.`;
         formIsValid = false;
       }
     });
+
+    if (!formData.domain || formData.domain.length === 0) {
+      newErrors.domain = "Please select at least one domain.";
+      formIsValid = false;
+    }
 
     if (!validatePhone(formData.phone)) {
       newErrors.phone = "Please enter a valid Phone number.";
@@ -158,13 +219,14 @@ function Recruitment() {
       return;
     }
 
+    window.scrollTo(0, 0);
     setShowNotification(true);
 
     setFormData({
       name: "",
       prn: "",
       interests: "",
-      domain: "",
+      domain: [],
       email: "",
       phone: "",
       file: null,
@@ -313,29 +375,24 @@ function Recruitment() {
           </div>
 
           <div className={styles.formGroup}>
-            <label htmlFor="domain">Select a Domain*</label>
-            <select
+            <label htmlFor="domain">Select Domain(s)*</label>
+            <Select
               id="domain"
               name="domain"
-              value={formData.domain}
-              onChange={handleChange}
-              className="form-control"
-            >
-              <option value="" disabled>Choose a domain</option>
-              <optgroup label="Tech">
-                <option value="Tarzan">TARZAN - Autonomous Vehicle Project</option>
-                <option value="Website">I.R.I.S. Website - Development & Updates</option>
-              </optgroup>
-              <optgroup label="Non-tech">
-                <option value="content-writing">Content Writing</option>
-                <option value="content-creation">Content Creation (Video Creation, Video Hosting)</option>
-                <option value="photo-video-editor">Photo/Video Editor</option>
-                <option value="designer-posts">Designer for Posts</option>
-                <option value="event-ops">Event and Ops (Event Management)</option>
-                <option value="marketing">Marketing</option>
-                <option value="sponsorship-outreach">Sponsorship and Outreach</option>
-              </optgroup>
-            </select>
+              options={domainOptions}
+              isMulti
+              value={formData.domain.map(value => ({
+                value,
+                label: domainOptions
+                  .flatMap(group => group.options)
+                  .find(option => option.value === value)?.label
+              }))}
+              onChange={handleDomainChange}
+              components={{ SingleValue: customSingleValue }}
+              className="react-select-container"
+              classNamePrefix="react-select"
+              styles={customStyles}
+            />
             {formErrors.domain && <p className="text-danger">{formErrors.domain}</p>}
           </div>
 
