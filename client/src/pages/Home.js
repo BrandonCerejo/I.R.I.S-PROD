@@ -158,6 +158,9 @@ function Home() {
           </div>
 
           {/* Sliding section 1 */}
+          <h3 className={styles.journeyTitle}>
+                Blog
+          </h3>
           <div
             className={`${styles.newSectionContainer} d-flex align-items-center`}
             style={{
@@ -210,6 +213,9 @@ function Home() {
             </button>
           </div>
           {/* Sliding section 2 */}
+          <h3 className={styles.journeyTitle}>
+              Events
+          </h3>
           <div
             className={`${styles.newSectionContainer} d-flex align-items-center`}
             style={{
@@ -262,6 +268,9 @@ function Home() {
             </button>
           </div>
           {/* Sliding section 3 */}
+          <h3 className={styles.journeyTitle}>
+                Projects
+          </h3>
           <div
             className={`${styles.newSectionContainer} d-flex align-items-center`}
             style={{
