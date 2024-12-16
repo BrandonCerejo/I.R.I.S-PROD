@@ -8,7 +8,6 @@ function Recruitment() {
   const [formData, setFormData] = useState({
     name: "",
     prn: "",
-    cgpa: "",
     interests: "",
     domain: "",
     email: "",
@@ -17,6 +16,8 @@ function Recruitment() {
     school: "",
     branch: "",
     currentYear: "",
+    experience: "",
+    contribution: ""
   });
 
   const [formErrors, setFormErrors] = useState({
@@ -24,7 +25,6 @@ function Recruitment() {
     prn: "",
     email: "",
     phone: "",
-    cgpa: "",
     school: "",
     branch: "",
     currentYear: "",
@@ -76,18 +76,18 @@ function Recruitment() {
       setFormData({ ...formData, file });
     } else {
       setFormData({ ...formData, [name]: value });
-      setFormErrors({ ...formErrors, [name]: "" }); 
+      setFormErrors({ ...formErrors, [name]: "" });
     }
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();  
+    e.preventDefault();
 
     const newErrors = {};
     let formIsValid = true;
 
     Object.keys(formData).forEach((field) => {
-      if (!formData[field] && field !== "cgpa" && field !== "file") {
+      if (!formData[field] && field !== "file") {
         newErrors[field] = `${field.charAt(0).toUpperCase() + field.slice(1)} is required.`;
         formIsValid = false;
       }
@@ -118,8 +118,8 @@ function Recruitment() {
       formIsValid = false;
     }
 
-    if (!formData.file) {
-      newErrors.file = "Please upload your resume (PDF).";
+    if (formData.file && !formData.file.name.endsWith(".pdf")) {
+      newErrors.file = "Please upload a valid PDF resume.";
       formIsValid = false;
     }
 
@@ -134,20 +134,7 @@ function Recruitment() {
       return;
     }
 
-    const cgpaValue = formData.cgpa ? parseFloat(formData.cgpa) : null;
-
-    const filePath = `cvs/${formData.name}-${Date.now()}.pdf`;
-    const { data, error: uploadError } = await supabase
-      .storage
-      .from('cv_bucket')
-      .upload(filePath, formData.file);
-
-    if (uploadError) {
-      setFormErrors({ ...formErrors, file: "Error uploading file: " + uploadError.message });
-      return;
-    }
-
-    const fileUrl = supabase.storage.from('cv_bucket').getPublicUrl(data.path).publicURL;
+    const fileUrl = formData.file ? await uploadFile(formData.file) : null;
 
     const { error: insertError } = await supabase
       .from('recruitment_forms')
@@ -156,7 +143,6 @@ function Recruitment() {
         prn: formData.prn,
         email: formData.email,
         phone: formData.phone,
-        cgpa: cgpaValue,
         domain: formData.domain,
         interests: formData.interests,
         experience: formData.experience,
@@ -177,7 +163,6 @@ function Recruitment() {
     setFormData({
       name: "",
       prn: "",
-      cgpa: "",
       interests: "",
       domain: "",
       email: "",
@@ -191,6 +176,21 @@ function Recruitment() {
     });
 
     fileInputRef.current.value = null;
+  };
+
+  const uploadFile = async (file) => {
+    const filePath = `cvs/${formData.name}-${Date.now()}.pdf`;
+    const { data, error: uploadError } = await supabase
+      .storage
+      .from('cv_bucket')
+      .upload(filePath, file);
+
+    if (uploadError) {
+      setFormErrors({ ...formErrors, file: "Error uploading file: " + uploadError.message });
+      return null;
+    }
+
+    return supabase.storage.from('cv_bucket').getPublicUrl(data.path).publicURL;
   };
 
   const handleOkayButton = () => {
@@ -260,19 +260,6 @@ function Recruitment() {
               onChange={handleChange}
             />
             {formErrors.phone && <p className="text-danger">{formErrors.phone}</p>}
-          </div>
-
-          <div className={styles.formGroup}>
-            <label htmlFor="cgpa">CGPA</label>
-            <input
-              type="number"
-              step="0.01"
-              id="cgpa"
-              name="cgpa"
-              value={formData.cgpa}
-              onChange={handleChange}
-            />
-            {formErrors.cgpa && <p className="text-danger">{formErrors.cgpa}</p>}
           </div>
 
           <div className={styles.formGroup}>
@@ -351,7 +338,7 @@ function Recruitment() {
           </div>
 
           <div className={styles.formGroup}>
-            <label htmlFor="file">Resume or CV (rename the PDF with your name)*</label>
+            <label htmlFor="file">Resume or CV (rename the PDF with your name)</label>
             <input
               type="file"
               id="file"
