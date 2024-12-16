@@ -52,7 +52,15 @@ const Projects1 = () => {
               <h3>DEPLOYMENT</h3>
               <p>We have used Vercel to deploy frontend because of their easy deployment and seamless integration with github.
               </p>
+              </section>
+              <section className={styles.projectRegistration}>
+              <h3>Stay Connected 📩</h3>
+              <p>If you're interested in participating in this project or have any questions, feel free to reach out to us!</p>
+              <Link to="/recruitment" className={styles.registerBtn}>
+                recruitment form
+              </Link>
             </section>
+            
           </div>
         </main>
       </div>
