@@ -157,9 +157,49 @@ function Home() {
             </div>
           </div>
 
+          {/* Journey Section */}
+          <div
+            className={`${styles.journey} py-5 text-center text-light`}
+          >
+            <div className="container">
+              <h3 className={styles.journeyTitle}>
+                Join us on the I.R.I.S. Journey
+              </h3>
+              <div className="row g-4">
+                <div className="col-md-4">
+                  <div className={`${styles.step} p-4 shadow-sm h-100`}>
+                    <h4>Bring Your Idea</h4>
+                    <p>
+                      Transform your concepts into reality with our supportive
+                      community.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className={`${styles.step} p-4 shadow-sm h-100`}>
+                    <h4>Collaborate and Develop</h4>
+                    <p>
+                      Work with like-minded individuals to refine and expand
+                      your projects.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className={`${styles.step} p-4 shadow-sm h-100`}>
+                    <h4>Achieve and Launch</h4>
+                    <p>
+                      Bring your innovations to life and make a lasting impact
+                      in the tech world.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Sliding section 1 */}
           <h3 className={styles.journeyTitle}>
-                Blog
+            Projects
           </h3>
           <div
             className={`${styles.newSectionContainer} d-flex align-items-center`}
@@ -176,13 +216,13 @@ function Home() {
               <div className="row align-items-center">
                 <div className="col-lg-6 text-center text-lg-start">
                   <h2 className="display-4 fw-bold">
-                    {section1[SectionIndex1].title}
+                    {section3[SectionIndex3].title}
                   </h2>
                   <p className="mb-4">
-                    {section1[SectionIndex1].description}
+                    {section3[SectionIndex3].description}
                   </p>
                   <Link
-                    to={section1[SectionIndex1].link}
+                    to={section3[SectionIndex3].link}
                     className={styles.knowMoreBtn}
                   >
                     Know More
@@ -190,31 +230,32 @@ function Home() {
                 </div>
                 <div className="col-lg-6 text-center">
                   <img
-                    src={section1[SectionIndex1].image}
-                    alt={section1[SectionIndex1].title}
+                    src={section3[SectionIndex3].image}
+                    alt={section3[SectionIndex3].title}
                     className={styles.newSectionImage}
                   />
                 </div>
               </div>
             </div>
 
-            {/* Arrows 1*/}
+            {/* Arrows 1 */}
             <button
-              onClick={handlePrev1}
+              onClick={handlePrev3}
               className={`${styles.arrow} ${styles.leftArrow}`}
             >
               &#8249;
             </button>
             <button
-              onClick={handleNext1}
+              onClick={handleNext3}
               className={`${styles.arrow} ${styles.rightArrow}`}
             >
               &#8250;
             </button>
           </div>
+          
           {/* Sliding section 2 */}
           <h3 className={styles.journeyTitle}>
-              Events
+            Events
           </h3>
           <div
             className={`${styles.newSectionContainer} d-flex align-items-center`}
@@ -267,9 +308,10 @@ function Home() {
               &#8250;
             </button>
           </div>
+
           {/* Sliding section 3 */}
           <h3 className={styles.journeyTitle}>
-                Projects
+            Blogs
           </h3>
           <div
             className={`${styles.newSectionContainer} d-flex align-items-center`}
@@ -286,13 +328,13 @@ function Home() {
               <div className="row align-items-center">
                 <div className="col-lg-6 text-center text-lg-start">
                   <h2 className="display-4 fw-bold">
-                    {section3[SectionIndex3].title}
+                    {section1[SectionIndex1].title}
                   </h2>
                   <p className="mb-4">
-                    {section3[SectionIndex3].description}
+                    {section1[SectionIndex1].description}
                   </p>
                   <Link
-                    to={section3[SectionIndex3].link}
+                    to={section1[SectionIndex1].link}
                     className={styles.knowMoreBtn}
                   >
                     Know More
@@ -300,69 +342,29 @@ function Home() {
                 </div>
                 <div className="col-lg-6 text-center">
                   <img
-                    src={section3[SectionIndex3].image}
-                    alt={section3[SectionIndex3].title}
+                    src={section1[SectionIndex1].image}
+                    alt={section1[SectionIndex1].title}
                     className={styles.newSectionImage}
                   />
                 </div>
               </div>
             </div>
 
-            {/* Arrows 3 */}
+            {/* Arrows 3*/}
             <button
-              onClick={handlePrev3}
+              onClick={handlePrev1}
               className={`${styles.arrow} ${styles.leftArrow}`}
             >
               &#8249;
             </button>
             <button
-              onClick={handleNext3}
+              onClick={handleNext1}
               className={`${styles.arrow} ${styles.rightArrow}`}
             >
               &#8250;
             </button>
           </div>
-
-
-        {/* Journey Section */}
-        <div
-            className={`${styles.journey} py-5 text-center text-light`}
-          >
-            <div className="container">
-              <h3 className={styles.journeyTitle}>
-                Join us on the I.R.I.S Journey
-              </h3>
-              <div className="row g-4">
-                <div className="col-md-4">
-                  <div className={`${styles.step} p-4 shadow-sm h-100`}>
-                    <h4>Bring Your Idea</h4>
-                    <p>
-                      Transform your concepts into reality with our supportive
-                      community.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className={`${styles.step} p-4 shadow-sm h-100`}>
-                    <h4>Collaborate and Develop</h4>
-                    <p>
-                      Work with like-minded individuals to refine and expand
-                      your projects.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className={`${styles.step} p-4 shadow-sm h-100`}>
-                    <h4>Achieve and Launch</h4>
-                    <p>
-                      Bring your innovations to life and make a lasting impact
-                      in the tech world.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </main>
       </div>
     </div>

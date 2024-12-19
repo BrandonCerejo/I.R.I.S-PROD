@@ -219,7 +219,6 @@ function Recruitment() {
       return;
     }
 
-    window.scrollTo(0, 0);
     setShowNotification(true);
 
     setFormData({
