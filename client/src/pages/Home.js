@@ -8,13 +8,13 @@ function Home() {
       title: "TARZAN",
       description: "Revolutionizing Autonomous Vehicle Navigation.\nAn innovative system using computer vision to enhance autonomous vehicle control.",
       link: "/blog",
-      image: "/simulation.jpg",
+      image: "/systemDiagMATLAB.jpg",
     },
     {
       title: "Security Breach We Overcame",
       description: "Our journey in building a platform for collaboration, hackathon management and seamless user experience.",
       link: "/blog",
-      image: "/website_img.png",
+      image: "/db.jpg",
     },
   ];
 
@@ -44,7 +44,7 @@ function Home() {
       title: "Autonomous Vehicle",
       description: "Tarzan is an innovative, leading-edge autonomous vehicle control system integrating the application of computer vision into vehicular communications.",
       link: "/Projects",
-      image: "/systemDiagMATLAB.jpg",
+      image: "/simulation.jpg",
     },
   ];
 
@@ -252,7 +252,7 @@ function Home() {
               &#8250;
             </button>
           </div>
-          
+
           {/* Sliding section 2 */}
           <h3 className={styles.journeyTitle}>
             Events
@@ -364,7 +364,7 @@ function Home() {
               &#8250;
             </button>
           </div>
-          
+
         </main>
       </div>
     </div>
