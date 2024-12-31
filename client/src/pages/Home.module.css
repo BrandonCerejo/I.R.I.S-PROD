@@ -108,6 +108,12 @@ html, body {
   color: #f8f9fa;
 }
 
+.projectsTitle, .eventsTitle, .blogsTitle {
+  text-align: center;
+  margin-top: 20px; 
+  margin-bottom: -23px;
+}
+
 .step {
   background: rgba(23, 37, 90, 0.8);
   color: #fff;

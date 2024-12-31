@@ -198,7 +198,7 @@ function Home() {
           </div>
 
           {/* Sliding section 1 */}
-          <h3 className={styles.journeyTitle}>
+          <h3 className={`${styles.journeyTitle} ${styles.projectsTitle}`}>
             Projects
           </h3>
           <div
@@ -254,7 +254,7 @@ function Home() {
           </div>
 
           {/* Sliding section 2 */}
-          <h3 className={styles.journeyTitle}>
+          <h3 className={`${styles.journeyTitle} ${styles.eventsTitle}`}>
             Events
           </h3>
           <div
@@ -310,7 +310,7 @@ function Home() {
           </div>
 
           {/* Sliding section 3 */}
-          <h3 className={styles.journeyTitle}>
+          <h3 className={`${styles.journeyTitle} ${styles.blogsTitle}`}>
             Blogs
           </h3>
           <div
