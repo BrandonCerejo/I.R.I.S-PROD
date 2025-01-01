@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import styles from './About.module.css';
+import { Link } from 'react-router-dom';
 // import backgroundVideo from './vid2.mp4';
 
 function About() {
@@ -140,6 +141,7 @@ function About() {
                     <h3>Taksh Dhabalia</h3>
                     <p>President</p>
                     <a href="https://www.linkedin.com/in/taksh-dhabalia-2b6969202/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    {/* <Link to="/portfolio/taksh" className={styles.button}>Portfolio</Link> */}
                   </div>
                 </div>
               </div>
