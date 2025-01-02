@@ -1,5 +1,5 @@
 import React from 'react';
-import './TakshDhabalia.css'; // Add a CSS file for styling
+import './TakshDhabalia.css';
 
 const skills = {
   languages: [
@@ -40,8 +40,8 @@ const projects = [
       'Takes surroundings like other cars, potholes, barricades, etc., to make its decisions.',
       'Worked on making simulations using MATLAB with pure-pursuit modeling.'
     ],
-    link: 'https://github.com/TakshDhabalia/TarzanIRIS', // Add the correct GitHub link
-    image: 'https://github.com/TakshDhabalia/TarzanIRIS/raw/main/Simulation_Results/Simulation_ongoing.jpg' // Add the correct image URL
+    link: 'https://github.com/TakshDhabalia/TarzanIRIS',
+    image: 'https://github.com/TakshDhabalia/TarzanIRIS/raw/main/Simulation_Results/Simulation_ongoing.jpg'
   },
   {
     title: 'IRIS Website',
@@ -49,8 +49,8 @@ const projects = [
       'Developed an official site for the club, handling multiple concurrent real-time payments and updating entries for events.',
       'Utilized Razorpay, Supabase Database, and Vercel for deployment.'
     ],
-    link: 'https://github.com/IRIS-MITWPU/I.R.I.S-Prod-Website', // Add the correct GitHub link
-    image: '/website_img.png' // Add the correct image URL
+    link: 'https://github.com/kushagra-a-singh/I.R.I.S-PROD',
+    image: '/website_img.png'
   },
   {
     title: 'Real-Time Parking Management System',
@@ -59,8 +59,8 @@ const projects = [
       'Uses OpenCV and Threading with YOLOv8 for real-time allocation, speeding up the process by 40%.',
       'Implemented using CCTV cameras and Raspberry Pi.'
     ],
-    link: 'https://github.com/TakshDhabalia/Driving_Optimization', // Add the correct GitHub link
-    image: '/TakshProj1.jpg' // Add the correct image URL
+    link: 'https://github.com/TakshDhabalia/Driving_Optimization',
+    image: '/TakshProj1.jpg'
   },
   {
     title: 'Doom on Web',
@@ -69,8 +69,8 @@ const projects = [
       'Leverages Ray-Casting for its core engine algorithm and uses BFS and DFS for NPC algorithms.',
       'Developing multiplayer and squad-up features (WIP).'
     ],
-    link: 'https://github.com/TakshDhabalia/Doom', // Add the correct GitHub link
-    image: '/TakshProj2.jpg' // Add the correct image URL
+    link: 'https://github.com/TakshDhabalia/Doom',
+    image: '/TakshProj2.jpg'
   },
   {
     title: 'Music_Gen',
@@ -78,14 +78,14 @@ const projects = [
       'Produced music from input using LSTMs in real-time.',
       'Utilized open-source KERN datasets for German songs to generate unique melodies based on the input provided, giving continuations of them as a result.'
     ],
-    link: 'https://github.com/TakshDhabalia/Research-and-MusicGeneration', // Add the correct GitHub link
-    image: 'https://via.placeholder.com/300?text=Music_Gen' // Add the correct image URL
+    link: 'https://github.com/TakshDhabalia/Research-and-MusicGeneration',
+    image: 'https://via.placeholder.com/300?text=Music_Gen'
   }
 ];
 
 const experiences = [
   {
-    logo: 'https://th.bing.com/th/id/R.6b6427406233274233e6654f503091a2?rik=V0yJ08JCJrC2DQ&riu=http%3a%2f%2f4.bp.blogspot.com%2f-S22Wb-TC5A0%2fUcvDWp02pGI%2fAAAAAAAAAF4%2fcMfVyM-_WuA%2fs1600%2flogo.jpg&ehk=AJTTfx0QjbYuNLU3FaKEth969092fkDmSRdYAQBnpi4%3d&risl=&pid=ImgRaw&r=0',
+    logo: 'https://www.careerindia.com/img/2014/03/20-iiit-delhi.jpg',
     company: 'IIIT-Delhi',
     role: 'System Design and Embedded Software Developer Intern',
     location: 'Delhi',
@@ -132,7 +132,6 @@ const achievements = [
 function TakshDhabalia() {
   return (
     <div>
-      {/* Background Video */}
       <video className="background-video" autoPlay muted loop>
         <source
           src="https://rkvbuqdjkilvqlywzjsi.supabase.co/storage/v1/object/sign/AboutPhotos/Videos/vid2.mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBYm91dFBob3Rvcy9WaWRlb3MvdmlkMi5tcDQiLCJpYXQiOjE3MzA5MDA1MDcsImV4cCI6MTc2MjQzNjUwN30.qMfRi7Uxvtpz4rRnaN6bTSQzEE_AtxrRQMBp2qR5YEI&t=2024-11-06T13%3A41%3A48.487Z"
@@ -151,11 +150,11 @@ function TakshDhabalia() {
           />
           <div className="hero-text">
             <h2>Hi, I'm Taksh Dhabalia</h2>
-            <p>I'm a passionate web developer with experience in creating dynamic and responsive websites. I love to learn new technologies and solve real-world problems.</p>
+            <p>A third year student at MIT WPU, Pune. I have worked as an intern at IIIT-D and am the current President of the tech club IRIS. I have also been the vice-lead for innovations and electronics at Team Bolt where we have secured AIR 4 in MOTO STUDENT INDIA - superbike manufacturing and design competition. My current interests are Microcontrollers, Electronics & electrical, Distributed Systems and ML & DL in computer vision.</p>
             <div className="social-links">
-              <a href="https://in.linkedin.com/in/taksh-dhabalia-2b6969202" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIN" class="icon"></img>LinkedIn</a>
-              <a href="https://github.com/TakshDhabalia" target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="icon"></img>GitHub</a>
-              <a target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" alt="Gmail" class="gmail-icon"></img>taksh.dhabalia@gmail.com</a>
+              <a href="https://in.linkedin.com/in/taksh-dhabalia-2b6969202" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIN" className="icon"></img>LinkedIn</a>
+              <a href="https://github.com/TakshDhabalia" target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" className="icon"></img>GitHub</a>
+              <a target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" alt="Gmail" className="gmail-icon"></img>taksh.dhabalia@gmail.com</a>
             </div>
             <div className="section-links">
               <a href="#experience">Experience</a>
@@ -243,7 +242,7 @@ function TakshDhabalia() {
             </div>
           ))}
         </div>
-    </section>
+      </section>
 
     <section id="roles-achievements">
       <h2>Roles and Achievements</h2>
