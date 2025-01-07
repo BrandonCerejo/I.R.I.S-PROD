@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Events.module.css';
 
@@ -64,7 +64,12 @@ function Events() {
           <div className={styles.eventList}>
             {pastEvents.map(event => (
               <div key={event.id} className={styles.eventCard}>
-                <img className={styles.eventImage} src={event.image} alt={event.title} />
+                <img
+                  className={styles.eventImage}
+                  src={event.image}
+                  alt={event.title}
+                  loading="lazy"
+                />
                 <div className={styles.eventDetails}>
                   <h2>{event.title}</h2>
                   <p className={styles.date}>Held on: {new Date(event.date).toLocaleDateString()}</p>
@@ -91,7 +96,12 @@ function Events() {
           <h2 className={styles.podcastTitle}>Podcasts</h2>
           <div className={styles.eventList}>
             <div key={podcast.id} className={styles.eventCard}>
-              <img className={styles.eventImage} src={podcast.image} alt={podcast.title} />
+              <img
+                className={styles.eventImage}
+                src={podcast.image}
+                alt={podcast.title}
+                loading="lazy"
+              />
               <div className={styles.eventDetails}>
                 <h2>{podcast.title}</h2>
                 <p className={styles.description}>{podcast.description}</p>

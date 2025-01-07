@@ -84,6 +84,19 @@ function About() {
                 </div>
               </div>
             </div>
+            <div className="col-md-6" >
+              {/* Faculty Mentor 3 */}
+              <div className={styles.mentor}>
+                <img src="Pratvina_mam.png" alt="Pratvina Vinayak Talele" className={styles.mentorImage} />
+                <div className={styles.mentorInfo}>
+                  <h3>Prof. Pratvina Vinayak Talele</h3>
+                  <p>Project Mentor</p>
+                  <a href="https://scholar.google.com/citations?hl=en&user=_sFHQ8UAAAAJ" target="_blank" rel="noopener noreferrer">
+                    View Profile
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
           <div id="team-members" className={styles.teamMembers + ' p-4'}>
             <h2>Team Members</h2>
