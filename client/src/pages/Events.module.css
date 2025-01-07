@@ -43,13 +43,13 @@
 .upcoming, .past, .podcastTitle {
   color: #f1eded; 
   margin-top: 2rem;
-  text-align: center; /* Center-align section titles */
+  text-align: center;
 }
 
 .eventList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center content horizontally */
+  justify-content: center; 
   padding: 2rem;
   z-index: 2;
 }
@@ -63,7 +63,8 @@
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  position: relative; /* Added for layering */
+  position: relative;
+  
 }
 
 .eventCard img {
@@ -73,28 +74,25 @@
 }
 
 .eventDetails {
-  padding: 1rem; /* Uniform padding for details */
+  padding: 1rem; 
   color: #000; 
 }
 
 .eventDetails h2 {
   margin: 0;
+  color: #000; 
 }
 
-.description {
+.description, .date {
   color: #333;
-  margin: 1rem 0; /* Added margin for spacing */
-}
-
-.date {
-  color: #555;
-  margin-bottom: 1rem; /* Added margin for spacing */
+  margin: 0.5rem 0;
 }
 
 .highlightsList {
   text-align: left; /* Align highlights to the left */
   padding-left: 1rem; /* Added padding for highlights */
   margin-bottom: 1rem; /* Spacing between highlights and conclusion */
+  color: #000; 
 }
 
 .btn {
