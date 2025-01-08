@@ -18,6 +18,7 @@ import Projects1 from './pages/Projects1';
 import { TarzanProject } from './pages/ProjectFiles/Tarzan/TarzanProject';
 import Recruitment from './pages/recruitment';
 import TakshDhabalia from './portfolio/TakshDhabalia'
+import KushagraSingh from './portfolio/KushagraSingh';
 
 function AppRouter() {
   return (
@@ -40,6 +41,7 @@ function AppRouter() {
         <Route path='/blog' element={<Blog />} />
         <Route path='/recruitment' element={<Recruitment />} />
         <Route path="/portfolio/TakshDhabalia" element={<TakshDhabalia />} />
+        <Route path="/portfolio/KushagraSingh" element={<KushagraSingh />} />
         {/* <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
         <Route path="/checkoutPayment" element={<CheckoutPayment />} /> */}
       </Routes>
