@@ -85,7 +85,7 @@ const projects = [
 
 const experiences = [
   {
-    logo: 'https://www.careerindia.com/img/2014/03/20-iiit-delhi.jpg',
+    logo: 'https://iiitd.ac.in/iras-hub/images/IIIT-DELHI.png',
     company: 'IIIT-Delhi',
     role: 'System Design and Embedded Software Developer Intern',
     location: 'Delhi',

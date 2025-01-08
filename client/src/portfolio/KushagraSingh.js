@@ -20,7 +20,8 @@ const skills = {
   ],
   electronics: [
     { name: 'Raspberry Pi', logo: 'https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2016/10/raspberry_pi_logo/16166824-1-eng-GB/Raspberry_Pi_logo.jpg' },
-    { name: 'Arduino', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/1200px-Arduino_Logo.svg.png'}
+    { name: 'Arduino', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/1200px-Arduino_Logo.svg.png'},
+    { name: 'STM32', logo: 'https://media.licdn.com/dms/image/C4D12AQFdgJiMnrzu2g/article-cover_image-shrink_600_2000/0/1622631819905?e=2147483647&v=beta&t=vPGjeJ65p7AAWZbkT6RD8Hik6QtFgfBiUn6-sIerB-M'}
   ],
   webDevelopment: [
     { name: 'Next.js', logo: 'https://seeklogo.com/images/N/next-js-logo-7929BCD36F-seeklogo.com.png' },
@@ -46,8 +47,7 @@ const skills = {
     { name: 'PostgreSQL', logo: 'https://images.freeimages.com/vme/images/2/8/284731/postgresql_logo_preview' }
   ],
   software: [
-    { name: 'MatLab', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc36bSKd51qFqjmBk_cDA3eNAeYF2Dtc_fWQ&s' },
-    { name: 'AutoCAD', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT797bsZgS9I1S_0ZEdoVl-DixAh-p8KkPojQ&s' },
+    { name: 'AutoCAD', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8iDZ14NlHB55_yQ2Hb0z-HR5z9uNpLEoHHw&s' },
     { name: 'TinkerCAD', logo: 'https://aeg.alpineschools.org/wp-content/uploads/sites/45/2023/08/Tinkercad.png' }
   ]
 };
@@ -58,8 +58,7 @@ const projects = [
     points: [
       'Developing an autonomous vehicle portable module for non-ADAS enabled cars.',
       'Uses an app to input images and run custom deep learning models (YOLOv8) to make decisions for car steering angle, acceleration, and braking values.',
-      'Takes surroundings like other cars, potholes, barricades, etc., to make its decisions.',
-      'Worked on making simulations using MATLAB with pure-pursuit modeling.'
+      'Takes surroundings like other cars, potholes, barricades, etc., to make its decisions.'
     ],
     link: 'https://github.com/kushagra-a-singh/Tarzan-I.R.I.S.',
     image: 'https://github.com/TakshDhabalia/TarzanIRIS/raw/main/Simulation_Results/Simulation_ongoing.jpg'
@@ -85,7 +84,7 @@ const projects = [
       'Currently trying to integrate a Kafka-based pipeline to handle real-time telemetry and analytics.'
     ],
     link: 'https://github.com/kushagra-a-singh/ForVis',
-    image: 'https://private-user-images.githubusercontent.com/118354029/400864531-91f34012-4fd4-4e51-a45d-efc89f8079cf.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzYzNDM0NzcsIm5iZiI6MTczNjM0MzE3NywicGF0aCI6Ii8xMTgzNTQwMjkvNDAwODY0NTMxLTkxZjM0MDEyLTRmZDQtNGU1MS1hNDVkLWVmYzg5ZjgwNzljZi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMTA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDEwOFQxMzMyNTdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iYmZiODgyMTg5MDRjNGQ4ODNmNDE0NzU3NjQ1Yzg4M2M0NzA3OGJkMDhjNzhmNTg3YTBmNDdlY2Y0NzVjYjQ0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.BRWed0j0RUWpN_kKLuK73IYIdltlunXrbGGOfaZLxFg'
+    image: '/KushagraProj1.png'
   },
   {
     title: 'Driver Safety Monitoring System',
@@ -95,7 +94,7 @@ const projects = [
       'Enabled timely feedback for enhanced driver safety, utilizing sensors for real-time monitoring and instant notifications.'
     ],
     link: 'https://github.com/kushagra-a-singh/Embedded-Arduino-System-for-Car-Road-Safety',
-    image: 'https://private-user-images.githubusercontent.com/105034224/353444357-92087b68-18ef-4f04-bf86-a7ed213fb65f.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzYzNDM1OTAsIm5iZiI6MTczNjM0MzI5MCwicGF0aCI6Ii8xMDUwMzQyMjQvMzUzNDQ0MzU3LTkyMDg3YjY4LTE4ZWYtNGYwNC1iZjg2LWE3ZWQyMTNmYjY1Zi5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMTA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDEwOFQxMzM0NTBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00YjMwZGQxMWU3ZDc5YWEzZTY4MmI1MTQ0YjIzMjQ2MGM0ODA1MTVkMjYwZTE4NzFmODIyNzA4ZmQwMzNlMjA0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.tzNFi-gUG6pNv9PwOE-dWQclDFIYqL5IMpP_2offMwo'
+    image: '/KushagraProj2.jpg'
   },
 ];
 
@@ -216,33 +215,34 @@ function KushagraSingh() {
       <section id="projects">
         <h2>Projects</h2>
         <div className="projects-grid">
-          {projects.map((project, index) => (
+            {projects.map((project, index) => (
             <div className="project-card" key={index}>
-              <img
+                <img
                 src={project.image}
                 alt={project.title}
                 className="project-image"
-              />
-              <div className="project-details">
-                <p><strong>{project.title}</strong></p>
-                <ul>
-                  {project.points.map((point, idx) => (
+                />
+                <div className="project-details">
+                <p className="project-title"><strong>{project.title}</strong></p>
+                <ul className="project-points">
+                    {project.points.map((point, idx) => (
                     <li key={idx}>{point}</li>
-                  ))}
+                    ))}
                 </ul>
                 <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-button"
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-button"
                 >
-                  View on GitHub
+                    View on GitHub
                 </a>
-              </div>
+                </div>
             </div>
-          ))}
+            ))}
         </div>
-      </section>
+        </section>
+
 
       <section id="skills">
         <h2>Skills</h2>
