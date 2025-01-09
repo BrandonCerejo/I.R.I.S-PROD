@@ -422,40 +422,74 @@
   
   @media (max-width: 768px) {
     .hero {
-      padding-top: 500px;
-    }
-    .hero-content {
+      min-height: 135vh;
+      flex-direction: column;
+      padding-top: 200px;
+  }
+
+  .hero-content {
       flex-direction: column;
       align-items: center;
       text-align: center;
-    }
+      width: 100%;
+  }
+
+  .hero-text p {
+    text-align: left;
+  }
+
+  .hero-image {
+    width: 65%;
+    height: 65%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .hero-text {
+      max-width: 90%;
+      margin: 0 auto;
+  }
+
+  .hero-text h2 {
+    font-size: 28px;
+  }
+
+  .social-links {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 5px;
+      gap: 15px;
+      justify-content: center;
+  }
+
+  .social-links a {
+      font-size: 16px;
+  }
+
+  .social-links img.icon,
+  .social-links .gmail-icon {
+      width: 24px;
+      height: 24px;
+  }
   
-    .hero-image {
-      margin-right: 0;
-      margin-bottom: 20px;
+  .section-links {
+      display: list-item;
+      flex-direction: row; /* Arrange links side by side */
+      justify-content: space-between; /* Center the links horizontally */
+      width: 100%;
+      margin-top: 10px;
+      box-sizing: border-box;
     }
-  
-    .hero-text {
-      max-width: 100%;
-    }
-  
-    .social-links {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .social-links a {
-      margin: 10px 0;
-    }
-  
-    .section-links {
-      flex-direction: column;
-      align-items: center;
-    }
-  
+
     .section-links a {
-      margin: 5px 0;
-    }
+      font-size: 16px; /* Adjust font size for mobile */
+      text-decoration: none; /* Remove underlines */
+      color: #ffffff; /* Adjust color as needed */
+      padding: 0px 5px; /* Add padding for better touch targets */
+      border-radius: 5px; /* Optional: Add rounded corners */
+      transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
   
     .projects-grid {
       grid-template-columns: 1fr;
@@ -468,7 +502,7 @@
     .experience-card {
       flex-direction: column;
       align-items: center;
-      text-align: center;
+      text-align: left;
     }
   
     .experience-logo {
