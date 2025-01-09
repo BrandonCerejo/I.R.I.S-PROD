@@ -2,8 +2,8 @@ import React from 'react';
 import './KushagraSingh.css';
 
 const camelCaseToWords = (text) => {
-    return text.replace(/([a-z])([A-Z])/g, '$1 $2'); // Adds space between camelCase
-  };
+  return text.replace(/([a-z])([A-Z])/g, '$1 $2'); // Adds space between camelCase
+};
 
 const skills = {
   languages: [
@@ -12,20 +12,17 @@ const skills = {
     { name: 'C++', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png' }
   ],
   packages: [
-    { name: 'Torch', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMBCKLljP0a1I_98yD-P_2JvfYCAFHlit5Fg&s'},
     { name: 'OpenCV', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/OpenCV_logo_black.svg/1200px-OpenCV_logo_black.svg.png' },
     { name: 'Pandas', logo: 'https://4008838.fs1.hubspotusercontent-na1.net/hubfs/4008838/pandas-logo.png' },
     { name: 'NumPy', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ0WMo9USP6o7gpVcLisXP0rJnZG41dsffJg&s' },
     { name: 'TensorFlow', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyPBk9JOT2-C39hu2yCyFiGAPE6o2kgpvecw&s' },
     { name: 'Seaborn', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOvsfXuwek_JdokX7xFPJBwxXF_5xJim-3og&s'},
     { name: 'Scikit-Learn', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSi-OFOLzWln43z2Kz8YSgyN5cHsaXb0l7OA&s'},
-    { name: 'Tkinter', logo: 'https://w7.pngwing.com/pngs/679/344/png-transparent-wing-ide-integrated-development-environment-python-computer-software-eric-raspberry-miscellaneous-monochrome-computer-program.png'},
-    { name: 'StreamLit', logo: 'https://images.seeklogo.com/logo-png/45/2/streamlit-logo-png_seeklogo-458260.png?v=1957216667958097800'}
+    { name: 'Tkinter', logo: 'https://w7.pngwing.com/pngs/679/344/png-transparent-wing-ide-integrated-development-environment-python-computer-software-eric-raspberry-miscellaneous-monochrome-computer-program.png'}
   ],
   electronics: [
     { name: 'Raspberry Pi', logo: 'https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2016/10/raspberry_pi_logo/16166824-1-eng-GB/Raspberry_Pi_logo.jpg' },
     { name: 'Arduino', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/1200px-Arduino_Logo.svg.png'},
-    { name: 'STM32', logo: 'https://media.licdn.com/dms/image/C4D12AQFdgJiMnrzu2g/article-cover_image-shrink_600_2000/0/1622631819905?e=2147483647&v=beta&t=vPGjeJ65p7AAWZbkT6RD8Hik6QtFgfBiUn6-sIerB-M'}
   ],
   webDevelopment: [
     { name: 'Next.js', logo: 'https://seeklogo.com/images/N/next-js-logo-7929BCD36F-seeklogo.com.png' },
@@ -47,89 +44,79 @@ const skills = {
   ],
   databases: [
     { name: 'MySQL', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx25AX0zo1Hxz_tPZ2Oi3GpX9-TfcClBSHLg&s' },
-    { name: 'MongoDB', logo: 'https://cdn.worldvectorlogo.com/logos/mongodb-icon-2.svg' },
-    { name: 'PostgreSQL', logo: 'https://images.freeimages.com/vme/images/2/8/284731/postgresql_logo_preview' }
+    { name: 'MongoDB', logo: 'https://cdn.worldvectorlogo.com/logos/mongodb-icon-2.svg' }
   ],
-  software: [
-    { name: 'AutoCAD', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8iDZ14NlHB55_yQ2Hb0z-HR5z9uNpLEoHHw&s' },
-    { name: 'TinkerCAD', logo: 'https://aeg.alpineschools.org/wp-content/uploads/sites/45/2023/08/Tinkercad.png' }
+  visualizationTools: [
+    { name: 'Tableau', logo: 'https://logos-world.net/wp-content/uploads/2021/10/Tableau-Symbol.png' },
+    { name: 'PowerBI', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4hzOS5W2J2PjB4JssJDrmx1b7xFn0yt0uCw&s' }
   ]
 };
 
 const projects = [
   {
-    title: 'Tarzan [Ongoing]',
+    title: 'ForVis - Formula 1 Analytics',
     points: [
-      'Developing an autonomous vehicle portable module for non-ADAS enabled cars.',
-      'Uses an app to input images and run custom deep learning models (YOLOv8) to make decisions for car steering angle, acceleration, and braking values.',
-      'Takes surroundings like other cars, potholes, barricades, etc., to make its decisions.'
+      'Tools used: Apache Spark, HDFS, Machine Learning Models, Scikit-Learn, PyQt5, Dash',
+      'Developed a dynamic GUI using PyQt5 to visualize Formula 1 race telemetry with real-time and historical data analysis.',
+      'Multi-driver comparison, lap time analysis & tire strategy insights via interactive dashboards.',
+      'Integrated FastF1 APIs and stored telemetry in HDFS, achieving a 30% reduction in processing time using Apache Spark.',
+      'Implemented Random Forest Classification and Linear Regression models for pit stop predictions and optimization of race strategy with an accuracy rate of 86%.',
+      'Currently, a Kafka-based pipeline is being tested to handle real-time telemetry and analytics.'
     ],
-    link: 'https://github.com/kushagra-a-singh/Tarzan-I.R.I.S.',
-    image: '/simulation.jpg'
+    link: 'https://github.com/BrandonCerejo/ForVis-Formula1-Data-Visualization-and-ML-Models',
+    image: '/KushagraProj1.png'
   },
   {
     title: 'IRIS Website',
     points: [
+      'Tools used: MERN Stack, Handling payments, database real-time CRUD, APIs',
       'Developed an official website for the club to provide a centralized platform to share IRIS updates, event details, recruitments and resources.',
       'Handling multiple concurrent real-time payments and updating entries for events.',
       'Features include event registrations with a payment gateway, dynamic blogging with a voting system and comment section, club project highlights, recruitment and contact forms.',
       'Utilized Razorpay SDK, Supabase Database, and continuous deployment on Vercel with GitHub CI/CD integration.'
     ],
-    link: 'https://github.com/kushagra-a-singh/I.R.I.S-PROD',
+    link: 'https://github.com/BrandonCerejo/I.R.I.S-PROD',
     image: '/website_img.png'
   },
   {
-    title: 'ForVis - Formula 1 Analytics',
+    title: 'Magic Board- Mathematical Equation Recognition and Calculation',
     points: [
-      'Developed a dynamic GUI using PyQt5 to visualize Formula 1 race telemetry with real-time and historical data analysis.',
-      'Integrated FastF1 APIs and stored telemetry in HDFS, achieving a 30% reduction in processing time using Apache Spark.',
-      'Implemented Random Forest Classification and Linear Regression models for pit stop predictions and race strategy optimization with an 86% accuracy rate.',
-      'Enabled multi-driver comparison, lap time analysis & tyre strategy insights via interactive dashboards.',
-      'Currently trying to integrate a Kafka-based pipeline to handle real-time telemetry and analytics.'
+      'Tools used: OCR, ML Models, SciPy, Sympy, Scikit-Learn, MatPlotLib',
+      'Developed a Convolutional Neural Network (CNN) model to accurately detect handwritten numbers and basic mathematical operators, trained on a dataset of over 10,000 images.',
+      'Achieved 98% recognition accuracy for handwritten mathematical equations.',
+      'Utilized SciPy to compute the solutions for the recognized mathematical equations, enabling real-time calculations.',
+      'Integrated Matplotlib to visualize the equations as graphs.'
     ],
-    link: 'https://github.com/kushagra-a-singh/ForVis',
-    image: '/KushagraProj1.png'
+    link: 'https://github.com/BrandonCerejo/Magic-board/tree/third',
+    image: '/BrandonProj1.jpg'
   },
   {
-    title: 'Driver Safety Monitoring System',
+    title: 'Driver Drowsiness Detection and Alert System',
     points: [
-      'Integrated MQ3 alcohol sensor, accelerometer/gyroscope, GPS module, LED screen, GSM module and buzzer into a vehicle’s onboard system using C++ and Arduino.',
-      'Developed a comprehensive system to monitor driver behavior, detect alcohol presence, and deliver real-time alerts to promote safe driving practices.',
-      'Enabled timely feedback for enhanced driver safety, utilizing sensors for real-time monitoring and instant notifications.'
+      'Tools Used: Python, DLib, Raspberry PI',
+      'Developed a real-time driver drowsiness detection system using the Dlib library, integrated with a Raspberry Pi and a connected camera.',
+      'Implemented facial landmark detection using Haar cascades and Dlib’s pre-trained model to monitor eye aspect ratio (EAR) for prolonged eye closure and lip distance for yawning detection.',
+      'Achieved over 95% accuracy in detecting drowsiness using advanced facial landmark detection algorithms.',
+      'Implemented real-time alerts for drowsiness through audio signals and notifications to enhance driver safety.'
     ],
-    link: 'https://github.com/kushagra-a-singh/Embedded-Arduino-System-for-Car-Road-Safety',
-    image: '/KushagraProj2.jpg'
+    link: 'https://github.com/BrandonCerejo/Driver-Drowsiness-Detection-And-Alert-System',
+    image: 'https://github-production-user-asset-6210df.s3.amazonaws.com/118354029/400884528-76c6207b-4132-4dbc-8268-b5dc2b0e67e1.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250109%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250109T225246Z&X-Amz-Expires=300&X-Amz-Signature=d3dd0a09317508d75479757bf319227a1f6714a127b648c185c586313c969162&X-Amz-SignedHeaders=host'
   },
 ];
 
 const experiences = [
   {
-    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS95Z4YVYbM6SAVHtlkuUqaFnyVFoQG54p-7A&s',
-    company: 'Infosys Springboard',
-    role: 'ML Project Intern',
-    location: 'Remote',
-    date: 'Oct - Nov 2024',
-    description: [
-      'Designed and implemented a handwritten digit recognition application using neural networks (MLP, CNN, LeNet5) for MNIST dataset classification.',
-      'Developed custom PyTorch models with dropout, activation functions, and convolutional layers for efficient feature extraction and classification.',
-      'Built an interactive web application using Streamlit to predict digits from uploaded images,     with support for model selection and real-time predictions. Achieved 90.04%, 98.93% & 98.95% accuracies respectively for each model on the test dataset.',
-      'Utilized image preprocessing (grayscale conversion, normalization, resizing) and dataset augmentation for robust model performance.',
-      'Created a digit visualization tool to save and display images from the MNIST dataset using Matplotlib.',
-      'Deployed models with pre-trained weights and integrated custom UI design for a seamless user experience during prediction.',
-    ],
-  },
-  {
     logo: 'https://www.iris-club.in/logo.png',
     company: 'IRIS',
-    role: 'Technical Head',
+    role: 'Treasurer and Tech team member',
     location: 'Pune',
     date: 'Aug 2024 - Present',
     description: [
-      'Spearheaded the development of the official I.R.I.S. club website, taking the lead in designing, coding, and deploying it for live hackathon event registrations for 200+ people, integrated with Razorpay payment gateway to enable seamless fee collection.',
-      'Currently leading and managing the tech team to oversee website updates, changes, & new feature implementations. Provide mentorship and technical guidance while also directly contributing to challenging tasks, such as backend development for the blogging system, voting system authentication, & comment section functionality.',
-      'Collaborate with faculty and peers to identify and initiate new tech-based projects, fostering innovation within the club.',
-      'Led the website’s successful deployment during live events, ensuring smooth operation and scalability for real-time registrations and payments.',
-      'Also developing an autonomous vehicle module for non-ADAS cars using YOLOv8 deep learning models and sensor-based simulations for decision-making and steering control',
+      'Successfully managing the financial operations of the I.R.I.S. club, overseeing budgeting, expense tracking, and fund allocation to ensure smooth execution of club activities and events.',
+      'Coordinating with higher college authorities to get event budgets approved, presenting comprehensive financial plans and justifications for fund utilization.',
+      'Collaborating with the technical and non-technical teams to ensure efficient resource allocation, facilitating seamless event organization and execution.',
+      'Actively engaging with the leadership team to identify new opportunities for club growth and innovation, ensuring financial feasibility and strategic alignment.',
+      'Worked with a team to develop a website for the club. My main role was focusing on the frontend aspects to ensure an intuitive and user-friendly design.'
     ],
   },
 ];
@@ -137,22 +124,22 @@ const experiences = [
 const roles = [
   {
     image: 'https://www.iris-club.in/logo.png',
-    role: 'IRIS [Student Club, MIT-WPU] - Technical Head',
+    role: 'IRIS [Student Club, MIT-WPU] - Treasurer',
     date: 'Aug 2024 - Present',
   },
   {
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS95Z4YVYbM6SAVHtlkuUqaFnyVFoQG54p-7A&s',
-    role: 'Infosys Springboard [Remote] - ML Intern',
-    date: 'Oct 2024 - Dec 2024',
+    image: 'https://www.iris-club.in/logo.png',
+    role: 'IRIS [Student Club, MIT-WPU] - Tech Team Member',
+    date: 'Jan 2024 - Current',
   },
 ];
 
 const achievements = [
-  'Smart India Hackathon (SIH) 2024 - Top 25 Finalist : Collaborated with a multidisciplinary team to qualify as one of the top 25 teams in the internal round of SIH 2024. Designed and developed PlantWise, an AI-powered Ayurvedic health companion for disease prediction and natural remedies.',
-  'HackMITWPU’24 Ideathon - Finalist : Proposed DermDetect, an AI-powered tool for preliminary dermatological diagnosis using image processing for remote consultations and personalized skincare solutions for underserved regions, enhancing early detection and skin condition management.',
+  'Hands-on approach to AI for Real-World Applications- Organized by IIT Kharagpur AI4ICPS I HUB Foundation and TCS iON. Completed on: December 6th 2023',
+  'Data Sciecnce and Machine Learning Bootcamp with R- Udemy. Completed on: December 2024',
 ];
 
-function KushagraSingh() {
+function BrandonCerejo() {
   return (
     <div>
       <video className="background-video" autoPlay muted loop>
@@ -167,22 +154,22 @@ function KushagraSingh() {
       <section className="hero">
         <div className="hero-content">
           <img
-            src="/Kushagra.jpeg"
+            src="https://media.licdn.com/dms/image/v2/D4D03AQHwI2FGamvHXw/profile-displayphoto-shrink_800_800/B4DZQ_NM7FHUAc-/0/1736227216483?e=1741824000&v=beta&t=kGszUfwD9GLHuiSzpKyNScjfFf20Wfn58-cCR2xStho"
             className="hero-image"
           />
           <div className="hero-text">
-            <h2>Hi, I'm Kushagra Singh</h2>
-            <p>I’m a Third Year Computer Science Engineering student at MIT WPU, Pune, with hands-on experience in Machine Learning, Web Development and Embedded Systems & IoT. I’ve interned at Infosys Springboard, and as the Technical Head of the IRIS Tech Club, I lead a team focused on building tech solutions and managing live projects. I’m driven by challenges and always looking for new ways to solve real-world problems with a focus on creating practical and user-centric applications.</p>
+            <h2>Hi, I'm Brandon Cerejo</h2>
+            <p>I am a third-year Computer Science Engineering student at MIT-WPU, Pune, with practical experience in Machine Learning, Data Science, Iot, and Web Development. Currently, I serve as the Treasurer of IRIS, a student club at MIT-WPU, where I also contribute as a member of the development team for the IRIS website. I am highly motivated by challenges, eager to learn and developing practical, user-friendly solutions</p>
             <div className="social-links">
-              <a href="https://in.linkedin.com/in/kushagra-anit-singh" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIN" className="icon"></img>LinkedIn</a>
-              <a href="https://github.com/kushagra-a-singh" target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" className="icon"></img>GitHub</a>
-              <a target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" alt="Gmail" className="gmail-icon"></img>kushagraa.n@gmail.com</a>
+              <a href="https://www.linkedin.com/in/brandon-cerejo-921275247/?originalSubdomain=in" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIN" className="icon"></img>LinkedIn</a>
+              <a href="https://github.com/BrandonCerejo" target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" className="icon"></img>GitHub</a>
+              <a target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" alt="Gmail" className="gmail-icon"></img>brandoncerejo39@gmail.com</a>
             </div>
             <div className="section-links">
               <a href="#experience">Experience</a>
               <a href="#projects">Projects</a>
               <a href="#skills">Skills</a>
-              <a href="#roles-achievements">Roles & Achievements</a>
+              <a href="#roles-achievements">Roles & Certifications</a>
             </div>
           </div>
         </div>
@@ -268,7 +255,7 @@ function KushagraSingh() {
       </section>
 
     <section id="roles-achievements">
-      <h2>Roles and Achievements</h2>
+      <h2>Roles and Certifications</h2>
       <div className="roles-achievements-container">
         {/* Roles Box */}
         <div className="roles-box">
@@ -293,7 +280,7 @@ function KushagraSingh() {
         </div>
         {/* Achievements Box */}
         <div className="achievements-box">
-          <h3>Achievements</h3>
+          <h3>Certifications</h3>
           <div className="achievements-list">
             {achievements.map((achievement, index) => (
               <div className="achievement-item" key={index}>
@@ -308,4 +295,4 @@ function KushagraSingh() {
   );
 }
 
-export default KushagraSingh;
+export default BrandonCerejo;
