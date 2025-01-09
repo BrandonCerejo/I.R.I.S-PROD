@@ -428,11 +428,11 @@
     opacity: 1;
   }
   
-  @media (max-width: 768px) {
+  @media (min-width: 321) and (max-width: 375px) {
     .hero {
       min-height: 135vh;
       flex-direction: column;
-      padding-top: 200px;
+      padding-top: 150px;
   }
 
   .hero-content {
@@ -495,6 +495,369 @@
       text-decoration: none; /* Remove underlines */
       color: #ffffff; /* Adjust color as needed */
       padding: 0px 5px; /* Add padding for better touch targets */
+      border-radius: 5px; /* Optional: Add rounded corners */
+      transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .experience-container {
+      width: 100%;
+    }
+  
+    .experience-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+    }
+  
+    .experience-logo {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .skills-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .skills-category {
+      max-width: 100%;
+    }
+  
+    .roles-achievements-container {
+      flex-direction: column;
+    }
+  
+    .role-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .role-left {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .role-right {
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 376px) and (max-width: 425px) {
+    .hero {
+      min-height: 135vh;
+      flex-direction: column;
+      padding-top: 80px;
+  }
+
+  .hero-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .hero-image {
+    width: 90%;
+    height: 90%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .hero-text {
+      max-width: 90%;
+      margin: 0 auto;
+  }
+
+  .hero-text h2 {
+    font-size: 30px;
+  }
+
+  .social-links {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      gap: 15px;
+      justify-content: center;
+  }
+
+  .social-links a {
+      font-size: 20px;
+  }
+
+  .social-links img.icon,
+  .social-links .gmail-icon {
+      width: 26px;
+      height: 26px;
+  }
+  
+  .section-links {
+      display: list-item;
+      flex-direction: row; /* Arrange links side by side */
+      justify-content: space-between; /* Center the links horizontally */
+      width: 100%;
+      margin-top: 20px;
+      box-sizing: border-box;
+    }
+
+    .section-links a {
+      font-size: 18px; /* Adjust font size for mobile */
+      text-decoration: none; /* Remove underlines */
+      color: #ffffff; /* Adjust color as needed */
+      padding: 0px 3px; /* Add padding for better touch targets */
+      border-radius: 5px; /* Optional: Add rounded corners */
+      transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .experience-container {
+      width: 100%;
+    }
+  
+    .experience-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+    }
+  
+    .experience-logo {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .skills-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .skills-category {
+      max-width: 100%;
+    }
+  
+    .roles-achievements-container {
+      flex-direction: column;
+    }
+  
+    .role-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .role-left {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .role-right {
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 426px) and (max-width: 768px) {
+    .hero {
+      min-height: 135vh;
+      flex-direction: column;
+      padding-top: 80px;
+  }
+
+  .hero-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+  }
+
+  .hero-text p {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .hero-image {
+    width: 90%;
+    height: 90%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .hero-text {
+      max-width: 90%;
+      margin: 0 auto;
+  }
+
+  .hero-text h2 {
+    font-size: 30px;
+  }
+
+  .social-links {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      gap: 15px;
+      justify-content: center;
+  }
+
+  .social-links a {
+      font-size: 22px;
+  }
+
+  .social-links img.icon,
+  .social-links .gmail-icon {
+      width: 28px;
+      height: 28px;
+  }
+  
+  .section-links {
+      display: list-item;
+      flex-direction: row; /* Arrange links side by side */
+      justify-content: space-between; /* Center the links horizontally */
+      width: 100%;
+      margin-top: 20px;
+      box-sizing: border-box;
+    }
+
+    .section-links a {
+      font-size: 22px; /* Adjust font size for mobile */
+      text-decoration: none; /* Remove underlines */
+      color: #ffffff; /* Adjust color as needed */
+      padding: 0px 3px; /* Add padding for better touch targets */
+      border-radius: 5px; /* Optional: Add rounded corners */
+      transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .experience-container {
+      width: 100%;
+    }
+  
+    .experience-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+    }
+  
+    .experience-logo {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .skills-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .skills-category {
+      max-width: 100%;
+    }
+  
+    .roles-achievements-container {
+      flex-direction: column;
+    }
+  
+    .role-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .role-left {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .role-right {
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 374px) {
+    .hero {
+      min-height: 175vh;
+      flex-direction: column;
+      padding-top: 85px;
+  }
+
+  .hero-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .hero-image {
+    width: 75%;
+    height: 75%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .hero-text {
+      max-width: 90%;
+      margin: 0 auto;
+  }
+
+  .hero-text h2 {
+    font-size: 30px;
+  }
+
+  .social-links {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      gap: 15px;
+      justify-content: center;
+  }
+
+  .social-links a {
+      font-size: 16px;
+  }
+
+  .social-links img.icon,
+  .social-links .gmail-icon {
+      width: 20px;
+      height: 20px;
+  }
+  
+  .section-links {
+      display: list-item;
+      flex-direction: row; /* Arrange links side by side */
+      justify-content: space-between; /* Center the links horizontally */
+      width: 100%;
+      margin-top: 20px;
+      box-sizing: border-box;
+    }
+
+    .section-links a {
+      font-size: 18px; /* Adjust font size for mobile */
+      text-decoration: none; /* Remove underlines */
+      color: #ffffff; /* Adjust color as needed */
+      padding: 0px 3px; /* Add padding for better touch targets */
       border-radius: 5px; /* Optional: Add rounded corners */
       transition: background-color 0.3s ease; /* Smooth hover effect */
   }

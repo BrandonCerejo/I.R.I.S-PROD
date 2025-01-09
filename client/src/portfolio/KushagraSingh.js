@@ -104,7 +104,7 @@ const experiences = [
     company: 'Infosys Springboard',
     role: 'ML Project Intern',
     location: 'Remote',
-    date: 'Oct 2024 - Nov 2024',
+    date: 'Oct - Nov 2024',
     description: [
       'Designed and implemented a handwritten digit recognition application using neural networks (MLP, CNN, LeNet5) for MNIST dataset classification.',
       'Developed custom PyTorch models with dropout, activation functions, and convolutional layers for efficient feature extraction and classification.',
