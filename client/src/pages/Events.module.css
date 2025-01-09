@@ -6,7 +6,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top: 6rem;
+  padding-top: 2rem;
 }
 
 .events::before {
@@ -23,26 +23,23 @@
 .mainContent {
   position: relative;
   z-index: 2;
-  padding: 2rem;
+  padding: -100rem;
   color: #000;
 }
 
 .title {
   color: #f8f2f2;
   text-align: center;
-  margin-bottom: 2rem;
 }
 
 .text {
   color: white;
   text-align: center;
-  margin-top: 1rem;
   font-size: 1.1rem;
 }
 
 .upcoming, .past, .podcastTitle {
   color: #f1eded;
-  margin-top: 2rem;
   text-align: center;
 }
 
@@ -50,8 +47,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 2rem;
-  z-index: 2;
+  padding: -10rem;
 }
 
 .eventCard {
@@ -61,7 +57,7 @@
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
   position: relative;
 }
@@ -73,7 +69,7 @@
 }
 
 .eventDetails {
-  padding: 1rem;
+  padding: -1rem;
   color: #000;
 }
 
@@ -84,19 +80,15 @@
 
 .description, .date {
   color: #333;
-  margin: 0.5rem 0;
 }
 
 .highlightsList {
   text-align: left;
-  padding-left: 1rem;
-  margin-bottom: 1rem;
   color: #000;
 }
 
 .conclusion {
   color: #333;
-  margin: 1rem 0;
   text-align: center;
 }
 
@@ -118,52 +110,48 @@
 
 .conclusion {
   color: #333;
-  padding: 1rem 2rem;
-  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
   text-align: center;
 }
 
 @media (max-width: 768px) {
-  .events {
-    padding-top: 5rem;
-  }
-
   .eventList {
     flex-direction: column;
     align-items: stretch;
-    padding: 1rem;
+    padding: -100rem;
+  }
+
+  .eventCard {
+    max-width: 100%; 
   }
 
   .eventCard img {
-    width: 100%;
+    width: 100%; 
     height: auto;
     object-fit: cover;
   }
 
   .eventDetails {
-    padding: 0.5rem;
+    padding: 1rem; 
   }
 
   .eventDetails h2 {
-    font-size: 1rem;
+    font-size: 1rem; 
   }
 
-  .description, .date, .conclusion {
-    font-size: 0.9rem;
-    margin: 0.1rem 0;
+  .description,
+  .date,
+  .conclusion {
+    font-size: 0.7rem; 
   }
 
   .highlightsList {
-    font-size: 0.8rem;
-    padding-left: 0.5rem;
+    font-size: 0.7rem; 
   }
 
   .btn {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
-  }
-
-  .podcasts {
-    padding: 1rem;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.7rem;
   }
 }
