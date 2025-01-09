@@ -61,7 +61,7 @@ const projects = [
       'Takes surroundings like other cars, potholes, barricades, etc., to make its decisions.'
     ],
     link: 'https://github.com/kushagra-a-singh/Tarzan-I.R.I.S.',
-    image: 'https://github.com/TakshDhabalia/TarzanIRIS/raw/main/Simulation_Results/Simulation_ongoing.jpg'
+    image: '/simulation.jpg'
   },
   {
     title: 'IRIS Website',
@@ -71,11 +71,11 @@ const projects = [
       'Features include event registrations with a payment gateway, dynamic blogging with a voting system and comment section, club project highlights, recruitment and contact forms.',
       'Utilized Razorpay SDK, Supabase Database, and continuous deployment on Vercel with GitHub CI/CD integration.'
     ],
-    link: 'https://github.com/IRIS-MITWPU/I.R.I.S-Prod-Website',
+    link: 'https://github.com/kushagra-a-singh/I.R.I.S-PROD',
     image: '/website_img.png'
   },
   {
-    title: 'ForVis- Formula 1 Analytics',
+    title: 'ForVis - Formula 1 Analytics',
     points: [
       'Developed a dynamic GUI using PyQt5 to visualize Formula 1 race telemetry with real-time and historical data analysis.',
       'Integrated FastF1 APIs and stored telemetry in HDFS, achieving a 30% reduction in processing time using Apache Spark.',
@@ -104,7 +104,7 @@ const experiences = [
     company: 'Infosys Springboard',
     role: 'ML Project Intern',
     location: 'Remote',
-    date: 'Oct - Nov 2024',
+    date: 'Oct 2024 - Nov 2024',
     description: [
       'Designed and implemented a handwritten digit recognition application using neural networks (MLP, CNN, LeNet5) for MNIST dataset classification.',
       'Developed custom PyTorch models with dropout, activation functions, and convolutional layers for efficient feature extraction and classification.',
@@ -119,7 +119,7 @@ const experiences = [
     company: 'IRIS',
     role: 'Technical Head',
     location: 'Pune',
-    date: 'Aug 2024- Present',
+    date: 'Aug 2024 - Present',
     description: [
       'Spearheaded the development of the official I.R.I.S. club website, taking the lead in designing, coding, and deploying it for live hackathon event registrations for 200+ people, integrated with Razorpay payment gateway to enable seamless fee collection.',
       'Currently leading and managing the tech team to oversee website updates, changes, & new feature implementations. Provide mentorship and technical guidance while also directly contributing to challenging tasks, such as backend development for the blogging system, voting system authentication, & comment section functionality.',
@@ -133,19 +133,19 @@ const experiences = [
 const roles = [
   {
     image: 'https://www.iris-club.in/logo.png',
-    role: 'IRIS [Student Club, MIT-WPU]- Technical Head',
-    date: 'Aug 2024- Present',
+    role: 'IRIS [Student Club, MIT-WPU] - Technical Head',
+    date: 'Aug 2024 - Present',
   },
   {
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS95Z4YVYbM6SAVHtlkuUqaFnyVFoQG54p-7A&s',
-    role: 'Infosys Springboard [Remote]- ML Intern',
-    date: 'Oct 2024- Nov 2024',
+    role: 'Infosys Springboard [Remote] - ML Intern',
+    date: 'Oct 2024 - Dec 2024',
   },
 ];
 
 const achievements = [
-  'Smart India Hackathon (SIH) 2024- Top 25 Finalist : Collaborated with a multidisciplinary team to qualify as one of the top 25 teams in the internal round of SIH 2024. Designed and developed PlantWise, an AI-powered Ayurvedic health companion for disease prediction and natural remedies.',
-  'HackMITWPU’24 Ideathon- Finalist : Proposed DermDetect, an AI-powered tool for preliminary dermatological diagnosis using image processing for remote consultations and personalized skincare solutions for underserved regions, enhancing early detection and skin condition management.',
+  'Smart India Hackathon (SIH) 2024 - Top 25 Finalist : Collaborated with a multidisciplinary team to qualify as one of the top 25 teams in the internal round of SIH 2024. Designed and developed PlantWise, an AI-powered Ayurvedic health companion for disease prediction and natural remedies.',
+  'HackMITWPU’24 Ideathon - Finalist : Proposed DermDetect, an AI-powered tool for preliminary dermatological diagnosis using image processing for remote consultations and personalized skincare solutions for underserved regions, enhancing early detection and skin condition management.',
 ];
 
 function KushagraSingh() {
@@ -168,7 +168,7 @@ function KushagraSingh() {
           />
           <div className="hero-text">
             <h2>Hi, I'm Kushagra Singh</h2>
-            <p>A third year student at MIT WPU, Pune. I have worked as an intern at IIIT-D and am the current President of the tech club IRIS. I have also been the vice-lead for innovations and electronics at Team Bolt where we have secured AIR 4 in MOTO STUDENT INDIA - superbike manufacturing and design competition. My current interests are Microcontrollers, Electronics & electrical, Distributed Systems and ML & DL in computer vision.</p>
+            <p>I’m a Third Year Computer Science Engineering student at MIT WPU, Pune, with hands-on experience in Machine Learning, Web Development and Embedded Systems & IoT. I’ve interned at Infosys Springboard, and as the Technical Head of the IRIS Tech Club, I lead a team focused on building tech solutions and managing live projects. I’m driven by challenges and always looking for new ways to solve real-world problems with a focus on creating practical and user-centric applications.</p>
             <div className="social-links">
               <a href="https://in.linkedin.com/in/kushagra-anit-singh" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIN" className="icon"></img>LinkedIn</a>
               <a href="https://github.com/kushagra-a-singh" target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" className="icon"></img>GitHub</a>
