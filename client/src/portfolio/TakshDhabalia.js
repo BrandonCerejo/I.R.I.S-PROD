@@ -3,31 +3,31 @@ import './TakshDhabalia.css';
 
 const skills = {
   languages: [
-    { name: 'Python', logo: 'https://image.similarpng.com/very-thumbnail/2021/12/Python-programming-logo-on-transparent-background-PNG.png' },
-    { name: 'C', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png' },
-    { name: 'C++', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png' }
+    { name: 'Python', logo: '/images/python.png' },
+    { name: 'C', logo: '/images/C.png' },
+    { name: 'C++', logo: '/images/C++.png' }
   ],
   packages: [
-    { name: 'Music21', logo: 'https://avatars.githubusercontent.com/u/29660943?v=4' },
-    { name: 'OpenCV', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/OpenCV_logo_black.svg/1200px-OpenCV_logo_black.svg.png' },
-    { name: 'Pandas', logo: 'https://4008838.fs1.hubspotusercontent-na1.net/hubfs/4008838/pandas-logo.png' },
-    { name: 'NumPy', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ0WMo9USP6o7gpVcLisXP0rJnZG41dsffJg&s' },
-    { name: 'TensorFlow', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyPBk9JOT2-C39hu2yCyFiGAPE6o2kgpvecw&s' },
-    { name: 'PyGame', logo: 'https://miro.medium.com/v2/resize:fit:640/0*nr8xfIriulC1eIkW.png' }
+    { name: 'Music21', logo: '/images/music21.png' },
+    { name: 'OpenCV', logo: '/images/opencv.png' },
+    { name: 'Pandas', logo: '/images/pandas.png' },
+    { name: 'NumPy', logo: '/images/numpy.png' },
+    { name: 'TensorFlow', logo: '/images/tensorflow.png' },
+    { name: 'PyGame', logo: '/images/pygame.png' }
   ],
   electronics: [
-    { name: 'Raspberry Pi', logo: 'https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2016/10/raspberry_pi_logo/16166824-1-eng-GB/Raspberry_Pi_logo.jpg' },
-    { name: 'STM32', logo: 'https://media.licdn.com/dms/image/C4D12AQFdgJiMnrzu2g/article-cover_image-shrink_600_2000/0/1622631819905?e=2147483647&v=beta&t=vPGjeJ65p7AAWZbkT6RD8Hik6QtFgfBiUn6-sIerB-M' },
-    { name: 'Node-RED', logo: 'https://nodered.org/about/resources/media/node-red-icon-2.png' },
-    { name: 'ESP', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1Y7rnv3rFIgxF28eohT_axZ2DUiM9LjLxng&s' },
-    { name: 'Arduino', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/1200px-Arduino_Logo.svg.png' }
+    { name: 'Raspberry Pi', logo: '/images/raspberry.jpg' },
+    { name: 'Arduino', logo: '/images/arduino.png'},
+    { name: 'STM32', logo: '/images/stm.png'},
+    { name: 'Node-RED', logo: '/images/nodered.png' },
+    { name: 'ESP', logo: '/images/esp.png' }
   ],
   protocols: [
-    { name: 'MQTT', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9UMBosVW7K30mwZqv2U1PuHwWex7hoJzbaQ&s' },
-    { name: 'LoRaWAN', logo: 'https://www.weble.ch/wp-content/uploads/2019/12/lw.png' },
-    { name: 'ESP-Now', logo: 'https://store.kidbright.info/upload/cover-image/1565963104-nLyoHV.png' },
-    { name: 'Cellular', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_4MsOTIDyF8cpnOvf5ExA-wG24IJKlaUbng&s' },
-    { name: 'NB-IoT', logo: 'https://toppng.com/uploads/preview/arrow-band-narrow-band-iot-logo-11562989975rlvbscfbtc.png' }
+    { name: 'MQTT', logo: '/images/mqtt.png' },
+    { name: 'LoRaWAN', logo: '/images/lorawan.png' },
+    { name: 'ESP-Now', logo: '/images/espnow.png' },
+    { name: 'Cellular', logo: '/images/cellular.png' },
+    { name: 'NB-IoT', logo: '/images/nbiot.png' }
   ]
 };
 
@@ -41,7 +41,7 @@ const projects = [
       'Worked on making simulations using MATLAB with pure-pursuit modeling.'
     ],
     link: 'https://github.com/TakshDhabalia/TarzanIRIS',
-    image: 'https://github.com/TakshDhabalia/TarzanIRIS/raw/main/Simulation_Results/Simulation_ongoing.jpg'
+    image: '/images/tarzan.jpg'
   },
   {
     title: 'IRIS Website',
@@ -85,7 +85,7 @@ const projects = [
 
 const experiences = [
   {
-    logo: 'https://iiitd.ac.in/iras-hub/images/IIIT-DELHI.png',
+    logo: '/images/iiitd.png',
     company: 'IIIT-Delhi',
     role: 'System Design and Embedded Software Developer Intern',
     location: 'Delhi',
@@ -98,7 +98,7 @@ const experiences = [
     ],
   },
   {
-    logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQG6wb9iYfvhSg/company-logo_200_200/company-logo_200_200/0/1695361560497/teamboltmitwpu_logo?e=1743638400&v=beta&t=IGM2RVZ2VNOIDQ97XkBe5xflNauz-mjGpSNV-e0H0MY',
+    logo: '/images/bolt.jpeg',
     company: 'Team Bolt',
     role: 'Vice Lead, Electronics',
     location: 'Pune',
@@ -113,12 +113,12 @@ const experiences = [
 
 const roles = [
   {
-    image: 'https://www.iris-club.in/logo.png',
+    image: '/logo2.png',
     role: 'IRIS [Student Club, MIT-WPU] - President',
     date: 'June 2024-Current',
   },
   {
-    image: 'https://media.licdn.com/dms/image/v2/D4E0BAQG6wb9iYfvhSg/company-logo_200_200/company-logo_200_200/0/1695361560497/teamboltmitwpu_logo?e=1743638400&v=beta&t=IGM2RVZ2VNOIDQ97XkBe5xflNauz-mjGpSNV-e0H0MY',
+    image: '/images/bolt.jpeg',
     role: 'Team Bolt [Student Club, MIT-WPU] - Vice-Lead for Innovations and Electronics',
     date: '2022-2024',
   },
@@ -144,7 +144,7 @@ function TakshDhabalia() {
       <section className="hero">
         <div className="hero-content">
           <img
-            src="https://avatars.githubusercontent.com/u/77263611?v=4?s=400"
+            src="/images/taksh.jpeg"
             alt="Taksh Dhabalia"
             className="hero-image"
           />
@@ -152,9 +152,9 @@ function TakshDhabalia() {
             <h2>Hi, I'm Taksh Dhabalia</h2>
             <p>A third year student at MIT WPU, Pune. I have worked as an intern at IIIT-D and am the current President of the tech club IRIS. I have also been the vice-lead for innovations and electronics at Team Bolt where we have secured AIR 4 in MOTO STUDENT INDIA - superbike manufacturing and design competition. My current interests are Microcontrollers, Electronics & electrical, Distributed Systems and ML & DL in computer vision.</p>
             <div className="social-links">
-              <a href="https://in.linkedin.com/in/taksh-dhabalia-2b6969202" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIN" className="icon"></img>LinkedIn</a>
-              <a href="https://github.com/TakshDhabalia" target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" className="icon"></img>GitHub</a>
-              <a target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" alt="Gmail" className="gmail-icon"></img>taksh.dhabalia@gmail.com</a>
+              <a href="https://in.linkedin.com/in/taksh-dhabalia-2b6969202" target="_blank" rel="noopener noreferrer"><img src="/images/linkedin.png" alt="LinkedIN" className="icon"></img>LinkedIn</a>
+              <a href="https://github.com/TakshDhabalia" target="_blank" rel="noopener noreferrer"><img src="/images/github.png" alt="GitHub" className="icon"></img>GitHub</a>
+              <a target="_blank" rel="noopener noreferrer"><img src="/images/gmail.webp" alt="Gmail" className="gmail-icon"></img>taksh.dhabalia@gmail.com</a>
             </div>
             <div className="section-links">
               <a href="#experience">Experience</a>

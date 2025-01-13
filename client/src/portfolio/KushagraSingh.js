@@ -7,52 +7,52 @@ const camelCaseToWords = (text) => {
 
 const skills = {
   languages: [
-    { name: 'Python', logo: 'https://image.similarpng.com/very-thumbnail/2021/12/Python-programming-logo-on-transparent-background-PNG.png' },
-    { name: 'C', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png' },
-    { name: 'C++', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png' }
+    { name: 'Python', logo: '/images/python.png' },
+    { name: 'C', logo: '/images/C.png' },
+    { name: 'C++', logo: '/images/C++.png' }
   ],
   packages: [
-    { name: 'Torch', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMBCKLljP0a1I_98yD-P_2JvfYCAFHlit5Fg&s'},
-    { name: 'OpenCV', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/OpenCV_logo_black.svg/1200px-OpenCV_logo_black.svg.png' },
-    { name: 'Pandas', logo: 'https://4008838.fs1.hubspotusercontent-na1.net/hubfs/4008838/pandas-logo.png' },
-    { name: 'NumPy', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ0WMo9USP6o7gpVcLisXP0rJnZG41dsffJg&s' },
-    { name: 'TensorFlow', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyPBk9JOT2-C39hu2yCyFiGAPE6o2kgpvecw&s' },
-    { name: 'Seaborn', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOvsfXuwek_JdokX7xFPJBwxXF_5xJim-3og&s'},
-    { name: 'Scikit-Learn', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSi-OFOLzWln43z2Kz8YSgyN5cHsaXb0l7OA&s'},
-    { name: 'Tkinter', logo: 'https://w7.pngwing.com/pngs/679/344/png-transparent-wing-ide-integrated-development-environment-python-computer-software-eric-raspberry-miscellaneous-monochrome-computer-program.png'},
-    { name: 'StreamLit', logo: 'https://images.seeklogo.com/logo-png/45/2/streamlit-logo-png_seeklogo-458260.png?v=1957216667958097800'}
+    { name: 'Torch', logo: '/images/pytorch.jpeg'},
+    { name: 'OpenCV', logo: '/images/opencv.png' },
+    { name: 'Pandas', logo: '/images/pandas.png' },
+    { name: 'NumPy', logo: '/images/numpy.png' },
+    { name: 'TensorFlow', logo: '/images/tensorflow.png' },
+    { name: 'Seaborn', logo: '/images/seaborn.png'},
+    { name: 'Scikit-Learn', logo: '/images/scikit.png'},
+    { name: 'Tkinter', logo: '/images/tkinter.png'},
+    { name: 'StreamLit', logo: '/images/stramlit.png'}
   ],
   electronics: [
-    { name: 'Raspberry Pi', logo: 'https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2016/10/raspberry_pi_logo/16166824-1-eng-GB/Raspberry_Pi_logo.jpg' },
-    { name: 'Arduino', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/1200px-Arduino_Logo.svg.png'},
-    { name: 'STM32', logo: 'https://media.licdn.com/dms/image/C4D12AQFdgJiMnrzu2g/article-cover_image-shrink_600_2000/0/1622631819905?e=2147483647&v=beta&t=vPGjeJ65p7AAWZbkT6RD8Hik6QtFgfBiUn6-sIerB-M'}
+    { name: 'Raspberry Pi', logo: '/images/raspberry.jpg' },
+    { name: 'Arduino', logo: '/images/arduino.png'},
+    { name: 'STM32', logo: '/images/stm.png'}
   ],
   webDevelopment: [
-    { name: 'Next.js', logo: 'https://seeklogo.com/images/N/next-js-logo-7929BCD36F-seeklogo.com.png' },
-    { name: 'React', logo: 'https://static-00.iconduck.com/assets.00/react-original-wordmark-icon-840x1024-vhmauxp6.png' },
-    { name: 'Node.js', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREiqSrQqj2siTEV3_c8yQVnRTkiwv9vPpvJw&s' },
-    { name: 'Express.js', logo: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1675637255386/f3a9a38b-116d-4b35-8f46-8d8abb78166f.png' },
-    { name: 'HTML', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/800px-HTML5_logo_and_wordmark.svg.png'},
-    { name: 'CSS', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png'},
-    { name: 'JavaScript', logo: 'https://i.pinimg.com/originals/28/b0/d1/28b0d189571e22609f0e9378da7b09a4.png'},
-    { name: 'Bootstrap', logo: 'https://e7.pngegg.com/pngimages/162/309/png-clipart-bootstrap-responsive-web-design-web-development-logo-django-others-miscellaneous-purple-thumbnail.png'}
+    { name: 'Next.js', logo: '/images/next.png' },
+    { name: 'React', logo: '/images/reacg.png' },
+    { name: 'Node.js', logo: '/images/node.jpeg' },
+    { name: 'Express.js', logo: '/images/express.png' },
+    { name: 'HTML', logo: '/images/html.png'},
+    { name: 'CSS', logo: '/images/css.png'},
+    { name: 'JavaScript', logo: '/images/js.png'},
+    { name: 'Bootstrap', logo: '/images/bootstrap.png'}
   ],
   bigDataTechnology: [
-    { name: 'Cloudera', logo: 'https://imageio.forbes.com/specials-images/imageserve/6732202d0f1f1f82e95d3de0/0x0.png?format=png&crop=375,375,x0,y0,safe&width=300' },
-    { name: 'HDFS', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBLPrKtALpP2XA52JD9onMxQBZ05sIyatTIg&s' },
-    { name: 'Apache Pig', logo: 'https://images.javatpoint.com/hadooppages/pig/images/apache-pig.png' },
-    { name: 'Hive', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Apache_Hive_logo.svg/1200px-Apache_Hive_logo.svg.png' },
-    { name: 'HBase', logo: 'https://download.logo.wine/logo/Apache_HBase/Apache_HBase-Logo.wine.png'},
-    { name: 'Apache Spark', logo: 'https://seekvectorlogo.com/wp-content/uploads/2018/12/apache-spark-vector-logo-small.png'}
+    { name: 'Cloudera', logo: '/images/cloudera.webp' },
+    { name: 'HDFS', logo: '/images/hdfs.png' },
+    { name: 'Apache Pig', logo: '/images/pig.png' },
+    { name: 'Hive', logo: '/images/hive.png' },
+    { name: 'HBase', logo: '/images/hbase.png'},
+    { name: 'Apache Spark', logo: '/images/spark.png'}
   ],
   databases: [
-    { name: 'MySQL', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx25AX0zo1Hxz_tPZ2Oi3GpX9-TfcClBSHLg&s' },
-    { name: 'MongoDB', logo: 'https://cdn.worldvectorlogo.com/logos/mongodb-icon-2.svg' },
-    { name: 'PostgreSQL', logo: 'https://images.freeimages.com/vme/images/2/8/284731/postgresql_logo_preview' }
+    { name: 'MySQL', logo: '/images/mysql.png' },
+    { name: 'MongoDB', logo: '/images/mongodb.svg' },
+    { name: 'PostgreSQL', logo: '/images/prostgresql.png' }
   ],
   software: [
-    { name: 'AutoCAD', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8iDZ14NlHB55_yQ2Hb0z-HR5z9uNpLEoHHw&s' },
-    { name: 'TinkerCAD', logo: 'https://aeg.alpineschools.org/wp-content/uploads/sites/45/2023/08/Tinkercad.png' }
+    { name: 'AutoCAD', logo: '/images/autocad.png' },
+    { name: 'TinkerCAD', logo: '/images/Tinkercad.png' }
   ]
 };
 
@@ -104,7 +104,7 @@ const projects = [
 
 const experiences = [
   {
-    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS95Z4YVYbM6SAVHtlkuUqaFnyVFoQG54p-7A&s',
+    logo: '/images/info.png',
     company: 'Infosys Springboard',
     role: 'ML Project Intern',
     location: 'Remote',
@@ -119,7 +119,7 @@ const experiences = [
     ],
   },
   {
-    logo: 'https://www.iris-club.in/logo.png',
+    logo: '/logo2.png',
     company: 'IRIS',
     role: 'Technical Head',
     location: 'Pune',
@@ -136,12 +136,12 @@ const experiences = [
 
 const roles = [
   {
-    image: 'https://www.iris-club.in/logo.png',
+    image: '/logo2.png',
     role: 'IRIS [Student Club, MIT-WPU] - Technical Head',
     date: 'Aug 2024 - Present',
   },
   {
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS95Z4YVYbM6SAVHtlkuUqaFnyVFoQG54p-7A&s',
+    image: '/images/info.png',
     role: 'Infosys Springboard [Remote] - ML Intern',
     date: 'Oct 2024 - Dec 2024',
   },
@@ -174,9 +174,9 @@ function KushagraSingh() {
             <h2>Hi, I'm Kushagra Singh</h2>
             <p>I’m a Third Year Computer Science Engineering student at MIT WPU, Pune, with hands-on experience in Machine Learning, Web Development and Embedded Systems & IoT. I’ve interned at Infosys Springboard, and as the Technical Head of the IRIS Tech Club, I lead a team focused on building tech solutions and managing live projects. I’m driven by challenges and always looking for new ways to solve real-world problems with a focus on creating practical and user-centric applications.</p>
             <div className="social-links">
-              <a href="https://in.linkedin.com/in/kushagra-anit-singh" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIN" className="icon"></img>LinkedIn</a>
-              <a href="https://github.com/kushagra-a-singh" target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" className="icon"></img>GitHub</a>
-              <a target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" alt="Gmail" className="gmail-icon"></img>kushagraa.n@gmail.com</a>
+              <a href="https://in.linkedin.com/in/kushagra-anit-singh" target="_blank" rel="noopener noreferrer"><img src="/images/linkedin.png" alt="LinkedIN" className="icon"></img>LinkedIn</a>
+              <a href="https://github.com/kushagra-a-singh" target="_blank" rel="noopener noreferrer"><img src="/images/github.png" alt="GitHub" className="icon"></img>GitHub</a>
+              <a target="_blank" rel="noopener noreferrer"><img src="/images/gmail.webp" alt="Gmail" className="gmail-icon"></img>kushagraa.n@gmail.com</a>
             </div>
             <div className="section-links">
               <a href="#experience">Experience</a>
