@@ -2,7 +2,7 @@ import React from 'react';
 import './KushagraSingh.css';
 
 const camelCaseToWords = (text) => {
-    return text.replace(/([a-z])([A-Z])/g, '$1 $2'); // Adds space between camelCase
+    return text.replace(/([a-z])([A-Z])/g, '$1 $2');
   };
 
 const skills = {
