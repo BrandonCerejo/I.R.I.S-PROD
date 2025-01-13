@@ -2,12 +2,12 @@ import React from 'react';
 import './KushagraSingh.css';
 
 const camelCaseToWords = (text) => {
-    return text.replace(/([a-z])([A-Z])/g, '$1 $2'); // Adds space between camelCase
+    return text.replace(/([a-z])([A-Z])/g, '$1 $2');
   };
 
 const skills = {
   languages: [
-    { name: 'Python', logo: 'https://image.similarpng.com/very-thumbnail/2021/12/Python-programming-logo-on-transparent-background-PNG.png' },
+    { name: 'Python', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png' },
     { name: 'C', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png' },
     { name: 'C++', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png' }
   ],
@@ -23,8 +23,8 @@ const skills = {
     { name: 'StreamLit', logo: 'https://images.seeklogo.com/logo-png/45/2/streamlit-logo-png_seeklogo-458260.png?v=1957216667958097800'}
   ],
   electronics: [
-    { name: 'Raspberry Pi', logo: 'https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2016/10/raspberry_pi_logo/16166824-1-eng-GB/Raspberry_Pi_logo.jpg' },
     { name: 'Arduino', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/1200px-Arduino_Logo.svg.png'},
+    { name: 'Raspberry Pi', logo: 'https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2016/10/raspberry_pi_logo/16166824-1-eng-GB/Raspberry_Pi_logo.jpg' },
     { name: 'STM32', logo: 'https://media.licdn.com/dms/image/C4D12AQFdgJiMnrzu2g/article-cover_image-shrink_600_2000/0/1622631819905?e=2147483647&v=beta&t=vPGjeJ65p7AAWZbkT6RD8Hik6QtFgfBiUn6-sIerB-M'}
   ],
   webDevelopment: [
@@ -37,7 +37,7 @@ const skills = {
     { name: 'JavaScript', logo: 'https://i.pinimg.com/originals/28/b0/d1/28b0d189571e22609f0e9378da7b09a4.png'},
     { name: 'Bootstrap', logo: 'https://e7.pngegg.com/pngimages/162/309/png-clipart-bootstrap-responsive-web-design-web-development-logo-django-others-miscellaneous-purple-thumbnail.png'}
   ],
-  bigDataTechnology: [
+  bigDataTechnologies: [
     { name: 'Cloudera', logo: 'https://imageio.forbes.com/specials-images/imageserve/6732202d0f1f1f82e95d3de0/0x0.png?format=png&crop=375,375,x0,y0,safe&width=300' },
     { name: 'HDFS', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBLPrKtALpP2XA52JD9onMxQBZ05sIyatTIg&s' },
     { name: 'Apache Pig', logo: 'https://images.javatpoint.com/hadooppages/pig/images/apache-pig.png' },
@@ -50,7 +50,10 @@ const skills = {
     { name: 'MongoDB', logo: 'https://cdn.worldvectorlogo.com/logos/mongodb-icon-2.svg' },
     { name: 'PostgreSQL', logo: 'https://images.freeimages.com/vme/images/2/8/284731/postgresql_logo_preview' }
   ],
-  software: [
+  visualizationTools: [
+    { name: 'Tableau', logo: 'https://logos-world.net/wp-content/uploads/2021/10/Tableau-Symbol.png' }
+  ],
+  softwares: [
     { name: 'AutoCAD', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8iDZ14NlHB55_yQ2Hb0z-HR5z9uNpLEoHHw&s' },
     { name: 'TinkerCAD', logo: 'https://aeg.alpineschools.org/wp-content/uploads/sites/45/2023/08/Tinkercad.png' }
   ]
@@ -174,7 +177,7 @@ function KushagraSingh() {
             <h2>Hi, I'm Kushagra Singh</h2>
             <p>I’m a Third Year Computer Science Engineering student at MIT WPU, Pune, with hands-on experience in Machine Learning, Web Development and Embedded Systems & IoT. I’ve interned at Infosys Springboard, and as the Technical Head of the IRIS Tech Club, I lead a team focused on building tech solutions and managing live projects. I’m driven by challenges and always looking for new ways to solve real-world problems with a focus on creating practical and user-centric applications.</p>
             <div className="social-links">
-              <a href="https://in.linkedin.com/in/kushagra-anit-singh" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIN" className="icon"></img>LinkedIn</a>
+              <a href="https://www.linkedin.com/in/kushagra-anit-singh/" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIN" className="icon"></img>LinkedIn</a>
               <a href="https://github.com/kushagra-a-singh" target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" className="icon"></img>GitHub</a>
               <a target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" alt="Gmail" className="gmail-icon"></img>kushagraa.n@gmail.com</a>
             </div>

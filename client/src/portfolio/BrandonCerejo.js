@@ -69,11 +69,9 @@ const projects = [
   {
     title: 'IRIS Website',
     points: [
-      'Tools used: MERN Stack, Handling payments, database real-time CRUD, APIs',
-      'Developed an official website for the club to provide a centralized platform to share IRIS updates, event details, recruitments and resources.',
-      'Handling multiple concurrent real-time payments and updating entries for events.',
-      'Features include event registrations with a payment gateway, dynamic blogging with a voting system and comment section, club project highlights, recruitment and contact forms.',
-      'Utilized Razorpay SDK, Supabase Database, and continuous deployment on Vercel with GitHub CI/CD integration.'
+      'Tools used: MERN Stack',
+      'Helped in developing an official website for the club to provide a centralized platform to share IRIS updates, event details, recruitments and resources.',
+      'Utilized continuous deployment on Vercel with GitHub CI/CD integration.'
     ],
     link: 'https://github.com/BrandonCerejo/I.R.I.S-PROD',
     image: '/website_img.png'
