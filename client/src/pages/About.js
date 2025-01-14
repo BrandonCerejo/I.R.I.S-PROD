@@ -89,7 +89,7 @@ function About() {
               <div className={styles.mentor}>
                 <img src="Pratvina_mam.png" alt="Pratvina Talele" className={styles.mentorImage} />
                 <div className={styles.mentorInfo}>
-                  <h3>Prof. Pratvina Talele</h3>
+                  <h3>Dr. Pratvina Talele</h3>
                   <p>Project Mentor</p>
                   <a href="https://scholar.google.com/citations?hl=en&user=_sFHQ8UAAAAJ" target="_blank" rel="noopener noreferrer">
                     View Profile
@@ -216,11 +216,11 @@ function About() {
               {/*  TECH TEAM  */}
               <div className="col-md-4">
                 <div className={styles.card}>
-                  <img src="https://rkvbuqdjkilvqlywzjsi.supabase.co/storage/v1/object/sign/AboutPhotos/Photos/Purva.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBYm91dFBob3Rvcy9QaG90b3MvUHVydmEucG5nIiwiaWF0IjoxNzMwODk5NjEyLCJleHAiOjE3NjI0MzU2MTJ9.8wEZG8xzADRIehO4k1PVCbNvk6TWiqxuspC7v88X2Fc&t=2024-11-06T13%3A26%3A52.832Z" alt="Team Member 5" />
+                  <img src="https://media.licdn.com/dms/image/v2/D4D03AQE8IBhB9VDQDw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1665454738504?e=2147483647&v=beta&t=CWTdaCxX0jfoldr7cQKsEdHIN6T-V-Pm9E2bM2UnvzI" alt="Team Member 5" />
                   <div className={styles.cardContent}>
-                    <h3>Purva Rana</h3>
-                    <p>Technical Team Member</p>
-                    <a href="https://www.linkedin.com/in/purva-rana-b231a0253/" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <h3>Samanyu Bhate</h3>
+                    <p>Technical Head</p>
+                    <a href="https://in.linkedin.com/in/samanyu-bhate-17136b1ab" className={styles.button} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
               </div>
