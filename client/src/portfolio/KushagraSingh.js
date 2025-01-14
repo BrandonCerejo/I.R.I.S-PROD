@@ -23,8 +23,8 @@ const skills = {
     { name: 'StreamLit', logo: '/images/stramlit.png'}
   ],
   electronics: [
-    { name: 'Raspberry Pi', logo: '/images/raspberry.jpg' },
     { name: 'Arduino', logo: '/images/arduino.png'},
+    { name: 'Raspberry Pi', logo: '/images/raspberry.jpg' },
     { name: 'STM32', logo: '/images/stm.png'}
   ],
   webDevelopment: [
@@ -37,7 +37,7 @@ const skills = {
     { name: 'JavaScript', logo: '/images/js.png'},
     { name: 'Bootstrap', logo: '/images/bootstrap.png'}
   ],
-  bigDataTechnology: [
+  bigDataTechnologies: [
     { name: 'Cloudera', logo: '/images/cloudera.webp' },
     { name: 'HDFS', logo: '/images/hdfs.png' },
     { name: 'Apache Pig', logo: '/images/pig.png' },
@@ -50,7 +50,10 @@ const skills = {
     { name: 'MongoDB', logo: '/images/mongodb.svg' },
     { name: 'PostgreSQL', logo: '/images/prostgresql.png' }
   ],
-  software: [
+  visualizationTools: [
+    { name: 'Tableau', logo: '/images/tableau.png' }
+  ],
+  softwares: [
     { name: 'AutoCAD', logo: '/images/autocad.png' },
     { name: 'TinkerCAD', logo: '/images/Tinkercad.png' }
   ]
@@ -174,7 +177,7 @@ function KushagraSingh() {
             <h2>Hi, I'm Kushagra Singh</h2>
             <p>I’m a Third Year Computer Science Engineering student at MIT WPU, Pune, with hands-on experience in Machine Learning, Web Development and Embedded Systems & IoT. I’ve interned at Infosys Springboard, and as the Technical Head of the IRIS Tech Club, I lead a team focused on building tech solutions and managing live projects. I’m driven by challenges and always looking for new ways to solve real-world problems with a focus on creating practical and user-centric applications.</p>
             <div className="social-links">
-              <a href="https://in.linkedin.com/in/kushagra-anit-singh" target="_blank" rel="noopener noreferrer"><img src="/images/linkedin.png" alt="LinkedIN" className="icon"></img>LinkedIn</a>
+              <a href="https://www.linkedin.com/in/kushagra-anit-singh/" target="_blank" rel="noopener noreferrer"><img src="/images/linkedin.png" alt="LinkedIn" className="icon"></img>LinkedIn</a>
               <a href="https://github.com/kushagra-a-singh" target="_blank" rel="noopener noreferrer"><img src="/images/github.png" alt="GitHub" className="icon"></img>GitHub</a>
               <a target="_blank" rel="noopener noreferrer"><img src="/images/gmail.webp" alt="Gmail" className="gmail-icon"></img>kushagraa.n@gmail.com</a>
             </div>
